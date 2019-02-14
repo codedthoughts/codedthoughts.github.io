@@ -116,7 +116,8 @@ body, html {
 
 body {
   background-color: #023638;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">Macro.add('loadtdb', {
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">Macro.add('loadtdb', {
 	handler : function () {
 		var dbdata = JSON.parse(loadFile('https://opentdb.com/api_category.php'));
 		
@@ -129,7 +130,7 @@ Macro.add('create_tdb_url', {
 		var data = JSON.parse(loadFile('https://opentdb.com/api_category.php'));
 		var ourl = State.getVar("$url");
 		var cat = State.getVar("$url_cat");
-		if (cat != ""){cat = "&category"+cat}
+		if (cat != ""){cat = "&category="+cat}
 		var difi = State.getVar("$url_dif");
 		var que = State.getVar("$url_que");
 		if (que > 20) {que = 20; State.setVar("$url_que", que);}
@@ -224,7 +225,8 @@ Macro.add('popup', {
     }
 
 });
-</script><tw-passagedata pid="1" name="Main" tags="" position="833.6666666666667,378" size="100,100">&lt;&lt;set $url to &quot;https://opentdb.com/api.php?amount=&quot;&gt;&gt;\
+
+</script><tw-passagedata pid="1" name="Main" tags="" position="833,378" size="100,100">&lt;&lt;set $url to &quot;https://opentdb.com/api.php?amount=&quot;&gt;&gt;\
 &lt;&lt;set $url_cat to &quot;&quot;&gt;&gt;\
 &lt;&lt;set $url_dif to &quot;&quot;&gt;&gt;\
 &lt;&lt;set $url_que to &quot;1&quot;&gt;&gt;\
@@ -249,7 +251,7 @@ Macro.add('popup', {
 * &lt;label&gt;&lt;&lt;radiobutton &quot;$url_dif&quot; &quot;&amp;difficulty=medium&quot;&gt;&gt; Medium&lt;/label&gt;
 * &lt;label&gt;&lt;&lt;radiobutton &quot;$url_dif&quot; &quot;&amp;difficulty=hard&quot;&gt;&gt; Hard&lt;/label&gt;
 
-&lt;&lt;button &#39;Confirm&#39;&gt;&gt;&lt;&lt;create_tdb_url&gt;&gt;&lt;&lt;goto &#39;game&#39;&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="game" tags="" position="643.3333333333334,338.33333333333337" size="100,100">&lt;&lt;button &#39;Back to main menu&#39;&gt;&gt;&lt;&lt;goto &#39;Main&#39;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;button &#39;Confirm&#39;&gt;&gt;&lt;&lt;create_tdb_url&gt;&gt;&lt;&lt;goto &#39;game&#39;&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="game" tags="" position="643,338" size="100,100">&lt;&lt;button &#39;Back to main menu&#39;&gt;&gt;&lt;&lt;goto &#39;Main&#39;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;set $round to $round + 1&gt;&gt;&lt;&lt;pullQuestion&gt;&gt;
 Round: $round / $url_que | Difficulty: $difficulty | Category: $category
 
@@ -257,7 +259,7 @@ Round: $round / $url_que | Difficulty: $difficulty | Category: $category
 
 &lt;&lt;for _i, _n range $answers&gt;&gt;&lt;&lt;capture _n&gt;&gt;&lt;&lt;button &#39;_n&#39;&gt;&gt;&lt;&lt;set $submitted to _n&gt;&gt;&lt;&lt;goto &#39;check&#39;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/capture&gt;&gt; &lt;&lt;/for&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="3" name="check" tags="" position="471.6666666666667,353.33333333333337" size="100,100">$question
+</tw-passagedata><tw-passagedata pid="3" name="check" tags="" position="471,353" size="100,100">$question
 
 The correct anser was... $correct.
 You guessed $submitted.
@@ -272,10 +274,10 @@ You got it wrong.
 &lt;&lt;button &#39;Next round&#39;&gt;&gt;&lt;&lt;goto &#39;game&#39;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;else&gt;&gt;
 &lt;&lt;button &#39;Finish&#39;&gt;&gt;&lt;&lt;goto &#39;end&#39;&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="end" tags="" position="688.3333333333334,145.00000000000003" size="100,100">
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="end" tags="" position="688,145" size="100,100">
 You got $score_correct out of $url_que correct.
 
-&lt;&lt;button &#39;Back to menu&#39;&gt;&gt;&lt;&lt;goto &#39;Main&#39;&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="StoryMenu" tags="" position="911.6666666666667,195.00000000000003" size="100,100">&lt;&lt;link &#39;About Coded Trivia&#39;&gt;&gt;
+&lt;&lt;button &#39;Back to menu&#39;&gt;&gt;&lt;&lt;goto &#39;Main&#39;&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="StoryMenu" tags="" position="911,195" size="100,100">&lt;&lt;link &#39;About Coded Trivia&#39;&gt;&gt;
 	&lt;&lt;dialog &#39;About&#39;&gt;&gt;\
 		Welcome to Coded Trivia!
 		This is a simple trivia game.
@@ -288,7 +290,7 @@ You got $score_correct out of $url_que correct.
 			
 			Additional testers - WIP
 	&lt;&lt;/dialog&gt;&gt;
-&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="StoryShare" tags="" position="1081.6666666666667,368.33333333333337" size="100,100">&lt;a href=&quot;https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcodedthoughts.github.io%2Ftrivia%2F&amp;src=sdkpreparse&amp;display=popup&quot;&gt;Facebook&lt;/a&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="StoryShare" tags="" position="1081,368" size="100,100">&lt;a href=&quot;https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcodedthoughts.github.io%2Ftrivia%2F&amp;src=sdkpreparse&amp;display=popup&quot;&gt;Facebook&lt;/a&gt;
 &lt;a href=&quot;https://twitter.com/intent/tweet?url=https%3A%2F%2Fcodedthoughts.github.io%2Ftrivia%2F&amp;text=Come play Coded Trivia!&amp;via=technomancer7&amp;hashtags=trivia&quot;&gt;Twitter&lt;/a&gt;
 </tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">
