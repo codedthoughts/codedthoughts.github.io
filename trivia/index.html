@@ -117,7 +117,15 @@ body, html {
 body {
   background-color: #023638;
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">Macro.add('loadtdb', {
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">Macro.add('getsession', {
+	handler : function () {
+		var sessiondata = JSON.parse(loadFile('https://opentdb.com/api_token.php?command=request'));
+		
+		State.setVar("$session_token", sessiondata['token']);
+	}
+});
+
+Macro.add('loadtdb', {
 	handler : function () {
 		var dbdata = JSON.parse(loadFile('https://opentdb.com/api_category.php'));
 		
@@ -133,6 +141,7 @@ Macro.add('create_tdb_url', {
 		if (cat != ""){cat = "&category="+cat}
 		var difi = State.getVar("$url_dif");
 		var que = State.getVar("$url_que");
+		var token = State.getVar("$session_token")
 		if (que > 20) {que = 20; State.setVar("$url_que", que);}
 		State.setVar("$final_url", ourl+que+cat+difi);
 		getQuestion(ourl+que+cat+difi);
@@ -235,6 +244,8 @@ Macro.add('popup', {
 &lt;&lt;set UIBar.stow()&gt;&gt;\
 &lt;&lt;set $score_correct to 0&gt;&gt;\
 &lt;&lt;set $score_fail to 0&gt;&gt;\
+&lt;&lt;if visited() == 1&gt;&gt;&lt;&lt;getsession&gt;&gt;Generated session token $session_token&lt;&lt;else&gt;&gt;Resuming session $session_token&lt;&lt;/if&gt;&gt;
+
 &lt;&lt;loadtdb&gt;&gt;&lt;&lt;button &#39;Confirm&#39;&gt;&gt;&lt;&lt;create_tdb_url&gt;&gt;&lt;&lt;goto &#39;game&#39;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 !Questions
