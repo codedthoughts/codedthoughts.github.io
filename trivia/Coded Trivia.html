@@ -15,6 +15,7 @@ body, html {
 body {
   background-color: #023638;
 }
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">Macro.add('getsession', {
 	handler : function () {
 		var sessiondata = JSON.parse(loadFile('https://opentdb.com/api_token.php?command=request'));
@@ -133,6 +134,7 @@ Macro.add('popup', {
 
 });
 
+
 </script><tw-passagedata pid="1" name="Main" tags="" position="833,378" size="100,100">&lt;&lt;set $url to &quot;https://opentdb.com/api.php?amount=&quot;&gt;&gt;\
 &lt;&lt;set $url_cat to &quot;&quot;&gt;&gt;\
 &lt;&lt;set $url_dif to &quot;&quot;&gt;&gt;\
@@ -196,8 +198,12 @@ You got $score_correct out of $url_que correct.
 			Kaiser - Programming, concept
 			ChapelR - Macros
 			Choco - Initial tests, design suggestions
-			
 			Additional testers - WIP
+			Designed with Twine engine and SugarCube template.
+			
+			Copyright © 2019 Kaiser (kaiser7@gmx.com)
+			All rights reserved.
+
 	&lt;&lt;/dialog&gt;&gt;
 &lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="StoryShare" tags="" position="1081,368" size="100,100">&lt;a href=&quot;https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcodedthoughts.github.io%2Ftrivia%2F&amp;src=sdkpreparse&amp;display=popup&quot;&gt;Facebook&lt;/a&gt;
 &lt;a href=&quot;https://twitter.com/intent/tweet?url=https%3A%2F%2Fcodedthoughts.github.io%2Ftrivia%2F&amp;text=Come play Coded Trivia!&amp;via=technomancer7&amp;hashtags=trivia&quot;&gt;Twitter&lt;/a&gt;
