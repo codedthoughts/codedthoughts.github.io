@@ -5,14 +5,14 @@ title: Coded Thoughts
 ## Working projects
 
 ### Web games
-[Nodewords](https://codedthoughts.github.io/nodewords/)<br>
+[Nodewords](https://codedthoughts.github.io/nodewords/) ![js](https://github.com/codedthoughts/codedthoughts.github.io/raw/master/img/ctjs.svg)<br>
 A word guessing game.<br>
 Version 1, obselete.<br>
 
-[Nodewords V2](https://codedthoughts.github.io/nodewords/)<br>
+[Nodewords V2](https://codedthoughts.github.io/nodewords/) ![js](https://github.com/codedthoughts/codedthoughts.github.io/raw/master/img/ctjs.svg)<br> 
 Version 2, improved.<br>
 
-[Coded Triva](https://codedthoughts.github.io/trivia/)<br>
+[Coded Triva](https://codedthoughts.github.io/trivia/) ![js](https://github.com/codedthoughts/codedthoughts.github.io/raw/master/img/ctjs.svg)<br> 
 Simple trivia game.<br>
 
 ### Sites
