@@ -1,4 +1,5 @@
 ---
+title: Coded Thoughts
 ---
 
 ## Working projects
