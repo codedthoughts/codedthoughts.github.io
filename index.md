@@ -20,7 +20,7 @@ Simple trivia game.<br>
 A repo for Deus Ex related information.<br>
 
 ### Applications
-[Merry](https://github.com/Kaiz0r/Merry) ![py](https://codedthoughts.github.io/img/ctpyth.svg)![linux](https://codedthoughts.github.io/img/ctlinux.svg) ![deb](https://codedthoughts.github.io/img/ctdeb.svg)<br> 
+[Merry](https://github.com/Kaiz0r/Merry) ![py](https://codedthoughts.github.io/img/ctpyth.svg)![linux](https://codedthoughts.github.io/img/ctlinux.svg)![deb](https://codedthoughts.github.io/img/ctdeb.svg)<br> 
 A fully-featured GUI interface for Python3's module manager.<br>
 
 [333 Browser](https://github.com/Kaiz0r/333Browser) ![py](https://codedthoughts.github.io/img/ctpyth.svg)![linux](https://codedthoughts.github.io/img/ctlinux.svg)![deb](https://codedthoughts.github.io/img/ctdeb.svg)<br> 
