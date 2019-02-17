@@ -5,18 +5,18 @@ title: Coded Thoughts
 ## Working projects
 
 ### Web games
-[Nodewords](https://codedthoughts.github.io/nodewords/) ![js](https://img.shields.io/badge/-Online-informational.svg?logo=javascript)<br>
+[Nodewords](https://codedthoughts.github.io/nodewords/) ![js](https://img.shields.io/badge/-Online-informational.svg?logo=html5)<br>
 A word guessing game.<br>
 Version 1, obselete.<br>
 
-[Nodewords V2](https://codedthoughts.github.io/nodewords/) ![js](https://img.shields.io/badge/-Online-informational.svg?logo=javascript)<br> 
+[Nodewords V2](https://codedthoughts.github.io/nodewords/) ![js](https://img.shields.io/badge/-Online-informational.svg?logo=html5)<br> 
 Version 2, improved.<br>
 
-[Coded Triva](https://codedthoughts.github.io/trivia/) ![js](https://img.shields.io/badge/-Online-informational.svg?logo=javascript)<br> 
+[Coded Triva](https://codedthoughts.github.io/trivia/) ![js](https://img.shields.io/badge/-Online-informational.svg?logo=html5)<br> 
 Simple trivia game.<br>
 
 ### Sites
-[Deus Ex Documentation](https://deusexhq.github.io/) ![js](https://img.shields.io/badge/-Online-informational.svg?logo=javascript)<br> 
+[Deus Ex Documentation](https://deusexhq.github.io/) ![js](https://img.shields.io/badge/-Online-informational.svg?logo=html5)<br> 
 A repo for Deus Ex related information.<br>
 
 ### Applications
@@ -38,9 +38,9 @@ A python3 library for my own personal use to quickly create modular text windows
 Here for if its useful to anyone, but is mainly just required by my other python3 applications.
 
 ## Prototypes
-Work-in-progress title ![js](https://img.shields.io/badge/-Online-informational.svg?logo=javascript)<br>
+Work-in-progress title ![js](https://img.shields.io/badge/-Online-informational.svg?logo=html5)<br>
 This is planned to be an indepth text-adventure story, mixing elements of Deus Ex and other scifi-fantasy elements with simple RPG gameplay in a mysterious setting.<br>
 
 ## Planned projects
-Open-Bestiary, an open-source catalogue of mobs and monsters for any RPG. ![js](https://img.shields.io/badge/-Online-informational.svg?logo=javascript)<br>
+Open-Bestiary, an open-source catalogue of mobs and monsters for any RPG. ![js](https://img.shields.io/badge/-Online-informational.svg?logo=html5)<br>
 More text games.<br>
