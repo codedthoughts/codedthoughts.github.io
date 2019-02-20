@@ -9,7 +9,7 @@ title: Coded Thoughts
 A word guessing game.<br>
 Version 1, obselete.<br>
 
-[Nodewords V2](https://codedthoughts.github.io/nodewords/) ![js](https://img.shields.io/badge/Platform-Online-informational.svg?logo=html5)<br> 
+[Nodewords V2](https://codedthoughts.github.io/nodewords_v2/) ![js](https://img.shields.io/badge/Platform-Online-informational.svg?logo=html5)<br> 
 Version 2, improved.<br>
 
 [Coded Triva](https://codedthoughts.github.io/trivia/) ![js](https://img.shields.io/badge/Platform-Online-informational.svg?logo=html5)<br> 
