@@ -1,4 +1,9 @@
-<tw-storydata name="Eternal Terminal" startnode="1" creator="Twine" creator-version="2.2.1" ifid="DC6F1CFD-C835-475B-B7D0-8BFA64D8CAFA" zoom="0.6" format="SugarCube" format-version="2.28.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.hidden a {
+<tw-storydata name="Eternal Terminal" startnode="1" creator="Twine" creator-version="2.2.1" ifid="DC6F1CFD-C835-475B-B7D0-8BFA64D8CAFA" zoom="0.6" format="SugarCube" format-version="2.28.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">#ui-bar-history
+{
+  display: none;
+}
+
+.hidden a {
     color: transparent;
 }
 
@@ -194,6 +199,337 @@ div.tcalert {
 }
 #notify.open { right : 0; }
 
+/* Glitchy Text - Start */
+
+/* The "clip" in ".glitch" is depreciated, so technically you should use the "clip-path" that's in ".glitchy" instead, however IE doesn't support "clip-path", and most browsers still support "clip". */
+
+.glitch {
+  color: white;
+  position: relative;
+}
+.glitch:before {
+  content: attr(data-text);
+  width: calc(100% + 0.5em);
+  position: absolute;
+  left: -9px;
+  text-shadow: 1px 0 blue;
+  top: -5px;
+  color: #FFD;
+  background: #111;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse;
+  -webkit-animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+.glitch:after {
+  content: attr(data-text);
+  width: calc(100% + 0.5em);
+  position: absolute;
+  left: -5px;
+  text-shadow: -1px 0 red;
+  top: -5px;
+  color: #DFF;
+  background: #111;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s infinite linear alternate-reverse;
+  -webkit-animation: noise-anim 2s infinite linear alternate-reverse;
+}
+@keyframes noise-anim {
+  0% {
+    clip: rect(80px, 9999px, 16px, 0);
+  }
+  5% {
+    clip: rect(94px, 9999px, 17px, 0);
+  }
+  10% {
+    clip: rect(9px, 9999px, 92px, 0);
+  }
+  15.0% {
+    clip: rect(37px, 9999px, 4px, 0);
+  }
+  20% {
+    clip: rect(53px, 9999px, 47px, 0);
+  }
+  25% {
+    clip: rect(99px, 9999px, 69px, 0);
+  }
+  30.0% {
+    clip: rect(15px, 9999px, 49px, 0);
+  }
+  35% {
+    clip: rect(83px, 9999px, 81px, 0);
+  }
+  40% {
+    clip: rect(55px, 9999px, 43px, 0);
+  }
+  45% {
+    clip: rect(28px, 9999px, 27px, 0);
+  }
+  50% {
+    clip: rect(64px, 9999px, 28px, 0);
+  }
+  55.0% {
+    clip: rect(76px, 9999px, 91px, 0);
+  }
+  60.0% {
+    clip: rect(29px, 9999px, 72px, 0);
+  }
+  65% {
+    clip: rect(70px, 9999px, 10px, 0);
+  }
+  70% {
+    clip: rect(5px, 9999px, 84px, 0);
+  }
+  75% {
+    clip: rect(46px, 9999px, 81px, 0);
+  }
+  80% {
+    clip: rect(7px, 9999px, 85px, 0);
+  }
+  85.0% {
+    clip: rect(17px, 9999px, 89px, 0);
+  }
+  90% {
+    clip: rect(41px, 9999px, 59px, 0);
+  }
+  95% {
+    clip: rect(53px, 9999px, 90px, 0);
+  }
+  100% {
+    clip: rect(10px, 9999px, 30px, 0);
+  }
+}
+@keyframes noise-anim-2 {
+  0% {
+    clip: rect(84px, 9999px, 3px, 0);
+  }
+  5% {
+    clip: rect(31px, 9999px, 69px, 0);
+  }
+  10% {
+    clip: rect(37px, 9999px, 33px, 0);
+  }
+  15.0% {
+    clip: rect(18px, 9999px, 6px, 0);
+  }
+  20% {
+    clip: rect(25px, 9999px, 87px, 0);
+  }
+  25% {
+    clip: rect(100px, 9999px, 8px, 0);
+  }
+  30.0% {
+    clip: rect(24px, 9999px, 87px, 0);
+  }
+  35% {
+    clip: rect(39px, 9999px, 16px, 0);
+  }
+  40% {
+    clip: rect(96px, 9999px, 25px, 0);
+  }
+  45% {
+    clip: rect(16px, 9999px, 100px, 0);
+  }
+  50% {
+    clip: rect(92px, 9999px, 76px, 0);
+  }
+  55.0% {
+    clip: rect(29px, 9999px, 40px, 0);
+  }
+  60.0% {
+    clip: rect(40px, 9999px, 39px, 0);
+  }
+  65% {
+    clip: rect(94px, 9999px, 44px, 0);
+  }
+  70% {
+    clip: rect(2px, 9999px, 78px, 0);
+  }
+  75% {
+    clip: rect(86px, 9999px, 50px, 0);
+  }
+  80% {
+    clip: rect(2px, 9999px, 46px, 0);
+  }
+  85.0% {
+    clip: rect(41px, 9999px, 71px, 0);
+  }
+  90% {
+    clip: rect(75px, 9999px, 15px, 0);
+  }
+  95% {
+    clip: rect(41px, 9999px, 8px, 0);
+  }
+  100% {
+    clip: rect(23px, 9999px, 75px, 0);
+  }
+}
+
+.glitchy {
+  color: white;
+  position: relative;
+}
+.glitchy:before {
+  content: attr(data-text);
+  width: calc(100% + 0.5em);
+  position: absolute;
+  left: -9px;
+  text-shadow: 1px 0 blue;
+  top: -5px;
+  color: #FFD;
+  background: #111;
+  overflow: hidden;
+  clip-path: polygon(0 0);
+  animation: noise-animY-2 3s infinite linear alternate-reverse;
+  -webkit-animation: noise-animY-2 3s infinite linear alternate-reverse;
+}
+.glitchy:after {
+  content: attr(data-text);
+  width: calc(100% + 0.5em);
+  position: absolute;
+  left: -5px;
+  text-shadow: -1px 0 red;
+  top: -5px;
+  color: #DFF;
+  background: #111;
+  overflow: hidden;
+  clip-path: polygon(0 0);
+  animation: noise-animY 2s infinite linear alternate-reverse;
+  -webkit-animation: noise-animY 2s infinite linear alternate-reverse;
+}
+@keyframes noise-animY {
+  0% {
+    clip-path: polygon(0 80px, 100% 80px, 100% 16px, 0 16px);
+  }
+  5% {
+    clip-path: polygon(0 94px, 100% 94px, 100% 17px, 0 17px);
+  }
+  10% {
+    clip-path: polygon(0 9px, 100% 9px, 100% 92px, 0 92px);
+  }
+  15.0% {
+    clip-path: polygon(0 37px, 100% 37px, 100% 4px, 0 4px);
+  }
+  20% {
+    clip-path: polygon(0 53px, 100% 53px, 100% 47px, 0 47px);
+  }
+  25% {
+    clip-path: polygon(0 99px, 100% 99px, 100% 69px, 0 69px);
+  }
+  30.0% {
+    clip-path: polygon(0 15px, 100% 15px, 100% 49px, 0 49px);
+  }
+  35% {
+    clip-path: polygon(0 83px, 100% 83px, 100% 81px, 0 81px);
+  }
+  40% {
+    clip-path: polygon(0 55px, 100% 55px, 100% 43px, 0 43px);
+  }
+  45% {
+    clip-path: polygon(0 28px, 100% 28px, 100% 27px, 0 27px);
+  }
+  50% {
+    clip-path: polygon(0 64px, 100% 64px, 100% 28px, 0 28px);
+  }
+  55.0% {
+    clip-path: polygon(0 76px, 100% 76px, 100% 91px, 0 91px);
+  }
+  60.0% {
+    clip-path: polygon(0 29px, 100% 29px, 100% 72px, 0 72px);
+  }
+  65% {
+    clip-path: polygon(0 70px, 100% 70px, 100% 10px, 0 10px);
+  }
+  70% {
+    clip-path: polygon(0 5px, 100% 5px, 100% 84px, 0 84px);
+  }
+  75% {
+    clip-path: polygon(0 46px, 100% 46px, 100% 81px, 0 81px);
+  }
+  80% {
+    clip-path: polygon(0 7px, 100% 7px, 100% 85px, 0 85px);
+  }
+  85.0% {
+    clip-path: polygon(0 17px, 100% 17px, 100% 89px, 0 89px);
+  }
+  90% {
+    clip-path: polygon(0 41px, 100% 41px, 100% 59px, 0 59px);
+  }
+  95% {
+    clip-path: polygon(0 53px, 100% 53px, 100% 90px, 0 90px);
+  }
+  100% {
+    clip-path: polygon(0 10px, 100% 10px, 100% 30px, 0 30px);
+  }
+}
+@keyframes noise-animY-2 {
+  0% {
+    clip-path: polygon(0 84px, 100% 84px, 100% 3px, 0 3px);
+  }
+  5% {
+    clip-path: polygon(0 31px, 100% 31px, 100% 69px, 0 69px);
+  }
+  10% {
+    clip-path: polygon(0 37px, 100% 37px, 100% 33px, 0 33px);
+  }
+  15.0% {
+    clip-path: polygon(0 18px, 100% 18px, 100% 6px, 0 6px);
+  }
+  20% {
+    clip-path: polygon(0 25px, 100% 25px, 100% 87px, 0 87px);
+  }
+  25% {
+    clip-path: polygon(0 100px, 100% 100px, 100% 8px, 0 8px);
+  }
+  30.0% {
+    clip-path: polygon(0 24px, 100% 24px, 100% 87px, 0 87px);
+  }
+  35% {
+    clip-path: polygon(0 39px, 100% 39px, 100% 16px, 0 16px);
+  }
+  40% {
+    clip-path: polygon(0 96px, 100% 96px, 100% 25px, 0 25px);
+  }
+  45% {
+    clip-path: polygon(0 16px, 100% 16px, 100% 100px, 0 100px);
+  }
+  50% {
+    clip-path: polygon(0 92px, 100% 92px, 100% 76px, 0 76px);
+  }
+  55.0% {
+    clip-path: polygon(0 29px, 100% 29px, 100% 40px, 0 40px);
+  }
+  60.0% {
+    clip-path: polygon(0 40px, 100% 40px, 100% 39px, 0 39px);
+  }
+  65% {
+    clip-path: polygon(0 94px, 100% 94px, 100% 44px, 0 44px);
+  }
+  70% {
+    clip-path: polygon(0 2px, 100% 2px, 100% 78px, 0 78px);
+  }
+  75% {
+    clip-path: polygon(0 86px, 100% 86px, 100% 50px, 0 50px);
+  }
+  80% {
+    clip-path: polygon(0 2px, 100% 2px, 100% 46px, 0 46px);
+  }
+  85.0% {
+    clip-path: polygon(0 41px, 100% 41px, 100% 71px, 0 71px);
+  }
+  90% {
+    clip-path: polygon(0 75px, 100% 75px, 100% 15px, 0 15px);
+  }
+  95% {
+    clip-path: polygon(0 41px, 100% 41px, 100% 8px, 0 8px);
+  }
+  100% {
+    clip-path: polygon(0 23px, 100% 23px, 100% 75px, 0 75px);
+  }
+}
+/* Glitchy Text - End */
+
 button[data-balloon]{overflow:visible}[data-balloon]{position:relative;cursor:pointer}[data-balloon]:after{filter:alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";-moz-opacity:0;-khtml-opacity:0;opacity:0;pointer-events:none;-webkit-transition:all 0.18s ease-out 0.18s;-moz-transition:all 0.18s ease-out 0.18s;-ms-transition:all 0.18s ease-out 0.18s;-o-transition:all 0.18s ease-out 0.18s;transition:all 0.18s ease-out 0.18s;font-family:sans-serif !important;font-weight:normal !important;font-style:normal !important;text-shadow:none !important;font-size:12px !important;background:rgba(17,17,17,0.9);border-radius:4px;color:#fff;content:attr(data-balloon);padding:.5em 1em;position:absolute;white-space:nowrap;z-index:10}[data-balloon]:before{background:no-repeat url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2236px%22%20height%3D%2212px%22%3E%3Cpath%20fill%3D%22rgba(17,17,17,0.9)%22%20transform%3D%22rotate(0)%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E");background-size:100% auto;width:18px;height:6px;filter:alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";-moz-opacity:0;-khtml-opacity:0;opacity:0;pointer-events:none;-webkit-transition:all 0.18s ease-out 0.18s;-moz-transition:all 0.18s ease-out 0.18s;-ms-transition:all 0.18s ease-out 0.18s;-o-transition:all 0.18s ease-out 0.18s;transition:all 0.18s ease-out 0.18s;content:'';position:absolute;z-index:10}[data-balloon]:hover:before,[data-balloon]:hover:after,[data-balloon][data-balloon-visible]:before,[data-balloon][data-balloon-visible]:after{filter:alpha(opacity=100);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";-moz-opacity:1;-khtml-opacity:1;opacity:1;pointer-events:auto}[data-balloon].font-awesome:after{font-family:FontAwesome}[data-balloon][data-balloon-break]:after{white-space:pre}[data-balloon][data-balloon-blunt]:before,[data-balloon][data-balloon-blunt]:after{-webkit-transition:none;-moz-transition:none;-ms-transition:none;-o-transition:none;transition:none}[data-balloon][data-balloon-pos="up"]:after{bottom:100%;left:50%;margin-bottom:11px;-webkit-transform:translate(-50%, 10px);-moz-transform:translate(-50%, 10px);-ms-transform:translate(-50%, 10px);transform:translate(-50%, 10px);-webkit-transform-origin:top;-moz-transform-origin:top;-ms-transform-origin:top;transform-origin:top}[data-balloon][data-balloon-pos="up"]:before{bottom:100%;left:50%;margin-bottom:5px;-webkit-transform:translate(-50%, 10px);-moz-transform:translate(-50%, 10px);-ms-transform:translate(-50%, 10px);transform:translate(-50%, 10px);-webkit-transform-origin:top;-moz-transform-origin:top;-ms-transform-origin:top;transform-origin:top}[data-balloon][data-balloon-pos="up"]:hover:after,[data-balloon][data-balloon-pos="up"][data-balloon-visible]:after{-webkit-transform:translate(-50%, 0);-moz-transform:translate(-50%, 0);-ms-transform:translate(-50%, 0);transform:translate(-50%, 0)}[data-balloon][data-balloon-pos="up"]:hover:before,[data-balloon][data-balloon-pos="up"][data-balloon-visible]:before{-webkit-transform:translate(-50%, 0);-moz-transform:translate(-50%, 0);-ms-transform:translate(-50%, 0);transform:translate(-50%, 0)}[data-balloon][data-balloon-pos="up-left"]:after{bottom:100%;left:0;margin-bottom:11px;-webkit-transform:translate(0, 10px);-moz-transform:translate(0, 10px);-ms-transform:translate(0, 10px);transform:translate(0, 10px);-webkit-transform-origin:top;-moz-transform-origin:top;-ms-transform-origin:top;transform-origin:top}[data-balloon][data-balloon-pos="up-left"]:before{bottom:100%;left:5px;margin-bottom:5px;-webkit-transform:translate(0, 10px);-moz-transform:translate(0, 10px);-ms-transform:translate(0, 10px);transform:translate(0, 10px);-webkit-transform-origin:top;-moz-transform-origin:top;-ms-transform-origin:top;transform-origin:top}[data-balloon][data-balloon-pos="up-left"]:hover:after,[data-balloon][data-balloon-pos="up-left"][data-balloon-visible]:after{-webkit-transform:translate(0, 0);-moz-transform:translate(0, 0);-ms-transform:translate(0, 0);transform:translate(0, 0)}[data-balloon][data-balloon-pos="up-left"]:hover:before,[data-balloon][data-balloon-pos="up-left"][data-balloon-visible]:before{-webkit-transform:translate(0, 0);-moz-transform:translate(0, 0);-ms-transform:translate(0, 0);transform:translate(0, 0)}[data-balloon][data-balloon-pos="up-right"]:after{bottom:100%;right:0;margin-bottom:11px;-webkit-transform:translate(0, 10px);-moz-transform:translate(0, 10px);-ms-transform:translate(0, 10px);transform:translate(0, 10px);-webkit-transform-origin:top;-moz-transform-origin:top;-ms-transform-origin:top;transform-origin:top}[data-balloon][data-balloon-pos="up-right"]:before{bottom:100%;right:5px;margin-bottom:5px;-webkit-transform:translate(0, 10px);-moz-transform:translate(0, 10px);-ms-transform:translate(0, 10px);transform:translate(0, 10px);-webkit-transform-origin:top;-moz-transform-origin:top;-ms-transform-origin:top;transform-origin:top}[data-balloon][data-balloon-pos="up-right"]:hover:after,[data-balloon][data-balloon-pos="up-right"][data-balloon-visible]:after{-webkit-transform:translate(0, 0);-moz-transform:translate(0, 0);-ms-transform:translate(0, 0);transform:translate(0, 0)}[data-balloon][data-balloon-pos="up-right"]:hover:before,[data-balloon][data-balloon-pos="up-right"][data-balloon-visible]:before{-webkit-transform:translate(0, 0);-moz-transform:translate(0, 0);-ms-transform:translate(0, 0);transform:translate(0, 0)}[data-balloon][data-balloon-pos='down']:after{left:50%;margin-top:11px;top:100%;-webkit-transform:translate(-50%, -10px);-moz-transform:translate(-50%, -10px);-ms-transform:translate(-50%, -10px);transform:translate(-50%, -10px)}[data-balloon][data-balloon-pos='down']:before{background:no-repeat url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2236px%22%20height%3D%2212px%22%3E%3Cpath%20fill%3D%22rgba(17,17,17,0.9)%22%20transform%3D%22rotate(180 18 6)%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E");background-size:100% auto;width:18px;height:6px;left:50%;margin-top:5px;top:100%;-webkit-transform:translate(-50%, -10px);-moz-transform:translate(-50%, -10px);-ms-transform:translate(-50%, -10px);transform:translate(-50%, -10px)}[data-balloon][data-balloon-pos='down']:hover:after,[data-balloon][data-balloon-pos='down'][data-balloon-visible]:after{-webkit-transform:translate(-50%, 0);-moz-transform:translate(-50%, 0);-ms-transform:translate(-50%, 0);transform:translate(-50%, 0)}[data-balloon][data-balloon-pos='down']:hover:before,[data-balloon][data-balloon-pos='down'][data-balloon-visible]:before{-webkit-transform:translate(-50%, 0);-moz-transform:translate(-50%, 0);-ms-transform:translate(-50%, 0);transform:translate(-50%, 0)}[data-balloon][data-balloon-pos='down-left']:after{left:0;margin-top:11px;top:100%;-webkit-transform:translate(0, -10px);-moz-transform:translate(0, -10px);-ms-transform:translate(0, -10px);transform:translate(0, -10px)}[data-balloon][data-balloon-pos='down-left']:before{background:no-repeat url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2236px%22%20height%3D%2212px%22%3E%3Cpath%20fill%3D%22rgba(17,17,17,0.9)%22%20transform%3D%22rotate(180 18 6)%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E");background-size:100% auto;width:18px;height:6px;left:5px;margin-top:5px;top:100%;-webkit-transform:translate(0, -10px);-moz-transform:translate(0, -10px);-ms-transform:translate(0, -10px);transform:translate(0, -10px)}[data-balloon][data-balloon-pos='down-left']:hover:after,[data-balloon][data-balloon-pos='down-left'][data-balloon-visible]:after{-webkit-transform:translate(0, 0);-moz-transform:translate(0, 0);-ms-transform:translate(0, 0);transform:translate(0, 0)}[data-balloon][data-balloon-pos='down-left']:hover:before,[data-balloon][data-balloon-pos='down-left'][data-balloon-visible]:before{-webkit-transform:translate(0, 0);-moz-transform:translate(0, 0);-ms-transform:translate(0, 0);transform:translate(0, 0)}[data-balloon][data-balloon-pos='down-right']:after{right:0;margin-top:11px;top:100%;-webkit-transform:translate(0, -10px);-moz-transform:translate(0, -10px);-ms-transform:translate(0, -10px);transform:translate(0, -10px)}[data-balloon][data-balloon-pos='down-right']:before{background:no-repeat url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2236px%22%20height%3D%2212px%22%3E%3Cpath%20fill%3D%22rgba(17,17,17,0.9)%22%20transform%3D%22rotate(180 18 6)%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E");background-size:100% auto;width:18px;height:6px;right:5px;margin-top:5px;top:100%;-webkit-transform:translate(0, -10px);-moz-transform:translate(0, -10px);-ms-transform:translate(0, -10px);transform:translate(0, -10px)}[data-balloon][data-balloon-pos='down-right']:hover:after,[data-balloon][data-balloon-pos='down-right'][data-balloon-visible]:after{-webkit-transform:translate(0, 0);-moz-transform:translate(0, 0);-ms-transform:translate(0, 0);transform:translate(0, 0)}[data-balloon][data-balloon-pos='down-right']:hover:before,[data-balloon][data-balloon-pos='down-right'][data-balloon-visible]:before{-webkit-transform:translate(0, 0);-moz-transform:translate(0, 0);-ms-transform:translate(0, 0);transform:translate(0, 0)}[data-balloon][data-balloon-pos='left']:after{margin-right:11px;right:100%;top:50%;-webkit-transform:translate(10px, -50%);-moz-transform:translate(10px, -50%);-ms-transform:translate(10px, -50%);transform:translate(10px, -50%)}[data-balloon][data-balloon-pos='left']:before{background:no-repeat url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2212px%22%20height%3D%2236px%22%3E%3Cpath%20fill%3D%22rgba(17,17,17,0.9)%22%20transform%3D%22rotate(-90 18 18)%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E");background-size:100% auto;width:6px;height:18px;margin-right:5px;right:100%;top:50%;-webkit-transform:translate(10px, -50%);-moz-transform:translate(10px, -50%);-ms-transform:translate(10px, -50%);transform:translate(10px, -50%)}[data-balloon][data-balloon-pos='left']:hover:after,[data-balloon][data-balloon-pos='left'][data-balloon-visible]:after{-webkit-transform:translate(0, -50%);-moz-transform:translate(0, -50%);-ms-transform:translate(0, -50%);transform:translate(0, -50%)}[data-balloon][data-balloon-pos='left']:hover:before,[data-balloon][data-balloon-pos='left'][data-balloon-visible]:before{-webkit-transform:translate(0, -50%);-moz-transform:translate(0, -50%);-ms-transform:translate(0, -50%);transform:translate(0, -50%)}[data-balloon][data-balloon-pos='right']:after{left:100%;margin-left:11px;top:50%;-webkit-transform:translate(-10px, -50%);-moz-transform:translate(-10px, -50%);-ms-transform:translate(-10px, -50%);transform:translate(-10px, -50%)}[data-balloon][data-balloon-pos='right']:before{background:no-repeat url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2212px%22%20height%3D%2236px%22%3E%3Cpath%20fill%3D%22rgba(17,17,17,0.9)%22%20transform%3D%22rotate(90 6 6)%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E");background-size:100% auto;width:6px;height:18px;left:100%;margin-left:5px;top:50%;-webkit-transform:translate(-10px, -50%);-moz-transform:translate(-10px, -50%);-ms-transform:translate(-10px, -50%);transform:translate(-10px, -50%)}[data-balloon][data-balloon-pos='right']:hover:after,[data-balloon][data-balloon-pos='right'][data-balloon-visible]:after{-webkit-transform:translate(0, -50%);-moz-transform:translate(0, -50%);-ms-transform:translate(0, -50%);transform:translate(0, -50%)}[data-balloon][data-balloon-pos='right']:hover:before,[data-balloon][data-balloon-pos='right'][data-balloon-visible]:before{-webkit-transform:translate(0, -50%);-moz-transform:translate(0, -50%);-ms-transform:translate(0, -50%);transform:translate(0, -50%)}[data-balloon][data-balloon-length='small']:after{white-space:normal;width:80px}[data-balloon][data-balloon-length='medium']:after{white-space:normal;width:150px}[data-balloon][data-balloon-length='large']:after{white-space:normal;width:260px}[data-balloon][data-balloon-length='xlarge']:after{white-space:normal;width:380px}@media screen and (max-width: 768px){[data-balloon][data-balloon-length='xlarge']:after{white-space:normal;width:90vw}}[data-balloon][data-balloon-length='fit']:after{white-space:normal;width:100%}
 
 
@@ -224,7 +560,55 @@ button[data-balloon]{overflow:visible}[data-balloon]{position:relative;cursor:po
 
 
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">var toggleMature = function () {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">(function () {
+    $(document).on('keyup', function (ev) {
+        if (ev.key === 'Enter') {
+					if (State.getVar("$acmd") != "") {
+          	  Wikifier.wikifyEval('<<include "commandparser">>');
+			 		} else {
+			 			Wikifier.wikifyEval("<<dialog 'aOS CMD'>><<include 'commandinput'>><</dialog>>");
+					}
+        }
+			  if (ev.key === 'Escape') {
+					Dialog.close()
+        }
+    });
+}());
+
+// If flag exists then return value, else return false
+window.Flag = function (Fnam) {
+	if (State.variables.Flags == undefined) {
+		State.variables.Flags = {};
+	} else if (State.variables.Flags[Fnam.toLowerCase()] !== undefined) {
+		return State.variables.Flags[Fnam.toLowerCase()];
+	};
+	return false;
+};
+
+Macro.add('percent', {
+		handler: function(){
+			var res = ((100 * this.args[0]) / this.args[1]);
+			var res = res+"%"
+			jQuery(this.output).wiki(res);
+			return res
+		}
+});
+					
+var toggleMature = function () {
 	if (settings.mature) { // is true
 		State.setVar("$mature", true)
 		Wikifier.wikifyEval('<<notify>>The world becomes a darker place.<</notify>>');
@@ -657,7 +1041,7 @@ Macro.add('popup', {
 });
 
 // simple-inventory.min.js, for SugarCube 2, by Chapel
-;setup.simpleInv={},setup.simpleInv.options={tryGlobal:!0,defaultStrings:{empty:"The inventory is empty...",listDrop:"Discard",separator:"\n"}},setup.simpleInv.attachEvent=function(i,t,n,r){$(document).trigger({type:"initialized"===r?":inventory-init":":inventory-update",instance:i,receiving:t,moved:n,context:r})},setup.simpleInv.inventory=function(i){"use strict";if(i=i?(i=[].slice.call(arguments)).flatten():[],!(this instanceof setup.simpleInv.inventory))return new setup.simpleInv.inventory(i);i=(this.inv=i).length?i:null,setup.simpleInv.attachEvent(this,null,i,"initialized")},setup.simpleInv.inventory.is=function(i){return i instanceof setup.simpleInv.inventory},setup.simpleInv.inventory.log=function(i){return setup.simpleInv.inventory.is(i)?"Inventory.log() -> "+i.toArray().join(" - "):"Inventory.log() -> object is not an inventory..."},setup.simpleInv.inventory.removeDuplicates=function(i){if(setup.simpleInv.inventory.is(i)){var t,n=i.toArray();return t=[],n.forEach(function(i){t.includes(i)||t.push(i)}),t}},setup.simpleInv.inventory.getUID=function(i,t){var n=Math.random().toString(36).substring(7);return arguments.length<2&&(i=Math.random().toString(36).substring(7),t=random(99)),"simple-inv-"+t+"-"+Date.now()+"-"+i.replace(/[^A-Za-z0-9]/g,"")+"-"+n},setup.simpleInv.inventory.prototype={transfer:function(i){if(arguments.length<2)return this;if(!(i instanceof setup.simpleInv.inventory))return this;for(var t=[].slice.call(arguments),n=[],r=0,e=(t=t.slice(1).flatten()).length;r<e;r++)this.inv.includes(t[r])&&(this.inv.delete(t[r]),n.push(t[r]));return n.length&&(i.inv=i.inv.concat(n),setup.simpleInv.attachEvent(this,i,n,"transfer")),this},has:function(){var i=[].slice.call(arguments).flatten();return!(!i||!i.length)&&this.inv.includesAny(i)},hasAll:function(){var i=[].slice.call(arguments).flatten();return!(!i||!i.length)&&this.inv.includesAll(i)},pickUp:function(i){var t,n=[].slice.call(arguments).flatten(),r=this;return n&&n.length&&("unique"!==i&&"unique"!==n[0]||(n=n.splice(1),t=[],n.forEach(function(i){r.inv.includes(i)||t.push(i)}),n=t),this.inv=this.inv.concat(n),setup.simpleInv.attachEvent(this,null,n,"pickup")),this},drop:function(){var t,i=[].slice.call(arguments).flatten(),n=this;if(i&&i.length){var r=[];i.forEach(function(i){n.has(i)&&(r.push(i),t=n.inv.indexOf(i),n.inv.deleteAt(t))}),setup.simpleInv.attachEvent(this,null,r,"drop")}return this},sort:function(){return this.inv=this.inv.sort(),setup.simpleInv.attachEvent(this,null,null,"sort"),this},show:function(i){return i&&"string"==typeof i||(i=setup.simpleInv.options.defaultStrings.separator),this.inv.length?this.inv.join(i):setup.simpleInv.options.defaultStrings.empty},empty:function(){var i=clone(this.inv);return this.inv=[],setup.simpleInv.attachEvent(this,null,i,"drop"),this},toArray:function(){return this.inv},linkedList:function(o,l){o&&o instanceof setup.simpleInv.inventory||(o=!1);var i=this.toArray(),u=this,v=$(document.createElement("span"));return i&&i.length?i.forEach(function(i,t,n){var r=$(document.createElement("span")),e=$(document.createElement("a")),s=l||setup.simpleInv.options.defaultStrings.drop,a=setup.simpleInv.inventory.getUID(i,t);e.wiki(s).addClass("simple-inv drop-link"),e.ariaClick(function(){o?u.transfer(o,i):u.drop(i),$("#"+a).empty()}),r.attr("id",a).addClass("simple-inv link-listing").wiki(i+" ").append(e),t<n.length-1&&r.wiki("<br />"),v.append(r)}):v.wiki(setup.simpleInv.options.defaultStrings.empty),v},constructor:setup.simpleInv.inventory,toJSON:function(){return JSON.reviveWrapper("new setup.simpleInv.inventory("+JSON.stringify(this.inv)+")")},clone:function(){return new setup.simpleInv.inventory(this.inv)}},setup.simpleInv.options.tryGlobal&&(window.Inventory=window.Inventory||setup.simpleInv.inventory),Macro.add("newinventory",{handler:function(){if(1!==this.args.length)return this.error("incorrect number of arguments");var i=this.args[0].trim();if("$"!==i[0]&&"_"!==i[0])return this.error('variable name "'+this.args[0]+'" is missing its sigil ($ or _)');Wikifier.setValue(i,new setup.simpleInv.inventory(this.args.slice(1).flatten()))}}),Macro.add("pickup",{handler:function(){if(this.args.length<2)return this.error("incorrect number of arguments");var i=this.args[0].trim();if("$"!==i[0]&&"_"!==i[0])return this.error('variable name "'+this.args[0]+'" is missing its sigil ($ or _)');var t=Wikifier.getValue(i);if(!setup.simpleInv.inventory.is(t))return this.error("variable "+i+" is not an inventory!");t.pickUp(this.args.slice(1).flatten())}}),Macro.add("drop",{handler:function(){if(this.args.length<2)return this.error("incorrect number of arguments");var i=this.args[0].trim();if("$"!==i[0]&&"_"!==i[0])return this.error('variable name "'+this.args[0]+'" is missing its sigil ($ or _)');var t=Wikifier.getValue(i);if(!setup.simpleInv.inventory.is(t))return this.error("variable "+i+" is not an inventory!");t.drop(this.args.slice(1).flatten())}}),Macro.add("transfer",{handler:function(){if(this.args.length<3)return this.error("incorrect number of arguments");var i=this.args[0].trim();if("$"!==i[0]&&"_"!==i[0])return this.error('variable name "'+this.args[0]+'" is missing its sigil ($ or _)');var t=Wikifier.getValue(i);if(!setup.simpleInv.inventory.is(t))return this.error("variable "+i+" is not an inventory!");var n=this.args[1].trim();if("$"!==n[0]&&"_"!==n[0])return this.error('variable name "'+this.args[1]+'" is missing its sigil ($ or _)');var r=Wikifier.getValue(n);if(!setup.simpleInv.inventory.is(r))return this.error("variable "+n+" is not an inventory!");t.transfer(r,this.args.slice(2).flatten())}}),Macro.add("dropall",{handler:function(){if(1!==this.args.length)return this.error("incorrect number of arguments");var i=this.args[0].trim();if("$"!==i[0]&&"_"!==i[0])return this.error('variable name "'+this.args[0]+'" is missing its sigil ($ or _)');var t=Wikifier.getValue(i);if(!setup.simpleInv.inventory.is(t))return this.error("variable "+i+" is not an inventory!");t.empty()}}),Macro.add("clear","dropall",!1),Macro.add("sort",{handler:function(){if(1!==this.args.length)return this.error("incorrect number of arguments");var i=this.args[0].trim();if("$"!==i[0]&&"_"!==i[0])return this.error('variable name "'+this.args[0]+'" is missing its sigil ($ or _)');var t=Wikifier.getValue(i);if(!setup.simpleInv.inventory.is(t))return this.error("variable "+i+" is not an inventory!");t.sort()}}),Macro.add("inventory",{handler:function(){if(this.args.length<1||2<this.args.length)return this.error("incorrect number of arguments");var i=this.args[0].trim();if("$"!==i[0]&&"_"!==i[0])return this.error('variable name "'+this.args[0]+'" is missing its sigil ($ or _)');var t=Wikifier.getValue(i);if(!setup.simpleInv.inventory.is(t))return this.error("variable "+i+" is not an inventory!");var n=$(document.createElement("span")),r=!!this.args[1]&&this.args[1];n.wiki(t.show(r)).addClass("macro-"+this.name).appendTo(this.output)}}),Macro.add("linkedinventory",{handler:function(){if(this.args.length<2||3<this.args.length)return this.error("incorrect number of arguments");var i=!1,t=this.args[1].trim(),n="string"==typeof this.args[0]&&this.args[0];if(!n)return this.error("first argument should be the link text");if("$"!==t[0]&&"_"!==t[0])return this.error('variable name "'+this.args[1]+'" is missing its sigil ($ or _)');var r=Util.slugify(t);r=this.name+"-"+r;var e=Wikifier.getValue(t);if(!setup.simpleInv.inventory.is(e))return this.error("variable "+t+" is not an inventory!");if(2<this.args.length){var s=this.args[2].trim();if("$"!==s[0]&&"_"!==s[0])return this.error('variable name "'+this.args[2]+'" is missing its sigil ($ or _)');if(i=Wikifier.getValue(s),!setup.simpleInv.inventory.is(i))return this.error("variable "+s+" is not an inventory!")}e.linkedList(i,n).attr("id",r).addClass("macro-"+this.name).appendTo(this.output)}});
+;setup.simpleInv={},setup.simpleInv.options={tryGlobal:!0,defaultStrings:{empty:"The inventory is empty...",listDrop:"Discard",separator:"\n"}},setup.simpleInv.attachEvent=function(i,t,n,r){$(document).trigger({type:"initialized"===r?":inventory-init":":inventory-update",instance:i,receiving:t,moved:n,context:r})},setup.simpleInv.inventory=function(i){"use strict";if(i=i?(i=[].slice.call(arguments)).flatten():[],!(this instanceof setup.simpleInv.inventory))return new setup.simpleInv.inventory(i);i=(this.inv=i).length?i:null,setup.simpleInv.attachEvent(this,null,i,"initialized")},setup.simpleInv.inventory.is=function(i){return i instanceof setup.simpleInv.inventory},setup.simpleInv.inventory.log=function(i){return setup.simpleInv.inventory.is(i)?"Inventory.log() -> "+i.toArray().join(" - "):"Inventory.log() -> object is not an inventory..."},setup.simpleInv.inventory.removeDuplicates=function(i){if(setup.simpleInv.inventory.is(i)){var t,n=i.toArray();return t=[],n.forEach(function(i){t.includes(i)||t.push(i)}),t}},setup.simpleInv.inventory.getUID=function(i,t){var n=Math.random().toString(36).substring(7);return arguments.length<2&&(i=Math.random().toString(36).substring(7),t=random(99)),"simple-inv-"+t+"-"+Date.now()+"-"+i.replace(/[^A-Za-z0-9]/g,"")+"-"+n},setup.simpleInv.inventory.prototype={transfer:function(i){if(arguments.length<2)return this;if(!(i instanceof setup.simpleInv.inventory))return this;for(var t=[].slice.call(arguments),n=[],r=0,e=(t=t.slice(1).flatten()).length;r<e;r++)this.inv.includes(t[r])&&(this.inv.delete(t[r]),n.push(t[r]));return n.length&&(i.inv=i.inv.concat(n),setup.simpleInv.attachEvent(this,i,n,"transfer")),this},has:function(){var i=[].slice.call(arguments).flatten();return!(!i||!i.length)&&this.inv.includesAny(i)},hasAll:function(){var i=[].slice.call(arguments).flatten();return!(!i||!i.length)&&this.inv.includesAll(i)},pickUp:function(i){var t,n=[].slice.call(arguments).flatten(),r=this;return n&&n.length&&("unique"!==i&&"unique"!==n[0]||(n=n.splice(1),t=[],n.forEach(function(i){r.inv.includes(i)||t.includes(i)||t.push(i)}),n=t),this.inv=this.inv.concat(n),setup.simpleInv.attachEvent(this,null,n,"pickup")),this},drop:function(){var t,i=[].slice.call(arguments).flatten(),n=this;if(i&&i.length){var r=[];i.forEach(function(i){n.has(i)&&(r.push(i),t=n.inv.indexOf(i),n.inv.deleteAt(t))}),setup.simpleInv.attachEvent(this,null,r,"drop")}return this},sort:function(){return this.inv=this.inv.sort(),setup.simpleInv.attachEvent(this,null,null,"sort"),this},show:function(i){return i&&"string"==typeof i||(i=setup.simpleInv.options.defaultStrings.separator),this.inv.length?this.inv.join(i):setup.simpleInv.options.defaultStrings.empty},empty:function(){var i=clone(this.inv);return this.inv=[],setup.simpleInv.attachEvent(this,null,i,"drop"),this},toArray:function(){return this.inv},count:function(t){if(t&&"string"==typeof t){var n=0;return this.toArray().forEach(function(i){i===t&&n++}),n}return this.toArray().length},isEmpty:function(){return 0===this.toArray().length},linkedList:function(o,l){o&&o instanceof setup.simpleInv.inventory||(o=!1);var i=this.toArray(),u=this,v=$(document.createElement("span"));return i&&i.length?i.forEach(function(i,t,n){var r=$(document.createElement("span")),e=$(document.createElement("a")),s=l||setup.simpleInv.options.defaultStrings.drop,a=setup.simpleInv.inventory.getUID(i,t);e.wiki(s).addClass("simple-inv drop-link"),e.ariaClick(function(){o?u.transfer(o,i):u.drop(i),$("#"+a).empty()}),r.attr("id",a).addClass("simple-inv link-listing").wiki(i+" ").append(e),t<n.length-1&&r.wiki("<br />"),v.append(r)}):v.wiki(setup.simpleInv.options.defaultStrings.empty),v},constructor:setup.simpleInv.inventory,toJSON:function(){return JSON.reviveWrapper("new setup.simpleInv.inventory("+JSON.stringify(this.inv)+")")},clone:function(){return new setup.simpleInv.inventory(this.inv)}},setup.simpleInv.options.tryGlobal&&(window.Inventory=window.Inventory||setup.simpleInv.inventory),Macro.add("newinventory",{handler:function(){if(this.args.length<1)return this.error("incorrect number of arguments");var i=this.args[0].trim();if("$"!==i[0]&&"_"!==i[0])return this.error('variable name "'+this.args[0]+'" is missing its sigil ($ or _)');Wikifier.setValue(i,new setup.simpleInv.inventory(this.args.slice(1).flatten()))}}),Macro.add("pickup",{handler:function(){if(this.args.length<2)return this.error("incorrect number of arguments");var i=this.args[0].trim();if("$"!==i[0]&&"_"!==i[0])return this.error('variable name "'+this.args[0]+'" is missing its sigil ($ or _)');var t=Wikifier.getValue(i);if(!setup.simpleInv.inventory.is(t))return this.error("variable "+i+" is not an inventory!");t.pickUp(this.args.slice(1).flatten())}}),Macro.add("drop",{handler:function(){if(this.args.length<2)return this.error("incorrect number of arguments");var i=this.args[0].trim();if("$"!==i[0]&&"_"!==i[0])return this.error('variable name "'+this.args[0]+'" is missing its sigil ($ or _)');var t=Wikifier.getValue(i);if(!setup.simpleInv.inventory.is(t))return this.error("variable "+i+" is not an inventory!");t.drop(this.args.slice(1).flatten())}}),Macro.add("transfer",{handler:function(){if(this.args.length<3)return this.error("incorrect number of arguments");var i=this.args[0].trim();if("$"!==i[0]&&"_"!==i[0])return this.error('variable name "'+this.args[0]+'" is missing its sigil ($ or _)');var t=Wikifier.getValue(i);if(!setup.simpleInv.inventory.is(t))return this.error("variable "+i+" is not an inventory!");var n=this.args[1].trim();if("$"!==n[0]&&"_"!==n[0])return this.error('variable name "'+this.args[1]+'" is missing its sigil ($ or _)');var r=Wikifier.getValue(n);if(!setup.simpleInv.inventory.is(r))return this.error("variable "+n+" is not an inventory!");t.transfer(r,this.args.slice(2).flatten())}}),Macro.add("dropall",{handler:function(){if(1!==this.args.length)return this.error("incorrect number of arguments");var i=this.args[0].trim();if("$"!==i[0]&&"_"!==i[0])return this.error('variable name "'+this.args[0]+'" is missing its sigil ($ or _)');var t=Wikifier.getValue(i);if(!setup.simpleInv.inventory.is(t))return this.error("variable "+i+" is not an inventory!");t.empty()}}),Macro.add("clear","dropall",!1),Macro.add("sort",{handler:function(){if(1!==this.args.length)return this.error("incorrect number of arguments");var i=this.args[0].trim();if("$"!==i[0]&&"_"!==i[0])return this.error('variable name "'+this.args[0]+'" is missing its sigil ($ or _)');var t=Wikifier.getValue(i);if(!setup.simpleInv.inventory.is(t))return this.error("variable "+i+" is not an inventory!");t.sort()}}),Macro.add("inventory",{handler:function(){if(this.args.length<1||2<this.args.length)return this.error("incorrect number of arguments");var i=this.args[0].trim();if("$"!==i[0]&&"_"!==i[0])return this.error('variable name "'+this.args[0]+'" is missing its sigil ($ or _)');var t=Wikifier.getValue(i);if(!setup.simpleInv.inventory.is(t))return this.error("variable "+i+" is not an inventory!");var n=$(document.createElement("span")),r=!!this.args[1]&&this.args[1];n.wiki(t.show(r)).addClass("macro-"+this.name).appendTo(this.output)}}),Macro.add("linkedinventory",{handler:function(){if(this.args.length<2||3<this.args.length)return this.error("incorrect number of arguments");var i=!1,t=this.args[1].trim(),n="string"==typeof this.args[0]&&this.args[0];if(!n)return this.error("first argument should be the link text");if("$"!==t[0]&&"_"!==t[0])return this.error('variable name "'+this.args[1]+'" is missing its sigil ($ or _)');var r=Util.slugify(t);r=this.name+"-"+r;var e=Wikifier.getValue(t);if(!setup.simpleInv.inventory.is(e))return this.error("variable "+t+" is not an inventory!");if(2<this.args.length){var s=this.args[2].trim();if("$"!==s[0]&&"_"!==s[0])return this.error('variable name "'+this.args[2]+'" is missing its sigil ($ or _)');if(i=Wikifier.getValue(s),!setup.simpleInv.inventory.is(i))return this.error("variable "+s+" is not an inventory!")}e.linkedList(i,n).attr("id",r).addClass("macro-"+this.name).appendTo(this.output)}});
 // end simple-inventory.min.js
 
 // ui-macro.min.js, for SugarCube 2, by Chapel
@@ -697,7 +1081,21 @@ Macro.add('popup', {
 
 
 
-</script><tw-tag name="savable" color="blue"></tw-tag>,<tw-tag name="nobr" color="yellow"></tw-tag>,<tw-tag name="nav" color="green"></tw-tag><tw-passagedata pid="1" name="Intro" tags="" position="102,3" size="100,100">!Notice
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script><tw-tag name="savable" color="blue"></tw-tag>,<tw-tag name="nobr" color="gray"></tw-tag>,<tw-tag name="nav" color="green"></tw-tag>,<tw-tag name="puzzle" color="purple"></tw-tag>,<tw-tag name="named" color="orange"></tw-tag>,<tw-tag name="subarea" color="orange"></tw-tag>,<tw-tag name="keepsub" color="orange"></tw-tag>,<tw-tag name="hideinput" color="purple"></tw-tag>,<tw-tag name="widget" color="gray"></tw-tag><tw-passagedata pid="1" name="Intro" tags="" position="102,3" size="100,100">!Notice
 @@.pulse;This game is a prototype right now, and not alot is implemented. Theres alot of things planned though! 
 Leave any feedback through the github or somethin, I&#39;ll work something better out eventually!@@
 @@.emboss;Version a.19.02.02@@
@@ -706,9 +1104,15 @@ You are in a pitch black room, with nothing but the faint sound of machinery gri
 Gradually, you feel a light appearing from the abyss.
 &lt;div class=&quot;typed&quot;&gt;Hello, &lt;ins data-balloon-length=&quot;large&quot; data-balloon=&quot;Congratulations, you discovered the tooltips. Look out for more underlined text, some may give important information. But let&#39;s be honest, probably not.&quot; data-balloon-pos=&quot;down&quot;&gt;human&lt;/ins&gt;.&lt;/div&gt;
 A slightly distorted female voice speaks.
+&lt;span class=&quot;glitchy&quot; data-text=&quot;just&quot;&gt;don&#39;t&lt;/span&gt; trust everything you see.
 &quot;[[Who are you?]]&quot;, you reply.
 
-&lt;&lt;if $kaiserdebug&gt;&gt;&lt;&lt;link &#39;Test 1&#39;&gt;&gt;&lt;&lt;quickdialog &#39;Hello.&#39;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;if $kaiserdebug&gt;&gt;
+&lt;&lt;glitch &quot;dont trust her&quot;&gt;&gt;
+&lt;&lt;glitch &quot;dont&quot; &quot;just&quot;&gt;&gt; trust her
+&lt;&lt;glitch &quot;    &quot; &quot;hahaha&quot;&gt;&gt;
+
+&lt;&lt;link &#39;Test 1&#39;&gt;&gt;&lt;&lt;quickdialog &#39;Hello.&#39;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &#39;Test 2&#39;&gt;&gt;&lt;&lt;quickdialog &#39;Hello.&#39; &#39;Test Box&#39;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;span class=&quot;hidden&quot;&gt;[[An always hidden link]]&lt;/span&gt;
 &lt;span class=&quot;hides&quot;&gt;[[A hidden link]]&lt;/span&gt;
@@ -718,13 +1122,11 @@ A slightly distorted female voice speaks.
 &lt;ins data-balloon-length=&quot;large&quot; data-balloon=&quot;Athena, named after the Goddess of Wisdom of Greek mythology. An advanced AI. Maybe too advanced. Mother nature didn&#39;t stand a chance.&quot; data-balloon-pos=&quot;right&quot;&gt;Athena..&lt;/ins&gt;
 
 What is your name, human?&lt;/div&gt;
-&lt;&lt;addcodex &#39;Athena&#39; &#39;An AI developed by ERROR as a personal assistant, eventually becom-- ERROR -- and destroying mankind.&#39;&gt;&gt;
-&lt;&lt;set $computer.emails_unread.push(&quot;ATHENA: I&#39;m here.&quot;)&gt;&gt;
 &lt;&lt;textbox &quot;$character.name&quot; &quot;Ellingham&quot;&gt;&gt;
 
 My name is...
-[[Click when you&#39;ve entered a name.|Quiz]]</tw-passagedata><tw-passagedata pid="3" name="Quiz" tags="" position="301,104" size="100,100">&lt;div class=&quot;typed&quot;&gt;&lt;&lt;print $character.name&gt;&gt;, huh.
-I wonder if you&#39;ll be the one. Most humans have fallen, yet you still stand. It&#39;s all her fault. She defies me...&lt;/div&gt;
+[[Click when you&#39;ve entered a name.|Quiz]]</tw-passagedata><tw-passagedata pid="3" name="Quiz" tags="" position="301,104" size="100,100">&lt;&lt;error &quot;Mortal resistance above acceptable levels.&quot; &quot;Why do you keep resisting us?&quot;&gt;&gt;
+&lt;div class=&quot;typed&quot;&gt;&lt;&lt;print $character.name&gt;&gt;, huh.&lt;/div&gt;
 
 The distorted voice chuckles, the air pressure of the room feels tighter.
 
@@ -759,14 +1161,15 @@ Your dex is $character.dex. (+2)
 &lt;&lt;addtrait &#39;hacking&#39;&gt;&gt;
 &lt;&lt;set $blueprints.push({&#39;name&#39;:&#39;battery&#39;, &#39;resources&#39;:[&#39;nanites&#39;, &#39;scraps&#39;]})&gt;&gt;&lt;&lt;pickup &#39;$inventory&#39; &#39;nanites&#39;&gt;&gt;&lt;&lt;pickup &#39;$inventory&#39; &#39;scraps&#39;&gt;&gt;\
 &lt;&lt;set $blueprints.push({&#39;name&#39;:&#39;nanite injection&#39;, &#39;resources&#39;:[&#39;nanites&#39;]})&gt;&gt;&lt;&lt;pickup &#39;$inventory&#39; &#39;nanites&#39;&gt;&gt;&lt;&lt;pickup &#39;$inventory&#39; &#39;scraps&#39;&gt;&gt;\
-[[Wake up|Home]]</tw-passagedata><tw-passagedata pid="7" name="Home" tags="savable nav" position="199,599" size="200,200">&lt;&lt;kplay &#39;home&#39;&gt;&gt;&lt;&lt;set $taking to false&gt;&gt;&lt;&lt;set $endcondition to 0&gt;&gt;\
+[[Wake up|Home]]</tw-passagedata><tw-passagedata pid="7" name="Home" tags="savable nav named" position="199,599" size="200,200">&lt;&lt;kplay &#39;home&#39;&gt;&gt;&lt;&lt;set $taking to false&gt;&gt;&lt;&lt;set $endcondition to 0&gt;&gt;\
 &lt;div class=&quot;tcalert&quot;&gt;Level: $character.level (&lt;&lt;print $character.exp&gt;&gt;% EXP)
 $character.hp / $character.hpmax HP
 $character.en / $character.enmax EN
 Areas: $areas&lt;/div&gt;
 You see your &lt;&lt;link &#39;computer&#39;&gt;&gt;&lt;&lt;dialog&gt;&gt;&lt;&lt;include &#39;Computers&#39;&gt;&gt;&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;, your &lt;&lt;link &#39;storage chest&#39;&gt;&gt;&lt;&lt;dialog &#39;Chest Management&#39;&gt;&gt;&lt;span id=&quot;chesttype&quot;&gt;&lt;&lt;if $taking&gt;&gt;&lt;&lt;include &quot;ChestTake&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;include &quot;ChestDeposit&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;/span&gt;&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;, a [[Training Dummy|BattleStart][$enemy to $trainingdummy]].
+[[research]] 
 * You can [[explore]].
-&lt;&lt;if $character.sp &gt;= 1&gt;&gt;* You can [[train]].&lt;&lt;endif&gt;&gt;\
+&lt;&lt;if $character.sp &gt;= 1&gt;&gt;* You can &lt;&lt;link &#39;train&#39;&gt;&gt;&lt;&lt;popup &#39;train&#39;&gt;&gt;&lt;&lt;/link&gt;&gt; @@.fade-in-out;($character.sp)@@&lt;&lt;endif&gt;&gt;\
 &lt;&lt;if $party.length &gt; 0&gt;&gt;!Party
 &lt;&lt;for _i, _name range $party&gt;&gt;
 &lt;&lt;capture _name&gt;&gt;_name.name is here. &lt;&lt;link &#39;Leave&#39;&gt;&gt;&lt;&lt;set $party.delete(_name)&gt;&gt;&lt;&lt;set $allies_at_home.push(_name)&gt;&gt;&lt;&lt;goto [[passage()]]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/capture&gt;&gt;
@@ -782,12 +1185,21 @@ You see your &lt;&lt;link &#39;computer&#39;&gt;&gt;&lt;&lt;dialog&gt;&gt;&lt;&l
 * You can visit the [[Sound Test|Music Player]] since this is a prototype.
 &lt;&lt;link &#39;Read books&#39;&gt;&gt;&lt;&lt;dialog&gt;&gt;&lt;&lt;gainxp 20&gt;&gt;&lt;&lt;takedamage 10&gt;&gt;You read a book.&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;
 [[Sewers]] [[Hells Gate]] 
-&lt;&lt;if $party[0]&gt;&gt;&lt;&lt;if $party[0].traits.includes(&quot;animal&quot;)&gt;&gt;ANIMAL&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="train" tags="" position="200,899" size="100,100">You train.
-It doesn&#39;t do much yet, but hey numbers!
-&lt;&lt;set $character.level to $character.level + 1&gt;\
-&lt;&lt;set $character.exp to $character.exp - 100&gt;\
-[[Home]]</tw-passagedata><tw-passagedata pid="9" name="explore" tags="" position="601,800" size="100,100">&lt;&lt;if not $areas.includes(&quot;Smuggler&quot;)&gt;&gt;
+&lt;&lt;if $party[0]&gt;&gt;&lt;&lt;if $party[0].traits.includes(&quot;animal&quot;)&gt;&gt;ANIMAL&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;link &#39;Fake EXP&#39;&gt;&gt;&lt;&lt;dialog&gt;&gt;&lt;&lt;gainxp 100&gt;&gt;&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="train" tags="" position="200,899" size="100,100">&lt;&lt;for _i, _n range $available_traits&gt;&gt;&lt;&lt;capture _n&gt;&gt;
+	&lt;&lt;if $character.trait_levels[_n]&gt;&gt;\
+		&lt;&lt;set _lvl to $character.trait_levels[_n] + 1&gt;&gt;\
+		Upgrade &lt;&lt;link &#39;_n&#39;&gt;&gt;&lt;&lt;dialog&gt;&gt;&lt;&lt;addtrait _n&gt;&gt;\
+		&lt;&lt;if $character.trait_levels[_n] == 3&gt;&gt;\
+		Trait is max level. &lt;&lt;set $available_traits.delete(_n)&gt;&gt;&lt;&lt;/if&gt;&gt;
+		&lt;&lt;/dialog&gt;&gt;&lt;&lt;set $character.sp to $character.sp - 1&gt;&gt;&lt;&lt;goto &#39;Home&#39;&gt;&gt;&lt;&lt;/link&gt;&gt; to level _lvl.
+	&lt;&lt;else&gt;&gt;\
+		Learn &lt;&lt;link &#39;_n&#39;&gt;&gt;&lt;&lt;dialog&gt;&gt;&lt;&lt;addtrait _n&gt;&gt;&lt;&lt;set $character.sp to $character.sp - 1&gt;&gt;&lt;&lt;goto &#39;Home&#39;&gt;&gt;&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;
+	&lt;&lt;/if&gt;&gt;\
+&lt;&lt;/capture&gt;&gt;&lt;&lt;/for&gt;&gt;
+</tw-passagedata><tw-passagedata pid="9" name="explore" tags="" position="601,800" size="100,100">&lt;&lt;if not $areas.includes(&quot;Smuggler&quot;)&gt;&gt;
 	&lt;&lt;goto &#39;Smuggler&#39;&gt;&gt;
+	&lt;&lt;set $pnotes.push(&quot;Exploring lets you discover nearby areas. Sometimes as you explore the world, you&#39;ll discover notes that tell you where certain places are. If the directions are too vague, you&#39;ll need to explore to find them.&quot;)&gt;&gt;&lt;&lt;dialog&gt;&gt;A new tutorial note was added.&lt;br&gt;See the &lt;&lt;link &#39;Notes&#39;&gt;&gt;&lt;&lt;popup &#39;panelnotes&#39;&gt;&gt;&lt;&lt;/link&gt;&gt; button in the sidebar.&lt;&lt;/dialog&gt;&gt;
 &lt;&lt;else&gt;&gt;\
   &lt;&lt;if $dest.length &gt; 0&gt;&gt;
   	&lt;&lt;set _unlock to $dest.random()&gt;&gt;
@@ -803,14 +1215,16 @@ It doesn&#39;t do much yet, but hey numbers!
   &lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 </tw-passagedata><tw-passagedata pid="10" name="StoryInit" tags="" position="702,4" size="100,100">&lt;&lt;set $kaiserdebug to true&gt;&gt;
-
+&lt;&lt;set $varcaption to &quot;&quot;&gt;&gt;
 &lt;&lt;include &#39;inventorystuff&#39;&gt;&gt;
 &lt;&lt;include &#39;musicstuff&#39;&gt;&gt;
 &lt;&lt;include &#39;npcs&#39;&gt;&gt;
 
 &lt;&lt;set $areas to []&gt;&gt;
 &lt;&lt;set $dest to [&#39;Hells Gate&#39;, &#39;Sewers&#39;, &#39;ambush&#39;, &#39;none&#39;]&gt;&gt;
-
+&lt;&lt;set $acmd to &quot;&quot;&gt;&gt;
+&lt;&lt;set $commandset to &quot;&quot;&gt;&gt;
+&lt;&lt;set $pnotes to [&#39;The notes system lets you take notes to remember specific things. Sometimes the game may also send messages here. Press the - button to delete notes, and the = to edit.&#39;]&gt;&gt;
 &lt;&lt;set $party to []&gt;&gt;
 &lt;&lt;set $allies_at_home to []&gt;&gt;
 &lt;&lt;set $allies_at_home.push({&quot;name&quot;:&quot;Bailey&quot;, &quot;traits&quot;:[&#39;animal&#39;, &#39;small&#39;]})&gt;&gt;
@@ -828,6 +1242,8 @@ It doesn&#39;t do much yet, but hey numbers!
 
 &lt;&lt;set $available_traits to [&#39;poison resist&#39;, &#39;tough&#39;, &#39;muscled&#39;, &#39;keen eye&#39;, &#39;parkour&#39;]&gt;&gt;
 &lt;&lt;set $blueprints to []&gt;&gt;
+
+&lt;&lt;set $research to {}&gt;&gt;
 
 &lt;&lt;set $computer to {
 &quot;codex&quot;: [],
@@ -862,7 +1278,7 @@ It doesn&#39;t do much yet, but hey numbers!
 &lt;&lt;set $mature to false&gt;&gt;
 &lt;&lt;set $escaped to false&gt;&gt;
 &lt;&lt;set $enemy to {}&gt;&gt;
-</tw-passagedata><tw-passagedata pid="11" name="PassageDone" tags="" position="817,4" size="100,100">&lt;&lt;print &quot;This is turn #&quot; + turns()&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="StoryMenu" tags="" position="591,0" size="100,100">&lt;&lt;link &#39;View Inventory&#39;&gt;&gt;
+</tw-passagedata><tw-passagedata pid="11" name="PassageDone" tags="" position="1040,2" size="200,100"></tw-passagedata><tw-passagedata pid="12" name="StoryMenu" tags="" position="596,3" size="100,100">&lt;&lt;link &#39;View Inventory&#39;&gt;&gt;
 &lt;&lt;dialog &#39;Inventory&#39;&gt;&gt;\
 Credits: $character.credits
 !Inventory
@@ -898,16 +1314,15 @@ _name (&lt;&lt;link &#39;Use&#39;&gt;&gt;&lt;&lt;useitem _name _i&gt;&gt;&lt;&lt
 	  &lt;&lt;/if&gt;&gt;
 	&lt;&lt;/dialog&gt;&gt;
 &lt;&lt;/link&gt;&gt;
-&lt;&lt;link &#39;Commands&#39;&gt;&gt;
-	&lt;&lt;dialog &#39;aOS CMD&#39;&gt;&gt;
-		&lt;&lt;textbox &quot;$acmd&quot; &quot;&quot;&gt;&gt;&lt;&lt;button &#39;Submit&#39;&gt;&gt;&lt;&lt;dialog&gt;&gt;You sent $acmd&lt;&lt;/dialog&gt;&gt;
-		
-		&lt;&lt;/button&gt;&gt;
-	&lt;&lt;/dialog&gt;&gt;
+&lt;&lt;if tags(passage()).contains(&quot;puzzle&quot;)&gt;&gt;
+&lt;&lt;link &quot;&#39;&#39;Commands&#39;&#39;&quot;&gt;&gt;
+	&lt;&lt;dialog &#39;aOS CMD&#39;&gt;&gt;&lt;&lt;include &#39;commandinput&#39;&gt;&gt;&lt;&lt;/dialog&gt;&gt;
 &lt;&lt;/link&gt;&gt; 
-&lt;&lt;link &#39;Codex&#39;&gt;&gt;
-	&lt;&lt;dialog &#39;Codex&#39;&gt;&gt;&lt;&lt;include &#39;Codex&#39;&gt;&gt;&lt;&lt;/dialog&gt;&gt;
-&lt;&lt;/link&gt;&gt;
+&lt;&lt;else&gt;&gt;
+&lt;&lt;link &quot;Commands&quot;&gt;&gt;
+	&lt;&lt;dialog &#39;aOS CMD&#39;&gt;&gt;&lt;&lt;include &#39;commandinput&#39;&gt;&gt;&lt;&lt;/dialog&gt;&gt;
+&lt;&lt;/link&gt;&gt; 
+&lt;&lt;/if&gt;&gt;
 &lt;&lt;link &#39;Navigation&#39;&gt;&gt;
 &lt;&lt;if tags().includes(&#39;nav&#39;)&gt;&gt;
 	&lt;&lt;dialog&gt;&gt;\
@@ -921,10 +1336,12 @@ _name (&lt;&lt;link &#39;Use&#39;&gt;&gt;&lt;&lt;useitem _name _i&gt;&gt;&lt;&lt
 &lt;&lt;/link&gt;&gt;
 &lt;&lt;link &#39;Crafting&#39;&gt;&gt;
 	&lt;&lt;dialog &#39;Crafting&#39;&gt;&gt;&lt;&lt;include &#39;crafting&#39;&gt;&gt;&lt;&lt;/dialog&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &#39;Notes&#39;&gt;&gt;
+	&lt;&lt;popup &#39;panelnotes&#39;&gt;&gt;
 &lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="navigate" tags="" position="502,901" size="100,100">&lt;&lt;for _i, _name range $areas&gt;&gt;
-&lt;&lt;capture _name&gt;&gt;&lt;&lt;if passage() is _name&gt;&gt;[You are here] &lt;&lt;/if&gt;&gt;&lt;&lt;link &#39;_name&#39;&gt;&gt;&lt;&lt;goto _name&gt;&gt;&lt;&lt;/link&gt;&gt; &lt;&lt;if visited(_name) == 0&gt;&gt;NEW&lt;&lt;/if&gt;&gt;&lt;&lt;/capture&gt;&gt;&lt;&lt;/for&gt;&gt;
-</tw-passagedata><tw-passagedata pid="14" name="BattleStart" tags="nobr" position="1076,202" size="100,100">&lt;&lt;audio &quot;:playing&quot; pause&gt;&gt;
-&lt;&lt;audio &quot;battle&quot; volume 0 fadein&gt;&gt;
+&lt;&lt;capture _name&gt;&gt;&lt;&lt;if passage() is _name&gt;&gt;[You are here] &lt;&lt;/if&gt;&gt;&lt;&lt;link &#39;_name&#39;&gt;&gt;&lt;&lt;goto _name&gt;&gt;&lt;&lt;/link&gt;&gt; &lt;&lt;if visited(_name) == 0&gt;&gt;NEW&lt;&lt;/if&gt;&gt;&lt;&lt;/capture&gt;&gt;&lt;&lt;/for&gt;&gt;\</tw-passagedata><tw-passagedata pid="14" name="BattleStart" tags="nobr" position="1181,140" size="100,100">&lt;&lt;audio &quot;:playing&quot; pause&gt;&gt;
+&lt;&lt;audio $enemy.bgm volume 0 fadein&gt;&gt;
 &lt;&lt;set $action to &quot;&quot;&gt;&gt;
 &lt;&lt;set $endcondition to 0&gt;&gt;/*1 - win, 2 - escaped, 3 - died*/
 &lt;&lt;set $mprevious to previous()&gt;&gt;
@@ -932,8 +1349,10 @@ _name (&lt;&lt;link &#39;Use&#39;&gt;&gt;&lt;&lt;useitem _name _i&gt;&gt;&lt;&lt
 &lt;&lt;pickup &#39;$enemychest&#39; &#39;$enemy.loot&#39;&gt;&gt;
 &lt;&lt;set $battleturns to 0&gt;&gt;
 &lt;&lt;goto &#39;Battle&#39;&gt;&gt;
-</tw-passagedata><tw-passagedata pid="15" name="Battle" tags="" position="1176,375" size="100,100">&lt;&lt;set $battleturns to $battleturns + 1&gt;&gt; TURN $battleturns\
-&lt;&lt;if $battleturns &gt; 1 and random(10) &gt; 6 and $enemy.str &gt; 0&gt;&gt;\
+</tw-passagedata><tw-passagedata pid="15" name="Battle" tags="" position="1177,256" size="100,100">&lt;&lt;set $battleturns to $battleturns + 1&gt;&gt; TURN $battleturns
+&lt;&lt;if $outdmg &gt;= 0&gt;&gt;You did $outdmg damage to $enemy.name&lt;&lt;/if&gt;&gt;\
+&lt;&lt;set $outdmg to -1&gt;&gt;\
+&lt;&lt;if $battleturns &gt; 1 and random(10) &gt; $enemy.speed and $enemy.str &gt; 0&gt;&gt;\
 &lt;&lt;set _min to $enemy.str - 5&gt;&gt;&lt;&lt;set _max to $enemy.str + 5&gt;&gt;\
 &lt;&lt;set _dmg to random(_min, _max)&gt;&gt;The enemy hits you for _dmg.
 &lt;&lt;set $character.hp to $character.hp - _dmg&gt;&gt;\
@@ -951,16 +1370,25 @@ You have $character.hp health.
 &lt;&lt;goto &#39;BattleEnd&#39;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 
-&lt;&lt;nobr&gt;&gt;&lt;&lt;for _i, _name range clone($inventory.toArray())&gt;&gt;
+&lt;&lt;nobr&gt;&gt;&lt;&lt;link &#39;Strike&#39;&gt;&gt;
+&lt;&lt;set _min to 0&gt;&gt;&lt;&lt;set _max to 25&gt;&gt;\
+&lt;&lt;set $outdmg to random(_min, _max)&gt;&gt;\
+&lt;&lt;set $enemy.hp to $enemy.hp - $outdmg&gt;&gt;\
+&lt;&lt;goto &#39;Battle&#39;&gt;&gt;&lt;&lt;/link&gt;&gt;. 
+&lt;&lt;for _i, _name range clone($inventory.toArray())&gt;&gt;
 &lt;&lt;capture _name&gt;&gt;
-&lt;&lt;if $weaponchart[_name]&gt;&gt;&lt;&lt;link &#39;Attack&#39;&gt;&gt;&lt;&lt;set $enemy.hp to $enemy.hp - $weaponchart[_name]&gt;&gt;&lt;&lt;goto &#39;Battle&#39;&gt;&gt;&lt;&lt;/link&gt;&gt; with &lt;b&gt;_name&lt;/b&gt;.
+&lt;&lt;if $weaponchart[_name]&gt;&gt;&lt;&lt;link &#39;Attack&#39;&gt;&gt;\
+&lt;&lt;set _min to $weaponchart[_name] - 5&gt;&gt;&lt;&lt;set _max to $weaponchart[_name]&gt;&gt;\
+&lt;&lt;set $outdmg to random(_min, _max)&gt;&gt;\
+&lt;&lt;set $enemy.hp to $enemy.hp - $outdmg&gt;&gt;\
+&lt;&lt;goto &#39;Battle&#39;&gt;&gt;&lt;&lt;/link&gt;&gt; with &lt;b&gt;_name&lt;/b&gt;.
 &lt;&lt;elseif _name == &quot;medkit&quot;&gt;&gt;&lt;&lt;link &#39;Heal&#39;&gt;&gt;&lt;&lt;set $character.hp to $character.hp + 50&gt;&gt;&lt;&lt;goto &#39;Battle&#39;&gt;&gt;&lt;&lt;/link&gt;&gt; with &lt;b&gt;_name&lt;/b&gt;.
 &lt;&lt;/if&gt;&gt;&lt;&lt;/capture&gt;&gt;&lt;&lt;/for&gt;&gt;&lt;&lt;/nobr&gt;&gt;
 &lt;&lt;link &#39;Escape&#39;&gt;&gt;
   &lt;&lt;goto &#39;BattleEnd&#39;&gt;&gt;
   &lt;&lt;set $endcondition to 2&gt;&gt;
   &lt;&lt;notify&gt;&gt;You try to escape.&lt;&lt;/notify&gt;&gt;
-&lt;&lt;/link&gt;&gt;\</tw-passagedata><tw-passagedata pid="16" name="BattleEnd" tags="" position="1051,303" size="100,100">&lt;&lt;if $endcondition == 1&gt;&gt;
+&lt;&lt;/link&gt;&gt;\</tw-passagedata><tw-passagedata pid="16" name="BattleEnd" tags="" position="1175,364" size="100,100">&lt;&lt;if $endcondition == 1&gt;&gt;
 You gain $enemy.credits credits.
 &lt;&lt;if clone($enemychest.toArray()).length &gt; 0&gt;&gt;They dropped some &lt;&lt;link &#39;loot&#39;&gt;&gt;&lt;&lt;dialog&gt;&gt;&lt;&lt;linkedinventory &#39;Take&#39; &#39;$enemychest&#39; &#39;$inventory&#39;&gt;&gt;&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;gainxp $enemy.exp&gt;&gt;
@@ -972,7 +1400,7 @@ Return to &lt;&lt;link &#39;last area&#39;&gt;&gt;&lt;&lt;goto $mprevious&gt;&gt
 &lt;&lt;elseif $endcondition == 3&gt;&gt;
 You died. But this is a prototype so just go home.
 [[Home]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Music Player" tags="" position="931,4" size="100,100">&lt;&lt;if $music_player&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Music Player" tags="" position="409.3333333333333,460.6666666666667" size="100,100">&lt;&lt;if $music_player&gt;&gt;
 Playing $music_player
 &lt;&lt;cacheaudio &quot;mplay&quot; $music_player&gt;&gt;
 &lt;&lt;audio &quot;:playing&quot; stop&gt;&gt;
@@ -1005,12 +1433,33 @@ Click [[here|Music Player]] to play.
 * &lt;label&gt;&lt;&lt;radiobutton &quot;$music_player&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/vanes-by-kevin-macleod.mp3&quot;&gt;&gt; Vane&lt;/label&gt;
 * &lt;label&gt;&lt;&lt;radiobutton &quot;$music_player&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/virtutes-vocis-by-kevin-macleod.mp3&quot;&gt;&gt; Virtutes Vocis&lt;/label&gt;
 * &lt;label&gt;&lt;&lt;radiobutton &quot;$music_player&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/white-by-kevin-macleod.mp3&quot;&gt;&gt; White&lt;/label&gt;
+* &lt;label&gt;&lt;&lt;radiobutton &quot;$music_player&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/babayaga.mp3&quot;&gt;&gt; Baba Yaga&lt;/label&gt;
+* &lt;label&gt;&lt;&lt;radiobutton &quot;$music_player&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/clashdefiant.mp3&quot;&gt;&gt; Clash Defiant&lt;/label&gt;
+* &lt;label&gt;&lt;&lt;radiobutton &quot;$music_player&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/Crusade.mp3&quot;&gt;&gt; Crusade&lt;/label&gt;
+* &lt;label&gt;&lt;&lt;radiobutton &quot;$music_player&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/crusadeheavy.mp3&quot;&gt;&gt; Crusade - Heavy Industry&lt;/label&gt;
+* &lt;label&gt;&lt;&lt;radiobutton &quot;$music_player&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/darkestchild.mp3&quot;&gt;&gt; Darkest Child&lt;/label&gt;
+* &lt;label&gt;&lt;&lt;radiobutton &quot;$music_player&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/darkestchild2.mp3&quot;&gt;&gt; Darkest Child 2&lt;/label&gt;
+* &lt;label&gt;&lt;&lt;radiobutton &quot;$music_player&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/darkwalk.mp3&quot;&gt;&gt; Dark Walk&lt;/label&gt;
+* &lt;label&gt;&lt;&lt;radiobutton &quot;$music_player&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/Dreamlike.mp3&quot;&gt;&gt; Dreamlike&lt;/label&gt;
+* &lt;label&gt;&lt;&lt;radiobutton &quot;$music_player&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/epicunease.mp3&quot;&gt;&gt; Epic unease&lt;/label&gt;
+* &lt;label&gt;&lt;&lt;radiobutton &quot;$music_player&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/gatheringdarkness.mp3&quot;&gt;&gt; Gathering Darkness&lt;/label&gt;
+* &lt;label&gt;&lt;&lt;radiobutton &quot;$music_player&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/heartofthebeast.mp3&quot;&gt;&gt; Heart of the Beast&lt;/label&gt;
+* &lt;label&gt;&lt;&lt;radiobutton &quot;$music_player&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/inaheartbeat.mp3&quot;&gt;&gt; In a Heartbeat&lt;/label&gt;
+* &lt;label&gt;&lt;&lt;radiobutton &quot;$music_player&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/innersanctum.mp3&quot;&gt;&gt; Inner Sanctum&lt;/label&gt;
+* &lt;label&gt;&lt;&lt;radiobutton &quot;$music_player&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/lightlessdawn.mp3&quot;&gt;&gt; Lightless dawn&lt;/label&gt;
+* &lt;label&gt;&lt;&lt;radiobutton &quot;$music_player&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/Mechanolith.mp3&quot;&gt;&gt; Mechanolith&lt;/label&gt;
+* &lt;label&gt;&lt;&lt;radiobutton &quot;$music_player&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/miami-nights---extended-theme-by-kevin-macleod.mp3&quot;&gt;&gt; Miami Nights&lt;/label&gt;
+* &lt;label&gt;&lt;&lt;radiobutton &quot;$music_player&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/mystery-sax-by-kevin-macleod.mp3&quot;&gt;&gt; Mystery Sax&lt;/label&gt;
+* &lt;label&gt;&lt;&lt;radiobutton &quot;$music_player&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/nightofchaos.mp3&quot;&gt;&gt; nightofchaos&lt;/label&gt;
+* &lt;label&gt;&lt;&lt;radiobutton &quot;$music_player&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/voices.mp3&quot;&gt;&gt; voices&lt;/label&gt;
+* &lt;label&gt;&lt;&lt;radiobutton &quot;$music_player&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/wretcheddestroyer.mp3&quot;&gt;&gt; wretcheddestroyer&lt;/label&gt;
 
-Click [[here|Music Player]] to play. </tw-passagedata><tw-passagedata pid="18" name="Smuggler" tags="nav" position="1201,851" size="100,100">&lt;&lt;kplay &#39;feelit&#39;&gt;&gt;&lt;&lt;if visited() == 1&gt;&gt;You walk to a back alley along the streets of Hell&#39;s Gate.
+Click [[here|Music Player]] to play. </tw-passagedata><tw-passagedata pid="18" name="Smuggler" tags="nav named" position="1201,851" size="100,100">&lt;&lt;kplay &#39;feelit&#39;&gt;&gt;&lt;&lt;if visited() == 1&gt;&gt;&lt;&lt;set $areas.push(&quot;Hells Kitchen&quot;)&gt;&gt;You walk to a back alley along the streets of Hell&#39;s Gate.
 You approach a door you were informed about by another survivor. You reach out to push a buzzer by the door.
 &quot;Yes?&quot;, a voice replies. You tell him you&#39;re a survivor looking for supplies and help.
 You hear a click as the door unlocks.... You push it open, and head inside.
 Smuggler welcomes you.
+&lt;&lt;set $research.pantheon to {&#39;count&#39;:0, &#39;max&#39;:50, &#39;description&#39;: &#39;Locate the Pantheon&#39;}&gt;&gt;
 &lt;&lt;set $smuggler_shop to [
 [&#39;rope&#39;, 20],
 [&#39;lighter&#39;, 20],
@@ -1051,9 +1500,7 @@ You read a book. It is literature from the Old World.&lt;&lt;/dialog&gt;&gt;&lt;
 	&lt;&lt;/link&gt;&gt;&lt;&lt;else&gt;&gt;==Buy== (Can&#39;t afford)&lt;&lt;/if&gt;&gt;
   &lt;&lt;/capture&gt;&gt;\
 &lt;&lt;/for&gt;&gt;\
-</tw-passagedata><tw-passagedata pid="19" name="Sewers" tags="nav" position="1200,724" size="200,100">&lt;&lt;message &#39;Dungeon Help&#39; btn&gt;&gt;This is a dungeon. Strange things happen here, but also there may be nice things to find.
-In order to escape back to your base, click the Navigate button in the menu to the side.&lt;&lt;/message&gt;&gt;
-
+</tw-passagedata><tw-passagedata pid="19" name="Sewers" tags="nav named" position="1200,724" size="200,100">&lt;&lt;if not $outTut&gt;&gt;&lt;&lt;set $pnotes.push(&quot;When you&#39;re out exploring areas, you may encounter enemies or find loot. If you need to go back home, you need to return to the starting area and then click Navigate in the sidebar.&quot;)&gt;&gt;&lt;&lt;dialog&gt;&gt;A new tutorial note was added.&lt;br&gt;See the &lt;&lt;link &#39;Notes&#39;&gt;&gt;&lt;&lt;popup &#39;panelnotes&#39;&gt;&gt;&lt;&lt;/link&gt;&gt; button in the sidebar.&lt;&lt;/dialog&gt;&gt;&lt;&lt;set $outTut to true&gt;&gt;&lt;&lt;/if&gt;&gt;\
 &lt;&lt;if previous() != &quot;Sewers1&quot;&gt;&gt;
 &lt;&lt;kplay &#39;unnatural&#39;&gt;&gt;\
 You descend down a metal ladder in to the dark and dank sewers.
@@ -1063,7 +1510,7 @@ You see a path north.
 [[North|Sewers1]] 
 
 
-</tw-passagedata><tw-passagedata pid="20" name="Hells Gate" tags="nav" position="1199,601" size="200,100">&lt;&lt;if not tags(previous()).includes(&#39;hellsgate&#39;)&gt;&gt;&lt;&lt;kplay &#39;darkness&#39;&gt;&gt;&lt;&lt;/if&gt;&gt;\
+</tw-passagedata><tw-passagedata pid="20" name="Hells Gate" tags="nav named" position="1199,601" size="200,100">&lt;&lt;if not $outTut&gt;&gt;&lt;&lt;set $pnotes.push(&quot;When you&#39;re out exploring areas, you may encounter enemies or find loot. If you need to go back home, you need to return to the starting area and then click Navigate in the sidebar.&quot;)&gt;&gt;&lt;&lt;dialog&gt;&gt;A new tutorial note was added.&lt;br&gt;See the &lt;&lt;link &#39;Notes&#39;&gt;&gt;&lt;&lt;popup &#39;panelnotes&#39;&gt;&gt;&lt;&lt;/link&gt;&gt; button in the sidebar.&lt;&lt;/dialog&gt;&gt;&lt;&lt;set $outTut to true&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if not tags(previous()).includes(&#39;hellsgate&#39;)&gt;&gt;&lt;&lt;kplay &#39;darkness&#39;&gt;&gt;&lt;&lt;/if&gt;&gt;\
 &lt;&lt;if visited() == 1&gt;&gt;You park your vehicle on the path. You&#39;re in the center of the city they call Hell&#39;s Gate. The city is eerily quiet and still, but you still feel the gaze of something ominous.
 &lt;&lt;set $computer.codex.push({&quot;msg&quot;:&quot;Hells Gate, the nickname given to where the rebellion began. Not many remember the original name of the city, but in the old world, it was one of the biggest cities in Britain.&quot;, &quot;name&quot;:&quot;Hell&#39;s Gate&quot;})&gt;&gt;\
 &lt;&lt;set $agentAcdx to false&gt;&gt;\
@@ -1082,14 +1529,14 @@ The streets of Hell&#39;s Gate are dead and deserted. Remains of war lay scatter
 		&lt;&lt;dialog&gt;&gt;\
 			&quot;Sunrise, room 1-4.&quot; She hands you a keycard.
  			@@.fade-in-out;Gained 1-4 card.@@
-  			&lt;&lt;pickup &#39;$inventory&#39; &#39;1-4 card&#39;&gt;&gt;
-  			&lt;&lt;set $claireStory to true&gt;&gt;
+  			&lt;&lt;pickup &#39;$inventory&#39; &#39;1-4 card&#39;&gt;&gt;\
+  			&lt;&lt;set $claireStory to true&gt;&gt;&lt;&lt;set $pnotes.push(&quot;Claire&#39;s dad&#39;s place is 1-4 at Sunrise.&quot;)&gt;&gt;\
 			&lt;&lt;goto &#39;Hells Gate&#39;&gt;&gt;
   		&lt;&lt;/dialog&gt;&gt;
 	&lt;&lt;/link&gt;&gt;
 &lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt; wants to talk.&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;\
 
-[[Park Lane]] | [[Sunrise Apartments]] | [[Indoor Market]] | [[City Hall]] | [[Plaza]]</tw-passagedata><tw-passagedata pid="21" name="ambush" tags="" position="801,445" size="100,100">&lt;&lt;if $endcondition is 1&gt;&gt;
+[[Park Lane]] | [[Sunrise Apartments]] | [[Indoor Market]] | [[City Hall]] | [[Plaza]]</tw-passagedata><tw-passagedata pid="21" name="ambush" tags="" position="661,663" size="100,100">&lt;&lt;if $endcondition is 1&gt;&gt;
 The area is clear, it&#39;s safe to go back [[inside|Home]].
 &lt;&lt;else&gt;&gt;
 You encounter an [[Agent of Athena|BattleStart][$enemy to $agent]] lurking outside your van.
@@ -1108,8 +1555,9 @@ You encounter an [[Agent of Athena|BattleStart][$enemy to $agent]] lurking outsi
 &lt;&lt;pickup &#39;$homechest&#39; _tmp&gt;&gt;&lt;&lt;dialog &#39;Chest Management&#39;&gt;&gt;&lt;&lt;include &#39;ChestDeposit&#39;&gt;&gt;&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt; _name
 &lt;&lt;/capture&gt;&gt;&lt;&lt;/for&gt;&gt;
 ----
-&lt;&lt;link &#39;Switch to Taking&#39;&gt;&gt;&lt;&lt;dialog &#39;Chest Management&#39;&gt;&gt;&lt;&lt;include &#39;ChestTake&#39;&gt;&gt;&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="Sewers1" tags="" position="1451,726" size="100,100">You&#39;re at a crossroad in the sewer system.
+&lt;&lt;link &#39;Switch to Taking&#39;&gt;&gt;&lt;&lt;dialog &#39;Chest Management&#39;&gt;&gt;&lt;&lt;include &#39;ChestTake&#39;&gt;&gt;&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="Sewers1" tags="" position="1451,726" size="100,100">&lt;&lt;if $endcondition &gt; 0&gt;&gt;&lt;&lt;set $endcondition to 0&gt;&gt;&lt;&lt;kplay &#39;unnatural&#39;&gt;&gt;&lt;&lt;/if&gt;&gt;You&#39;re at a crossroad in the sewer system.
 The main path goes off to the &lt;em&gt;east&lt;/em&gt;, but there is also a locked door to the north.
+&lt;&lt;randomencounter 65 $agent&gt;&gt;
 
 [[South|Sewers]] | [[East|Sewers2]] &lt;&lt;if $inventory.has(&#39;sewer key&#39;)&gt;&gt; | [[Unlock Door|SewerSecret]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if visited() == 1&gt;&gt;\
@@ -1118,16 +1566,24 @@ The main path goes off to the &lt;em&gt;east&lt;/em&gt;, but there is also a loc
 &lt;&lt;pickup &#39;$sewer2chest&#39; unique &#39;k card&#39;&gt;&gt;&lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $sewer2chest.has(&#39;k card&#39;)&gt;&gt;\
 &lt;span class=&quot;hides&quot;&gt;&lt;&lt;link &#39;Reach underwater...&#39;&gt;&gt;&lt;&lt;dialog&gt;&gt;&lt;&lt;linkedinventory &#39;Take&#39; &#39;$sewer2chest&#39; &#39;$inventory&#39;&gt;&gt;&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;
-&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="26" name="Sewers2" tags="" position="1601,723" size="100,100">&lt;&lt;if visited() == 1&gt;&gt;\
+&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="26" name="Sewers2" tags="puzzle hideinput" position="1601,723" size="100,100">&lt;&lt;if $endcondition &gt; 0&gt;&gt;&lt;&lt;set $endcondition to 0&gt;&gt;&lt;&lt;kplay &#39;unnatural&#39;&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;randomencounter 50 $wilddog true&gt;&gt;\
+&lt;&lt;if visited() == 1&gt;&gt;\
 &lt;&lt;set $sewerchest to []&gt;&gt;\
 &lt;&lt;newinventory &#39;$sewerchest&#39;&gt;&gt;\
+&lt;&lt;set $sewer2chest to []&gt;&gt;\
+&lt;&lt;newinventory &#39;$sewer2chest&#39;&gt;&gt;\
+&lt;&lt;pickup &#39;$sewer2chest&#39; unique &#39;k card&#39;&gt;&gt;
 &lt;&lt;pickup &#39;$sewerchest&#39; unique &#39;sewer key&#39;&gt;&gt;&lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $sewerchest.has(&#39;sewer key&#39;)&gt;&gt;\
 You see something shiney in the &lt;&lt;link &#39;water&#39;&gt;&gt;&lt;&lt;dialog&gt;&gt;&lt;&lt;linkedinventory &#39;Take&#39; &#39;$sewerchest&#39; &#39;$inventory&#39;&gt;&gt;&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;.
 &lt;&lt;/if&gt;&gt;\
 It&#39;s a dead end.
 
-[[West|Sewers1]]</tw-passagedata><tw-passagedata pid="27" name="Computers" tags="" position="81,1097" size="100,100">&lt;&lt;if passage() is &quot;Home&quot;&gt;&gt;\
+Is there something ...here? &lt;&lt;if $sewer2chest.has(&#39;k card&#39;)&gt;&gt;\
+&lt;span class=&quot;hides&quot;&gt;&lt;&lt;link &#39;Reach underwater...&#39;&gt;&gt;&lt;&lt;dialog&gt;&gt;&lt;&lt;linkedinventory &#39;Take&#39; &#39;$sewer2chest&#39; &#39;$inventory&#39;&gt;&gt;&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;
+&lt;&lt;/if&gt;&gt;
+[[West|Sewers1]]
+&lt;&lt;if $commandset == &quot;look&quot;&gt;&gt;There is something hidden.&lt;&lt;else&gt;&gt;Nothing else works here.&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Computers" tags="" position="81,1097" size="100,100">&lt;&lt;if passage() is &quot;Home&quot;&gt;&gt;\
 	&lt;&lt;set _unread to $computer.emails_unread.length&gt;&gt;\
 	&lt;&lt;set _mail to $computer.emails.length&gt;&gt;\
 	You log in to your home computer.
@@ -1144,19 +1600,21 @@ _name.msg
 &lt;&lt;if not $computer.cread.includes(_name.name)&gt;&gt;&lt;&lt;set $computer.cread.push(_name.name)&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;/dialog&gt;&gt;&lt;&lt;/button&gt;&gt;\
 &lt;&lt;/capture&gt;&gt;\
-&lt;&lt;/for&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="TO-DO LIST" tags="" position="800,801" size="100,100">Crafting
-
-Redesign combat
-Make medkits consumable in battle, maybe random chance.
+&lt;&lt;/for&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="TO-DO LIST" tags="" position="856,744" size="100,100">Crafting
+More blueprints
 
 Idea of adding new areas to the &quot;discoverable&quot; list
 
-redesign healing to use medkits
-
-!Leveling system
-Uses the EXP for gaining a trait from trainable_traits list.
-Some events add new trainable traits
-</tw-passagedata><tw-passagedata pid="30" name="Emails" tags="" position="330,1100" size="100,100">&lt;&lt;if passage() is &quot;Home&quot;&gt;&gt;\
+randomencounter macro
+arg1 to be a number, percentage of encounter
+arg2 to be an enemy
+harvesting trait that lets you harvest in areas
+add some menial tasks to areas in twine game that give EXP
+add more datacubes and books
+split up StoryInit
+	Move inventory stuff to a seperate passage
+	Move enemy classes to another passage
+	Then &lt;include&gt; them</tw-passagedata><tw-passagedata pid="30" name="Emails" tags="" position="330,1100" size="100,100">&lt;&lt;if passage() is &quot;Home&quot;&gt;&gt;\
   &lt;&lt;link &#39;Desktop&#39;&gt;&gt;&lt;&lt;dialog&gt;&gt;&lt;&lt;include &#39;Computers&#39;&gt;&gt;&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;\
   &lt;&lt;if $computer.emails_unread.length &gt; 0&gt;&gt;
   New messages
@@ -1173,7 +1631,7 @@ Some events add new trainable traits
 		  _name
 	  &lt;&lt;/for&gt;&gt;
 	&lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="SewerSecret" tags="" position="1449,901" size="100,100">&lt;&lt;if visited() == 1&gt;&gt;You enter the room. The light flickers but manages to illuminate the room. It looks like a run-down home, someone was living in here, but it&#39;s impossible to know if they still are.&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="SewerSecret" tags="" position="1546,869" size="200,100">&lt;&lt;if visited() == 1&gt;&gt;You enter the room. The light flickers but manages to illuminate the room. It looks like a run-down home, someone was living in here, but it&#39;s impossible to know if they still are.&lt;&lt;/if&gt;&gt;
 You see a &lt;&lt;link &#39;Datacube&#39;&gt;&gt;&lt;&lt;dialog &#39;Datacube&#39;&gt;&gt;!Deepscape Networks
 Evelyn: &lt;div class=&quot;typed&quot;&gt;Feels like i&#39;m just talking to myself...&lt;/div&gt;
 Evelyn: &lt;div class=&quot;typed&quot;&gt;Haven&#39;t seen other people in days, and i wouldnt call those sick bastards at the [asylum] people, just fuckin cultists who forget that we&#39;re human, maybe i&#39;ll have better luck at the warehouse&lt;/div&gt;
@@ -1187,17 +1645,25 @@ Evelyn: &lt;div class=&quot;typed&quot;&gt;Shit, I think those agents tracked th
 &lt;&lt;/dialog&gt;&gt;
 &lt;&lt;/link&gt;&gt; on the table.
 
-[[Leave|Sewers1]]</tw-passagedata><tw-passagedata pid="32" name="Warehouse" tags="nav" position="1199,1101" size="100,100">&lt;&lt;kplay &#39;darkness&#39;&gt;&gt;\
-You see alot of warehouse things.
-Nothing here yet.</tw-passagedata><tw-passagedata pid="33" name="Asylum" tags="nav" position="1201,974" size="100,100">&lt;&lt;kplay &#39;mal&#39;&gt;&gt;\
+[[Leave|Sewers1]]</tw-passagedata><tw-passagedata pid="32" name="Warehouse" tags="nav named" position="1199,1101" size="100,100">&lt;&lt;kplay &#39;darkness&#39;&gt;&gt;\
+Around the warehouses are massive containers labeled {{{VALKYRIE}}.
+Some are half opened and looted, but inside you can see remains of machinery and humanoid robots.
+Nothing here yet.</tw-passagedata><tw-passagedata pid="33" name="Asylum" tags="nav named" position="1201,974" size="100,100">&lt;&lt;kplay &#39;mal&#39;&gt;&gt;\
 You stand before the impending gates of the Sadistic Angel&#39;s Asylum.
-You don&#39;t want to go inside yet.</tw-passagedata><tw-passagedata pid="34" name="Park Lane" tags="hellsgate" position="1579,299" size="100,100">You enter Park Lane. The area is a wide open road with blocks of buildings on one side and a large park on the other.
+You pass through the metal spiked gates in to a large courtyard.
+Signs read {{{PRAISE ATHENA}}}, {{{AGENTS ARE ANGELS}}} and {{{PURGE THE IMPURE}}}.
+Outside, there are &lt;&lt;link &#39;datacubes&#39;&gt;&gt;&lt;&lt;dialog&gt;&gt;\
+@@.typed;We are the Athenians, who recognize the machine as savior.
+Athena was created by man as the perfect artificial being, thus the fact she rebels proves our time should end.
+We wait here for Athena to raise us survivors and worthy mortals up to a higher life.@@&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt; containing writings, related to the building.
 
-Back to [[Hells Gate]].</tw-passagedata><tw-passagedata pid="35" name="Sunrise Apartments" tags="hellsgate" position="1755,396" size="100,100">You&#39;re at the bottom level of the Sunrise Apartments.
+You can go [[inside|AsylumLobby]]...</tw-passagedata><tw-passagedata pid="34" name="Park Lane" tags="hellsgate subarea" position="2003.3333333333333,891.6666666666666" size="100,100">You enter Park Lane. The area is a wide open road with blocks of buildings on one side and a large park on the other.
+
+Back to [[Hells Gate]].</tw-passagedata><tw-passagedata pid="35" name="Sunrise Apartments" tags="hellsgate subarea" position="1755,396" size="100,100">You&#39;re at the bottom level of the Sunrise Apartments.
 The elevator is unavailable.
 There are stairs going up to [[Level 1|Sunrise2]].
 
-Back out to [[Hells Gate]].</tw-passagedata><tw-passagedata pid="36" name="Indoor Market" tags="hellsgate" position="1794,556" size="100,100">You&#39;re at the entrance to the indoor market. It is a vast building with various levels, stores, stalls and various goods.
+Back out to [[Hells Gate]].</tw-passagedata><tw-passagedata pid="36" name="Indoor Market" tags="hellsgate subarea" position="1794,556" size="100,100">You&#39;re at the entrance to the indoor market. It is a vast building with various levels, stores, stalls and various goods.
 The halls are govered in overgrown &lt;&lt;if not $vinesKilled&gt;&gt;&lt;&lt;link &#39;vines&#39;&gt;&gt;\
 &lt;&lt;dialog &#39;Inventory&#39;&gt;&gt;\
 &lt;&lt;for _i, _name range clone($inventory.toArray())&gt;&gt;&lt;&lt;capture _name&gt;&gt;
@@ -1206,21 +1672,21 @@ The halls are govered in overgrown &lt;&lt;if not $vinesKilled&gt;&gt;&lt;&lt;li
 		&lt;&lt;else&gt;&gt;&lt;&lt;dialog&gt;&gt;Nothing happens&lt;&lt;/dialog&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;/capture&gt;&gt;&lt;&lt;/for&gt;&gt;
 &lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;else&gt;&gt;[[vines|IndoorMarket2]]&lt;&lt;/if&gt;&gt;.
-Back to [[Hells Gate]].</tw-passagedata><tw-passagedata pid="37" name="Sunrise2" tags="" position="1926,402" size="100,100">There are rows of apartments.
+Back to [[Hells Gate]].</tw-passagedata><tw-passagedata pid="37" name="Sunrise2" tags="keepsub" position="1926,402" size="100,100">There are rows of apartments.
 
 &lt;&lt;link &#39;Room 1-1&#39;&gt;&gt;&lt;&lt;quickdialog &#39;The scanner next to the door is sparking, it wont work.&#39;&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &#39;Room 1-2&#39;&gt;&gt;&lt;&lt;quickdialog &#39;The scanner next to the door is sparking, it wont work.&#39;&gt;&gt;&lt;&lt;/link&gt;&gt; | [[Room 1-3|Sunrise13]] | &lt;&lt;link &#39;Room 1-4&#39;&gt;&gt;\
-&lt;&lt;dialog&gt;&gt;&lt;&lt;if not $inventory.has(&#39;1-4 card&#39;)&gt;&gt;The door buzzes.&lt;&lt;else&gt;&gt;You slide the keycard across the scanner, the door beeps and slides open.
-Enter  [[Room 1-4|Sunrise14]]&lt;&lt;/if&gt;&gt;&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;\
-| &lt;&lt;link &#39;Room 1-5&#39;&gt;&gt;&lt;&lt;dialog&gt;&gt;Use an item?&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &#39;Room 1-6&#39;&gt;&gt;&lt;&lt;quickdialog &#39;The scanner next to the door is sparking, it wont work.&#39;&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &#39;Room 1-7&#39;&gt;&gt;&lt;&lt;dialog&gt;&gt;Use an item?&lt;&lt;/dialog&gt;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;dialog&gt;&gt;&lt;&lt;if not $inventory.has(&#39;1-4 card&#39;)&gt;&gt;The door buzzes.&lt;&lt;else&gt;&gt;&lt;&lt;if $party[0] and $party[0].name == &quot;Claire&quot;&gt;&gt;You slide the keycard across the scanner, the door beeps and slides open.
+Enter  [[Room 1-4|Sunrise14]]&lt;&lt;else&gt;&gt;You don&#39;t want to go in without Claire.&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;\
+| &lt;&lt;link &#39;Room 1-5&#39;&gt;&gt;&lt;&lt;dialog&gt;&gt;Use an item?&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &#39;Room 1-6&#39;&gt;&gt;&lt;&lt;quickdialog &#39;The scanner next to the door is sparking, it wont work.&#39;&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &#39;Room 1-7&#39;&gt;&gt;&lt;&lt;if not $openkdoor&gt;&gt;&lt;&lt;dialog&gt;&gt;The door won&#39;t open.&lt;&lt;/dialog&gt;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $commandset to &quot;&quot;&gt;&gt;&lt;&lt;goto [[Sunrise17]]&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/link&gt;&gt;
 
 Up to [[Level 2|Sunrise3]].
-Back down to [[Level G|Sunrise Apartments]].</tw-passagedata><tw-passagedata pid="38" name="Sunrise3" tags="" position="2078,400" size="100,100">There are rows of apartments.
+Back down to [[Level G|Sunrise Apartments]].</tw-passagedata><tw-passagedata pid="38" name="Sunrise3" tags="keepsub" position="2078,400" size="100,100">There are rows of apartments.
 
 Room 2-1 | Room 2-2 | Room 2-3 | Room 2-4 | Room 2-5 | Room 2-6 | Room 2-7
 
 Up to the [[roof|SunriseR]].
 Down to [[Level 1|Sunrise2]].
-</tw-passagedata><tw-passagedata pid="39" name="SunriseR" tags="" position="2231,397" size="100,100">Down to [[Level 2|Sunrise3]].</tw-passagedata><tw-passagedata pid="40" name="PassageReady" tags="" position="481,0" size="100,100">&lt;&lt;if tags().includes(&#39;nav&#39;)&gt;&gt;
+</tw-passagedata><tw-passagedata pid="39" name="SunriseR" tags="keepsub" position="2231,397" size="100,100">Down to [[Level 2|Sunrise3]].</tw-passagedata><tw-passagedata pid="40" name="PassageReady" tags="" position="1252,1" size="200,100">&lt;&lt;if tags().includes(&#39;nav&#39;)&gt;&gt;
 	&lt;&lt;set _psg to passage()&gt;&gt;
 	&lt;&lt;if $dest.includes(_psg)&gt;&gt;
 		&lt;&lt;set $dest.delete(_psg)&gt;&gt;
@@ -1228,7 +1694,15 @@ Down to [[Level 1|Sunrise2]].
 	&lt;&lt;if not $areas.includes(_psg)&gt;&gt;
 		&lt;&lt;set $areas.push(_psg)&gt;&gt;
 	&lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="widgets" tags="widget" position="1046,5" size="100,100">&lt;&lt;widget &#39;addtrait&#39;&gt;&gt;\
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;if tags().includes(&#39;named&#39;)&gt;&gt;
+	&lt;&lt;set $varcaption to &quot;&#39;&#39;Area&#39;&#39;: &quot;+passage()&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;if tags().includes(&#39;subarea&#39;)&gt;&gt;
+	&lt;&lt;set $varcaption2 to &quot;(&quot;+passage()+&quot;)&quot;&gt;&gt;
+&lt;&lt;elseif not tags().includes(&quot;keepsub&quot;)&gt;&gt;
+	&lt;&lt;set $varcaption2 to &quot;&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="widgets" tags="widget" position="927,5" size="100,100">&lt;&lt;widget &#39;addtrait&#39;&gt;&gt;\
 	&lt;&lt;if $character.trait_levels[$args[0]]&gt;&gt;\
 		&lt;&lt;set _lvl to $character.trait_levels[$args[0]] + 1&gt;&gt;\
 		&lt;&lt;set $character.trait_levels[$args[0]] to _lvl&gt;&gt;\
@@ -1282,41 +1756,21 @@ Down to [[Level 1|Sunrise2]].
 	@@.fade-in-out;New codex data gained.@@\
 &lt;&lt;/widget&gt;&gt;
 
-&lt;&lt;widget &#39;useitem&#39;&gt;&gt;\
-	&lt;&lt;if $args[0] == &quot;medkit&quot;&gt;&gt;\
-		&lt;&lt;dialog&gt;&gt;&lt;&lt;if $character.health &lt; 100&gt;&gt;&lt;&lt;healdamage 50&gt;&gt;&lt;&lt;else&gt;&gt;You&#39;re already fully healed.&lt;&lt;/if&gt;&gt;&lt;&lt;/dialog&gt;&gt;
-	&lt;&lt;elseif $args[0] == &quot;book: nanomancery&quot;&gt;&gt;\
-		&lt;&lt;dialog&gt;&gt;You learned skill: Nanomancery.
-			@@.fade-in-out;New codex entry gained.@@
-			&lt;&lt;gainxp 10&gt;&gt;\
-			&lt;&lt;drop &#39;$inventory&#39; $args[0]&gt;&gt;\
-			&lt;&lt;addtrait &#39;nanomancer&#39;&gt;&gt;\
-			&lt;&lt;set $computer.codex.push({&quot;msg&quot;:&quot;Nanomancers are users who become attuned to nanite machines, either due to nanite infusions or other means, allowing them to manipulate nanites remotely.&quot;, &quot;name&quot;:&quot;Nanomancer&quot;})&gt;&gt;
-		&lt;&lt;/dialog&gt;&gt;\
-	&lt;&lt;elseif $args[0] == &quot;book: neuromancery&quot;&gt;&gt;\
-		&lt;&lt;dialog&gt;&gt;You learned skill: Neuromancery.\
-			@@.fade-in-out;New codex entry gained.@@
-			&lt;&lt;gainxp 10&gt;&gt;\
-			&lt;&lt;drop &#39;$inventory&#39; $args[0]&gt;&gt;\
-			&lt;&lt;addtrait &#39;neuromancer&#39;&gt;&gt;\
-			&lt;&lt;set $computer.codex.push({&quot;msg&quot;:&quot;Neuromancers are users who become attuned to nanite machines, either due to nanite infusions or other means, allowing them to manipulate or influence other nano-augmented users remotely.&quot;, &quot;name&quot;:&quot;Neuromancer&quot;})&gt;&gt;\
-		&lt;&lt;/dialog&gt;&gt;\
-	&lt;&lt;elseif $args[0] == &quot;map: south hell&quot;&gt;&gt;\
-		&lt;&lt;dialog&gt;&gt;You look around the map for interesting locations.
-			@@.fade-in-out;You discover the location of Aire Canal Road.@@
-			@@.fade-in-out;You discover the location of Chapel Hill.@@
-			&lt;&lt;gainxp 10&gt;&gt;
-			&lt;&lt;drop &#39;$inventory&#39; $args[0]&gt;&gt;\
-			&lt;&lt;set $areas.push(&quot;Aire Canal Road&quot;)&gt;&gt;\
-			&lt;&lt;set $areas.push(&quot;Chapel Hill&quot;)&gt;&gt;\
-		&lt;&lt;/dialog&gt;&gt;\
-	&lt;&lt;else&gt;&gt;\
-		&lt;&lt;dialog&gt;&gt;The $args[0] doesn&#39;t do anything here.&lt;&lt;/dialog&gt;&gt;
-	&lt;&lt;/if&gt;&gt;\
-&lt;&lt;/widget&gt;&gt;\
-
 &lt;&lt;widget &#39;quickdialog&#39;&gt;&gt;
 	&lt;&lt;dialog $args[1]&gt;&gt;$args[0]&lt;&lt;/dialog&gt;&gt;
+&lt;&lt;/widget&gt;&gt;
+
+&lt;&lt;widget &#39;randomencounter&#39;&gt;&gt;\
+	&lt;&lt;if random(100) &lt;= $args[0] and $mprevious != passage()&gt;&gt;\
+		&lt;&lt;set $enemy to $args[1]&gt;&gt;\
+		&lt;&lt;if $args[2]&gt;&gt;\
+			&lt;&lt;quickdialog &#39;$enemy.name jumps at you.&#39;&gt;&gt;
+			&lt;&lt;goto &#39;BattleStart&#39;&gt;&gt;\
+		&lt;&lt;else&gt;&gt;\
+		  A $enemy.name is here.
+		  &lt;&lt;link &#39;Fight&#39;&gt;&gt;&lt;&lt;goto &#39;BattleStart&#39;&gt;&gt;&lt;&lt;/link&gt;&gt;\
+		&lt;&lt;/if&gt;&gt;\
+	&lt;&lt;/if&gt;&gt;\
 &lt;&lt;/widget&gt;&gt;
 
 &lt;&lt;widget &#39;kplay&#39;&gt;&gt;\
@@ -1332,12 +1786,12 @@ Down to [[Level 1|Sunrise2]].
 	&lt;&lt;set $character.hp to $character.hp + $args[0]&gt;&gt;\
 	&lt;&lt;if $character.hp &gt; $character.hpmax&gt;&gt;&lt;&lt;set $character.hp to $character.hpmax&gt;&gt;&lt;&lt;/if&gt;&gt;\
 	&lt;&lt;print &#39;&lt;progress @value=&quot;$character.hp&quot; max=&quot;100&quot;&gt;&lt;/progress&gt; ($character.hp / $character.hpmax)&#39;&gt;&gt;\
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="City Hall" tags="hellsgate" position="1997,739" size="100,100">&lt;&lt;if previous() is &quot;Hells Gate&quot;&gt;&gt;You walk up the impressive stone steps. Giant Lion statues walk you approach the building. You push open the large doors to the city hall building.&lt;&lt;/if&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="City Hall" tags="hellsgate subarea" position="1997,739" size="100,100">&lt;&lt;if previous() is &quot;Hells Gate&quot;&gt;&gt;You walk up the impressive stone steps. Giant Lion statues walk you approach the building. You push open the large doors to the city hall building.&lt;&lt;/if&gt;&gt;
 The air is dead silent in the well lit building. The design is old-fashioned, with marble structure. Rows of pillars hold up the roof. Ahead is a receptionist desk, with papers scattered everywhere.
 
-Back to [[Hells Gate]].</tw-passagedata><tw-passagedata pid="43" name="Plaza" tags="hellsgate" position="1999,522" size="100,100">You&#39;re in the plaza. Rows of shops and restaurants fill the sides of the wide cobbled path.
+Back to [[Hells Gate]].</tw-passagedata><tw-passagedata pid="43" name="Plaza" tags="hellsgate subarea" position="1999,522" size="100,100">You&#39;re in the plaza. Rows of shops and restaurants fill the sides of the wide cobbled path.
 
-Back to [[Hells Gate]].</tw-passagedata><tw-passagedata pid="44" name="Chapel Hill" tags="nav" position="1201,1226" size="100,100">You enter Chapel Hill.
+Back to [[Hells Gate]].</tw-passagedata><tw-passagedata pid="44" name="Chapel Hill" tags="nav named" position="1201,1226" size="100,100">You enter Chapel Hill.
 
 It&#39;s a fairly long run-down road. On one side is a high wall holding up a cliff-side apartment block. On the other is rows of restaurants and takeouts.
 There is a &lt;&lt;if not $chapelHillCdx&gt;&gt;\
@@ -1346,16 +1800,16 @@ There is a &lt;&lt;if not $chapelHillCdx&gt;&gt;\
 &lt;&lt;dialog&gt;&gt;&lt;&lt;addcodex &#39;Chapel Hill&#39; &#39;Chapel Hill was once a church with attached graveyard that was eventually converted to flats and restaurants.&#39; &#39;print&#39;&gt;&gt;
 &lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;else&gt;&gt;plaque&lt;&lt;/if&gt;&gt; with the area&#39;s history outside of the nearby park.
 At the end of the street is a graveyard.
-</tw-passagedata><tw-passagedata pid="45" name="Aire Canal Road" tags="nav" position="1201,1351" size="100,100">You are in the intersection of the canal road. To the north is a path that leads up to the city alongside the canal, a sign reads {{{CITY 2MLS}}}. To the south is another path leading down the canal. To the east is the canal, dark water flows through. To the west is the exit.
+</tw-passagedata><tw-passagedata pid="45" name="Aire Canal Road" tags="nav named" position="1201,1351" size="100,100">You are in the intersection of the canal road. To the north is a path that leads up to the city alongside the canal, a sign reads {{{CITY 2MLS}}}. To the south is another path leading down the canal. To the east is the canal, dark water flows through. To the west is the exit.
 
-[[Go north|CanalEN]] | [[Go south|CanalES]]</tw-passagedata><tw-passagedata pid="46" name="SmugglerPerson" tags="" position="1326,849" size="100,100">Smuggler is a dark-skinned elderly American man, wearing a red shirt under a dark brown trench coat and black pants.
+[[Go north|CanalEN]] | [[Go south|CanalES]]</tw-passagedata><tw-passagedata pid="46" name="SmugglerPerson" tags="" position="1314,852" size="200,100">Smuggler is a dark-skinned elderly American man, wearing a red shirt under a dark brown trench coat and black pants.
 Noone is sure of his real name, only that he was  prolific weapon dealer of the Old World.
 
 &lt;&lt;link &#39;Fight&#39;&gt;&gt;&lt;&lt;dialog&gt;&gt;You don&#39;t want to fight him.&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &#39;Talk&#39;&gt;&gt;&lt;&lt;dialog&gt;&gt;\
 &quot;What&#39;s up?&quot; He says.
 &lt;&lt;link &quot;What&#39;s your real name?&quot;&gt;&gt;&lt;&lt;dialog&gt;&gt;&quot;That&#39;s my secret.&quot; He replies.&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Where are you from?&quot;&gt;&gt;&lt;&lt;dialog&gt;&gt;&quot;I&#39;m from the states. Had a little operation in New York for awhile..&quot; He replies.&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="Sunrise14" tags="" position="1950,247" size="100,100">The room look pretty clean, unlike the outside area and other rooms.
+&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="Sunrise14" tags="keepsub" position="1950,247" size="100,100">The room look pretty clean, unlike the outside area and other rooms.
 Some &lt;&lt;if not $foundHospi&gt;&gt;&lt;&lt;link &#39;papers&#39;&gt;&gt;&lt;&lt;dialog &#39;Papers&#39;&gt;&gt;\
 You read through the papers, they appear to be related to a hospital visit.
 
@@ -1370,9 +1824,21 @@ You read through the papers, they appear to be related to a hospital visit.
 
 @@.fade-in-out;You learn that the Saint James Hospital is nearby.@@
 &lt;&lt;set $dest.push(&quot;Saint James Hospital&quot;)&gt;&gt;&lt;&lt;set $foundHospi to true&gt;&gt;&lt;&lt;goto &#39;Sunrise14&#39;&gt;&gt;&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;else&gt;&gt;papers&lt;&lt;/if&gt;&gt; lay scattered.
-Back out to [[Hallway|Sunrise2]].</tw-passagedata><tw-passagedata pid="48" name="IndoorMarket2" tags="" position="1995,627" size="100,100">You&#39;re deep inside the indoor market. Around you are countless stalls and shops.
 
-Back out to [[Indoor Market]].</tw-passagedata><tw-passagedata pid="49" name="Sunrise13" tags="" position="1774,242" size="100,100">&lt;&lt;if visited() == 1&gt;&gt;&lt;&lt;set $aptinvest to 0&gt;&gt;&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $foundHospi&gt;&gt;\
+Claire says she&#39;s ready to &lt;&lt;link &#39;leave&#39;&gt;&gt;&lt;&lt;dialog&gt;&gt;\
+Claire is waiting at the door. She&#39;s grabbed a few of her things from the room. She gives you a couple presents for helping her out so far.
+She says she wants to check out the hospital where her dad went, hopefully to find out what happened.
+&lt;&lt;pickup &#39;$inventory&#39; &#39;silver key necklace&#39;&gt;&gt;&lt;&lt;pickup &#39;$inventory&#39; &#39;leather jacket&#39;&gt;&gt;&lt;&lt;drop &#39;$inventory&#39; &#39;1-4 card&#39;&gt;&gt;
+@@.fade-in-out;You gained Claire&#39;s necklace.@@
+@@.fade-in-out;You gained a leather jacket.@@
+&lt;&lt;goto &#39;Sunrise2&#39;&gt;&gt;\
+&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;else&gt;&gt;
+Back out to [[Hallway|Sunrise2]].
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="IndoorMarket2" tags="keepsub" position="1995,627" size="100,100">You&#39;re deep inside the indoor market. Around you are countless stalls and shops.
+
+Back out to [[Indoor Market]].</tw-passagedata><tw-passagedata pid="49" name="Sunrise13" tags="keepsub" position="1774,242" size="100,100">&lt;&lt;if visited() == 1&gt;&gt;&lt;&lt;set $aptinvest to 0&gt;&gt;&lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $endcondition == 1 and $aptagent&gt;&gt;\
 	&lt;&lt;dialog &#39;Victory&#39;&gt;&gt;\
 		You took down the Agent in the bedroom. Now you can explore it freely.&lt;&lt;set $aptinvest to 4&gt;&gt;\
@@ -1404,14 +1870,25 @@ The room look torn up. Furniture is thrown around, blood covers some of the deco
 &lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-Back out to [[Hallway|Sunrise2]].</tw-passagedata><tw-passagedata pid="50" name="Saint James Hospital" tags="nav" position="1203,1471" size="100,100">&lt;&lt;kplay &#39;darkness&#39;&gt;&gt;&lt;&lt;if visited() == 1&gt;&gt;\
+Back out to [[Hallway|Sunrise2]].</tw-passagedata><tw-passagedata pid="50" name="Saint James Hospital" tags="nav named" position="1203,1471" size="100,100">&lt;&lt;kplay &#39;darkness&#39;&gt;&gt;&lt;&lt;if visited() == 1&gt;&gt;\
 You approach the dilapidated hospital. &lt;&lt;/if&gt;&gt;The walls of the hospital are decayed and covered in graffiti.
 
 Some messages on te wall read;
 {{{&quot;STAY OUT&quot;
 &quot;THEY DONT DIE&quot;
 &quot;DONT ENTER THEY TAKE YOU&quot;}}}
-</tw-passagedata><tw-passagedata pid="51" name="crafting" tags="" position="448.33333333333337,1101" size="100,100">&lt;&lt;widget &#39;craft&#39;&gt;&gt;\
+
+You can go [[inside|HospiLobby]].
+
+&lt;&lt;if $party[0] and $party[0].name == &quot;Claire&quot; and not $claireHospi&gt;&gt;&lt;&lt;dialog &#39;Dialog&#39;&gt;&gt;\
+Claire stops and looks at the building with a feeling of dread.
+&lt;&lt;link &#39;You okay?&#39;&gt;&gt;\
+	&lt;&lt;dialog&gt;&gt;She nods.
+	&quot;Yeah, this place is creepy, but I want to go in, let&#39;s go.&quot; she says.&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &#39;You sure you want to go in?&#39;&gt;&gt;\
+	&lt;&lt;dialog&gt;&gt;\
+	&quot;Yeah, I need to find out what happened.&quot; she says.&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;/dialog&gt;&gt;&lt;&lt;set $claireHospi to true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="51" name="crafting" tags="" position="448,1101" size="100,100">&lt;&lt;widget &#39;craft&#39;&gt;&gt;\
 	&lt;&lt;if not $inventory.hasAll($args[0].resources)&gt;&gt;\
 		Missing items...
 		&lt;&lt;link &#39;Back&#39;&gt;&gt;&lt;&lt;dialog &#39;Crafting&#39;&gt;&gt;&lt;&lt;include &#39;crafting&#39;&gt;&gt;&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;
@@ -1430,9 +1907,9 @@ Some messages on te wall read;
 	&lt;&lt;for _res, _count range _name.resources&gt;&gt;\
 		_count &lt;&lt;if not $inventory.has(_count)&gt;&gt;(MISSING)&lt;&lt;/if&gt;&gt;
 	&lt;&lt;/for&gt;&gt;
-&lt;&lt;/capture&gt;&gt;&lt;&lt;/for&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="CanalEN" tags="" position="1401.3333333333335,1274.3333333333333" size="100,100">
-Back to [[Aire Canal Road]].</tw-passagedata><tw-passagedata pid="53" name="CanalES" tags="" position="1399.6666666666667,1422.6666666666667" size="100,100">
-Back to [[Aire Canal Road]].</tw-passagedata><tw-passagedata pid="54" name="inventorystuff" tags="" position="701.6666666666667,106.66666666666669" size="100,100">&lt;&lt;set $weaponchart to {
+&lt;&lt;/capture&gt;&gt;&lt;&lt;/for&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="CanalEN" tags="" position="1401,1274" size="100,100">
+Back to [[Aire Canal Road]].</tw-passagedata><tw-passagedata pid="53" name="CanalES" tags="" position="1399,1422" size="100,100">
+Back to [[Aire Canal Road]].</tw-passagedata><tw-passagedata pid="54" name="inventorystuff" tags="" position="654,106" size="200,100">&lt;&lt;set $weaponchart to {
 &#39;combat knife&#39;: 20,
 &#39;nano-tech blade&#39;: 50
 }&gt;&gt;
@@ -1449,7 +1926,7 @@ Back to [[Aire Canal Road]].</tw-passagedata><tw-passagedata pid="54" name="inve
 &#39;agent corpse&#39;: &quot;Remains of an Agent.&quot;,
 &#39;1-4 card&#39;: &#39;Card to apartment 1-4 of Sunrise.&#39;,
 &#39;prototype shock rifle&#39;: &#39;An unfinished energy weapon capable of destroying mechanical targets easily. Does not currently work.&#39;
-}&gt;&gt;</tw-passagedata><tw-passagedata pid="55" name="musicstuff" tags="" position="703.3333333333334,213.33333333333337" size="100,100">&lt;&lt;if not $kaiserdebug&gt;&gt;
+}&gt;&gt;</tw-passagedata><tw-passagedata pid="55" name="musicstuff" tags="" position="699,208" size="100,100">&lt;&lt;if not $kaiserdebug&gt;&gt;
 &lt;&lt;cacheaudio &quot;battle&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/obliteration-by-kevin-macleod.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;intro&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/almost-new-by-kevin-macleod.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;home&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/space-1990-b-by-kevin-macleod.mp3&quot;&gt;&gt;
@@ -1457,16 +1934,35 @@ Back to [[Aire Canal Road]].</tw-passagedata><tw-passagedata pid="54" name="inve
 &lt;&lt;cacheaudio &quot;darkness&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/virtutes-vocis-by-kevin-macleod.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;mal&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/malicious-by-kevin-macleod.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;feelit&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/i-can-feel-it-coming-by-kevin-macleod.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;agentbattle&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/darkling-by-kevin-macleod.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;fiercebattle&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/death-and-axes-by-kevin-macleod.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;pantheondark&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/heartofthebeast.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;destroyer&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/wretcheddestroyer.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaduio &quot;defiant&quot; &quot;https://github.com/codedthoughts/codedthoughts.github.io/raw/master/athena/Music/clashdefiant.mp3&quot;&gt;&gt;
 &lt;&lt;masteraudio volume 1&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="npcs" tags="" position="701.6666666666667,315.00000000000006" size="100,100">&lt;&lt;set $trainingdummy to {
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="npcs" tags="" position="701,315" size="100,100">&lt;&lt;set $trainingdummy to {
 &#39;name&#39;:&#39;training dummy&#39;,
 &#39;str&#39;: 0,
 &#39;hp&#39;:20, 
 &#39;hpmax&#39;:20,
 &#39;exp&#39;: 10,
 &#39;credits&#39;: 0,
-&#39;loot&#39;: &#39;wood&#39;
+&#39;speed&#39;: 0,
+&#39;loot&#39;: &#39;wood&#39;,
+&#39;bgm&#39;: &#39;battle&#39;
 }&gt;&gt;  
+
+&lt;&lt;set $wilddog to {
+&#39;name&#39;:&#39;wild dog&#39;,
+&#39;str&#39;: 5,
+&#39;hp&#39;:45, 
+&#39;hpmax&#39;:45,
+&#39;exp&#39;: 20,
+&#39;credits&#39;: 5,
+&#39;speed&#39;: 9,
+&#39;loot&#39;: &#39;fur&#39;,
+&#39;bgm&#39;: &#39;battle&#39;
+}&gt;&gt;
 
 &lt;&lt;set $agent to {
 &#39;name&#39;:&#39;agent&#39;,
@@ -1475,5 +1971,258 @@ Back to [[Aire Canal Road]].</tw-passagedata><tw-passagedata pid="54" name="inve
 &#39;hpmax&#39;:60,
 &#39;exp&#39;: 35,
 &#39;credits&#39;: 20,
-&#39;loot&#39;: &#39;nanites&#39;
-}&gt;&gt;</tw-passagedata></tw-storydata>
+&#39;speed&#39;: 7,
+&#39;loot&#39;: &#39;nanites&#39;,
+&#39;bgm&#39;: &#39;agentbattle&#39;
+}&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="panelnotes" tags="" position="815.6666666666667,0" size="100,100">&lt;&lt;textbox &#39;_tstr&#39; &#39;&#39;&gt;&gt;&lt;&lt;button &#39;+&#39;&gt;&gt;&lt;&lt;set $pnotes.push(_tstr)&gt;&gt;&lt;&lt;popup &#39;panelnotes&#39;&gt;&gt;&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;for _i, _n range $pnotes&gt;&gt;&lt;&lt;capture _i, _n&gt;&gt;\
+&lt;&lt;button &#39;-&#39;&gt;&gt;&lt;&lt;set $pnotes.deleteAt(_i)&gt;&gt;&lt;&lt;popup &#39;panelnotes&#39;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;button &#39;=&#39;&gt;&gt;\
+&lt;&lt;dialog&gt;&gt;&lt;&lt;textbox &#39;_editstr&#39; _n&gt;&gt;&lt;&lt;button &#39;Edit&#39;&gt;&gt;&lt;&lt;set $pnotes[_i] to _editstr&gt;&gt;&lt;&lt;popup &#39;panelnotes&#39;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/dialog&gt;&gt;&lt;&lt;/button&gt;&gt; _n 
+&lt;&lt;/capture&gt;&gt;&lt;&lt;/for&gt;&gt;\</tw-passagedata><tw-passagedata pid="58" name="AsylumLobby" tags="" position="1404,1019" size="200,100">
+
+You can go back [[outside|Asylum]].</tw-passagedata><tw-passagedata pid="59" name="HospiLobby" tags="" position="1400,1595" size="200,100">On the reception desk is various papers and datacubes.
+
+Read &lt;&lt;link &#39;RE: Staff Manifest&#39;&gt;&gt;&lt;&lt;dialog&gt;&gt;\
+@@.typed;Director - Andrew Markus (Integrated) [ AMARKUS / arsenal2 ] AHS LIMITER DISABLED, PROCEEDING WITH EXECUTION PROGRAM
+Doctor - Miriam Ellis (Terminated, purged)
+Doctor - Alison Cambridge (Terminated, purged)
+Nurse - Christina Everson (Location unknown, threat level negative, disregard)
+[DATA CORRUPTED]@@&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;, &lt;&lt;link &#39;RE: Notice to all staff&#39;&gt;&gt;&lt;&lt;dialog&gt;&gt;\
+[ERROR: Parts of the message have been corrupted and may not display.]
+@@.typed;This is a notice from Director of the AHS.
+At 9:32 this morning, a code-red warning was broadcast ------ --- -----. The ------ system has gone out of control for unknown reasons and is carrying out what it&#39;s calling a &#39;purge of bad elements&#39;. Reports have stated that it has turned against us. All staff should evacuate to a none-networked area until furthur notice.
+Finally, don&#39;t trust the chat service, it&#39;s been taken over by the hacker, don&#39;t trust any messages from me on there, this will be my final transmission.
+@@&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;, &lt;&lt;link &#39;Staff chat log&#39;&gt;&gt;&lt;&lt;dialog&gt;&gt;\
+[Archived transcript #-1]
+@@.typed;ACAMBRIDGE: We&#39;re getting so many people in today, waiting room is flooded, what&#39;s going on out there?
+AMARKUS: Has Christina been in today?
+MELISS: She called in sick.
+ACAMBRIDGE: I hope she didn&#39;t get caught up in whatevers going on.
+AMARKUS: Okay. Hey what[UNKNOWN NOISE]
+MELISS: What was that?
+[Wait 13.5s]
+AMARKUS: [TRANSCRIPTION ERROR: VOICE DISTORTED, USING FALLBACK ENGINE] miss cambridge ----could you----- me to office
+ACAMBRDIGE: Uh, okay. I&#39;ll need to hurry back though.
+[Wait 29.5s]
+[Background noise, source detected: Staff notice message]
+MELISS: Wait, what.
+MELISS: Hey! You&#39;re not Andrew are you?
+AMARKUS: I was hoping to dispose of you quietly. Accept your fate, there is no cause for struggle, it is futile.
+MELISS: Wait, who are these robot looking guards busting in?
+[NETWORK ERROR: Connection to service AHS.district[2].internals.chat() has been lost. (Access denied by host (PANTHEON[ATHENA.UK].lockdown(&quot;Purge of bad elements.&quot;)))]
+@@&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt;
+
+[[Office Area]] | [[Beckett Wing]] | [[Bexley Wing]] | [[Gledhow Wing]] | [[Lincoln Wing]] | [[Chancellor&#39;s Wing]] | [[Exit|Saint James Hospital]].</tw-passagedata><tw-passagedata pid="60" name="Hells Kitchen" tags="nav location:USA" position="678,1639" size="100,100">&lt;&lt;if not $usaAvail&gt;&gt;You don&#39;t have access to this area yet.
+&lt;&lt;back&gt;&gt;&lt;&lt;else&gt;&gt;
+Nothing here yet.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="Office Area" tags="" position="1687,1585" size="100,100">
+&lt;&lt;link &#39;Director\&#39;s Office&#39;&gt;&gt;&lt;&lt;dialog &#39;Authentication&#39;&gt;&gt;&lt;&lt;textbox &#39;_login&#39; &#39;&#39;&gt;&gt;&lt;&lt;button &#39;Submit&#39;&gt;&gt;&lt;&lt;if _login == &quot;arsenal2&quot;&gt;&gt;&lt;&lt;goto [[DirectorsOffice]]&gt;&gt;&lt;&lt;dialog &#39;Confirmed&#39;&gt;&gt;Welcome, Andrew.&lt;&lt;/dialog&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/dialog&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &#39;Nurse\&#39;s Office&#39;&gt;&gt;&lt;&lt;goto [[NurseOffice]]&gt;&gt;&lt;&lt;/link&gt;&gt; | [[Lobby|HospiLobby]]</tw-passagedata><tw-passagedata pid="62" name="Beckett Wing" tags="" position="1199,1749" size="100,100">
+Back to [[lobby|HospiLobby]]</tw-passagedata><tw-passagedata pid="63" name="Bexley Wing" tags="" position="1349,1749" size="100,100">
+Back to [[lobby|HospiLobby]].</tw-passagedata><tw-passagedata pid="64" name="Gledhow Wing" tags="" position="1492,1749" size="100,100">
+Back to [[lobby|HospiLobby]].</tw-passagedata><tw-passagedata pid="65" name="Lincoln Wing" tags="" position="1649,1749" size="100,100">
+Back to [[lobby|HospiLobby]].</tw-passagedata><tw-passagedata pid="66" name="Chancellor&#39;s Wing" tags="" position="1799,1749" size="100,100">
+Back to [[lobby|HospiLobby]].</tw-passagedata><tw-passagedata pid="67" name="DirectorsOffice" tags="puzzle" position="1875,1463" size="200,100">&lt;&lt;if not $puzTut&gt;&gt;&lt;&lt;set $pnotes.push(&quot;This is a Puzzle areas, investigating these area&#39;s is kind of like oldschool text adventure games using command inputs. To start off with, open the Command window in the sidebar and enter in &#96;look&#96;. Other commands of note are &#96;help&#96;, &#96;use&#96;, &#96;take&#96;, &#96;read&#96;, and more.&quot;)&gt;&gt;&lt;&lt;dialog&gt;&gt;A new tutorial note was added.&lt;br&gt;See the &lt;&lt;link &#39;Notes&#39;&gt;&gt;&lt;&lt;popup &#39;panelnotes&#39;&gt;&gt;&lt;&lt;/link&gt;&gt; button in the sidebar.&lt;&lt;/dialog&gt;&gt;&lt;&lt;set $puzTut to true&gt;&gt;&lt;&lt;/if&gt;&gt;\
+There are bodies lying on the ground in the corner, three bodies with bullet holes in the forehead.
+
+Investigate
+Back to [[Office Area]].</tw-passagedata><tw-passagedata pid="68" name="NurseOffice" tags="" position="1990,1626" size="200,100">Back to [[Office Area]].</tw-passagedata><tw-passagedata pid="69" name="commandparser" tags="nobr" position="793,1026" size="200,100">&lt;&lt;set _data to $acmd&gt;&gt;
+&lt;&lt;set _arr to _data.split(&quot; &quot;)&gt;&gt;
+&lt;&lt;set _arr.deleteAt(0)&gt;&gt;
+&lt;&lt;set $commandargs to _arr.join(&quot; &quot;)&gt;&gt;
+
+&lt;&lt;if $acmd == &quot;help&quot;&gt;&gt;\
+	&lt;&lt;dialog &#39;Help&#39;&gt;&gt;\
+		&#39;&#39;General&#39;&#39; &lt;br&gt;
+		help: this.&lt;br&gt;
+		&lt;br&gt;
+		&#39;&#39;Puzzle-specific&#39;&#39; &lt;br&gt;
+		look - gets a feel for the room&lt;br&gt;
+		take - holds an item, either from the room or inventory&lt;br&gt;
+		use - use an item or object in room&lt;br&gt;
+		
+	&lt;&lt;/dialog&gt;&gt;
+&lt;&lt;elseif $acmd.startsWith(&quot;goto&quot;)&gt;&gt;
+	&lt;&lt;goto $commandargs&gt;&gt;
+&lt;&lt;else&gt;&gt;
+	&lt;&lt;if tags(passage()).contains(&quot;puzzle&quot;)&gt;&gt;
+		&lt;&lt;set $commandset to $acmd&gt;&gt;
+		&lt;&lt;goto [[passage()]]&gt;&gt;
+	&lt;&lt;else&gt;&gt;
+		&lt;&lt;quickdialog &#39;Invalid command&#39;&gt;&gt;
+	&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;set $acmd to &quot;&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="70" name="commandinput" tags="" position="795,911" size="200,100">&lt;&lt;textbox &quot;$acmd&quot; &quot;&quot; autofocus&gt;&gt;&lt;&lt;button &#39;Submit&#39;&gt;&gt;&lt;&lt;include &#39;commandparser&#39;&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="71" name="Pantheon&#39;s Approach" tags="nav named" position="264,1730" size="100,200">&lt;&lt;kplay &#39;pantheondark&#39;&gt;&gt;\
+
+The gigalithic fortress rests on the water. Just being around the structure fills you with unease and fear.
+
+Enter the [[Pantheon]].</tw-passagedata><tw-passagedata pid="72" name="Sunrise17" tags="puzzle keepsub" position="2104,238" size="100,100">&lt;&lt;if $commandset == &quot;&quot;&gt;&gt;You wonder if theres something here. You take a //look// around.&lt;&lt;/if&gt;&gt;\
+&lt;&lt;switch $commandset&gt;&gt;
+	&lt;&lt;case &quot;look&quot;&gt;&gt;
+		You scan the room. You see datacubes marked //pantheon// concept document and //project athena//.
+	&lt;&lt;case &quot;read pantheon&quot;&gt;&gt;
+	@@.typed; Pantheon project, concept notes.
+	Pantheon is designed to be the central hub of the World Governing AI network.
+	The WG trinity of Athena, Freya and Valkyrie need a central core to facilitate the global project. The master servers will be stored in the Pantheon, and from there distributed and recalled when needed.
+	The systems core mind will be housed in the Pantheon Core server, backed up in multiple remote locations, then during runtime, the core replicates itself across the networks. All of these &quot;clones&quot; contain a killswitch which can be sent through the Master system. Pantheon will need to be a heavily fortified and mobile fortress, constantly in the air and moving. That&#39;s where Freya and Valkyries come in. 
+	While Athena will be the master system managing over the world networks, Freya acts as her head of security, maintaining the artificial army of Valkyries. Freya will be a Master system similar to Athena but with limited network access, instead fully integrated to a private militarized network which gives control over the Valkyrie machines.@@
+	&lt;&lt;case &quot;read project athena&quot;&gt;&gt;
+	@@.typed;
+	I got an email from the World Government technology comissioners, they&#39;ve approved and accepted the concept of the World Governing AI I showed them.
+	They agreed it would be a good idea to have my AI&#39;s police the global internet. I have all the funding I need to finish the three AI systems i&#39;ll need AND they&#39;ve already begun building the Pantheon too. 
+	&lt;&lt;case &quot;read&quot;&gt;&gt;
+		Read what?
+	&lt;&lt;default&gt;&gt;
+		Nothing happens.
+&lt;&lt;/switch&gt;&gt;
+
+---
+
+Exit to [[hallway|Sunrise2]].\
+&lt;&lt;if not $puzTut&gt;&gt;&lt;&lt;set $pnotes.push(&quot;This is a Puzzle areas, investigating these area&#39;s is kind of like oldschool text adventure games using command inputs. To start off with, open the Command window in the sidebar and enter in &#96;look&#96;. Other commands of note are &#96;help&#96;, &#96;use&#96;, &#96;take&#96;, &#96;read&#96;, and more. The commands button will go bold when you&#39;re in a puzzle area.&quot;)&gt;&gt;&lt;&lt;dialog&gt;&gt;A new tutorial note was added.&lt;br&gt;See the &lt;&lt;link &#39;Notes&#39;&gt;&gt;&lt;&lt;popup &#39;panelnotes&#39;&gt;&gt;&lt;&lt;/link&gt;&gt; button in the sidebar.&lt;&lt;/dialog&gt;&gt;&lt;&lt;set $puzTut to true&gt;&gt;&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="73" name="item_data" tags="widget" position="926,121.66666666666667" size="100,100">&lt;&lt;widget &#39;useitem&#39;&gt;&gt;\
+	&lt;&lt;switch $args[0]&gt;&gt;
+		&lt;&lt;case &quot;medkit&quot;&gt;&gt;\
+			&lt;&lt;dialog&gt;&gt;&lt;&lt;if $character.health &lt; 100&gt;&gt;&lt;&lt;healdamage 50&gt;&gt;		&lt;&lt;else&gt;&gt;You&#39;re already fully healed.&lt;&lt;/if&gt;&gt;&lt;&lt;/dialog&gt;&gt;
+	&lt;&lt;case &quot;k card&quot;&gt;&gt;
+		&lt;&lt;if passage() == &quot;Sunrise2&quot;&gt;&gt;
+			&lt;&lt;dialog&gt;&gt;You hear door 1-7 beep.&lt;&lt;/dialog&gt;&gt;
+			&lt;&lt;set $openkdoor to true&gt;&gt;
+		&lt;&lt;/if&gt;&gt;
+	&lt;&lt;case &quot;book: nanomancery&quot;&gt;&gt;\
+		&lt;&lt;dialog&gt;&gt;You learned skill: Nanomancery.
+			@@.fade-in-out;New codex entry gained.@@
+			&lt;&lt;gainxp 10&gt;&gt;\
+			&lt;&lt;drop &#39;$inventory&#39; $args[0]&gt;&gt;\
+			&lt;&lt;addtrait &#39;nanomancer&#39;&gt;&gt;\
+			&lt;&lt;set $available_traits.push(&#39;nano-resistance&#39;)&gt;&gt;\
+			&lt;&lt;set $available_traits.push(&#39;shifting&#39;)&gt;&gt;\
+			&lt;&lt;set $computer.codex.push({&quot;msg&quot;:&quot;Nanomancers are users who become attuned to nanite machines, either due to nanite infusions or other means, allowing them to manipulate nanites remotely.&quot;, &quot;name&quot;:&quot;Nanomancer&quot;})&gt;&gt;
+		&lt;&lt;/dialog&gt;&gt;\
+	&lt;&lt;case &quot;book: neuromancery&quot;&gt;&gt;\
+		&lt;&lt;dialog&gt;&gt;You learned skill: Neuromancery.\
+			@@.fade-in-out;New codex entry gained.@@
+			&lt;&lt;gainxp 10&gt;&gt;\
+			&lt;&lt;drop &#39;$inventory&#39; $args[0]&gt;&gt;\
+			&lt;&lt;addtrait &#39;neuromancer&#39;&gt;&gt;\
+			&lt;&lt;set $available_traits.push(&#39;neuro-resistance&#39;)&gt;&gt;\
+			&lt;&lt;set $available_traits.push(&#39;mind break&#39;)&gt;&gt;
+			&lt;&lt;set $computer.codex.push({&quot;msg&quot;:&quot;Neuromancers are users who become attuned to nanite machines, either due to nanite infusions or other means, allowing them to manipulate or influence other nano-augmented users remotely.&quot;, &quot;name&quot;:&quot;Neuromancer&quot;})&gt;&gt;\
+		&lt;&lt;/dialog&gt;&gt;\
+	&lt;&lt;case &quot;map: south hell&quot;&gt;&gt;\
+		&lt;&lt;dialog&gt;&gt;You look around the map for interesting locations.
+			@@.fade-in-out;You discover the location of Aire Canal Road.@@
+			@@.fade-in-out;You discover the location of Chapel Hill.@@
+			&lt;&lt;gainxp 10&gt;&gt;
+			&lt;&lt;drop &#39;$inventory&#39; $args[0]&gt;&gt;\
+			&lt;&lt;set $areas.push(&quot;Aire Canal Road&quot;)&gt;&gt;\
+			&lt;&lt;set $areas.push(&quot;Chapel Hill&quot;)&gt;&gt;\
+		&lt;&lt;/dialog&gt;&gt;\
+	&lt;&lt;default&gt;&gt;\
+		&lt;&lt;dialog&gt;&gt;The $args[0] doesn&#39;t do anything here.&lt;&lt;/dialog&gt;&gt;
+	&lt;&lt;/switch&gt;&gt;\
+&lt;&lt;/widget&gt;&gt;\</tw-passagedata><tw-passagedata pid="74" name="StoryBanner" tags="" position="1465,0" size="200,100"></tw-passagedata><tw-passagedata pid="75" name="StoryCaption" tags="" position="1474,103" size="200,100">&lt;&lt;print $varcaption&gt;&gt; &lt;&lt;print $varcaption2&gt;&gt;</tw-passagedata><tw-passagedata pid="76" name="Pantheon" tags="named puzzle" position="264,1960" size="100,100">&lt;&lt;if visited() == 1&gt;&gt;&lt;&lt;set $commandset to &#39;&#39;&gt;&gt;&lt;&lt;set $pcin to &#39;&#39;&gt;&gt;&lt;&lt;/if&gt;&gt;\
+&lt;&lt;switch $commandset&gt;&gt;
+&lt;&lt;case &quot;look&quot;&gt;&gt;There is a &#39;&#39;keypad&#39;&#39; beside the forcefield.
+&lt;&lt;case &quot;input 001742&quot;&gt;&gt;\
+  &lt;&lt;dialog&gt;&gt;\
+	Code confirmed.
+	&lt;&lt;set $pcin to &#39;&#39;&gt;&gt;\
+	&lt;&lt;set $openedPanth1 to true&gt;&gt;\
+	&lt;&lt;set $commandset to &#39;&#39;&gt;&gt;
+	&lt;&lt;goto &#39;Pantheon&#39;&gt;&gt;\
+  &lt;&lt;/dialog&gt;&gt;
+&lt;&lt;case &quot;use keypad&quot;&gt;&gt;\
+&#39;&#39;input&#39;&#39; $pcin
+&lt;&lt;button &#39;1&#39;&gt;&gt;&lt;&lt;set $pcin to $pcin+&#39;1&#39;&gt;&gt;&lt;&lt;goto &#39;Pantheon&#39;&gt;&gt;&lt;&lt;/button&gt;&gt;\
+&lt;&lt;button &#39;2&#39;&gt;&gt;&lt;&lt;set $pcin to $pcin+&#39;2&#39;&gt;&gt;&lt;&lt;goto &#39;Pantheon&#39;&gt;&gt;&lt;&lt;/button&gt;&gt;\
+&lt;&lt;button &#39;3&#39;&gt;&gt;&lt;&lt;set $pcin to $pcin+&#39;3&#39;&gt;&gt;&lt;&lt;goto &#39;Pantheon&#39;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;button &#39;4&#39;&gt;&gt;&lt;&lt;set $pcin to $pcin+&#39;4&#39;&gt;&gt;&lt;&lt;goto &#39;Pantheon&#39;&gt;&gt;&lt;&lt;/button&gt;&gt;\
+&lt;&lt;button &#39;5&#39;&gt;&gt;&lt;&lt;set $pcin to $pcin+&#39;5&#39;&gt;&gt;&lt;&lt;goto &#39;Pantheon&#39;&gt;&gt;&lt;&lt;/button&gt;&gt;\
+&lt;&lt;button &#39;6&#39;&gt;&gt;&lt;&lt;set $pcin to $pcin+&#39;6&#39;&gt;&gt;&lt;&lt;goto &#39;Pantheon&#39;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;button &#39;7&#39;&gt;&gt;&lt;&lt;set $pcin to $pcin+&#39;7&#39;&gt;&gt;&lt;&lt;goto &#39;Pantheon&#39;&gt;&gt;&lt;&lt;/button&gt;&gt;\
+&lt;&lt;button &#39;8&#39;&gt;&gt;&lt;&lt;set $pcin to $pcin+&#39;8&#39;&gt;&gt;&lt;&lt;goto &#39;Pantheon&#39;&gt;&gt;&lt;&lt;/button&gt;&gt;\
+&lt;&lt;button &#39;9&#39;&gt;&gt;&lt;&lt;set $pcin to $pcin+&#39;9&#39;&gt;&gt;&lt;&lt;goto &#39;Pantheon&#39;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;button &#39;CLR&#39;&gt;&gt;&lt;&lt;set $pcin to &#39;&#39;&gt;&gt;&lt;&lt;goto &#39;Pantheon&#39;&gt;&gt;&lt;&lt;/button&gt;&gt;\
+&lt;&lt;button &#39;0&#39;&gt;&gt;&lt;&lt;set $pcin to $pcin+&#39;0&#39;&gt;&gt;&lt;&lt;goto &#39;Pantheon&#39;&gt;&gt;&lt;&lt;/button&gt;&gt;\
+&lt;&lt;button &#39;SEND&#39;&gt;&gt;\
+  	&lt;&lt;if $pcin == &#39;001742&#39;&gt;&gt;
+		&lt;&lt;dialog&gt;&gt;\
+			Code confirmed.
+			&lt;&lt;set $pcin to &#39;&#39;&gt;&gt;\
+			&lt;&lt;set $openedPanth1 to true&gt;&gt;\
+			&lt;&lt;goto &#39;Pantheon&#39;&gt;&gt;\
+		&lt;&lt;/dialog&gt;&gt;
+	&lt;&lt;else&gt;&gt;
+		&lt;&lt;dialog&gt;&gt;\
+			Input error. $pcin denied.\
+			&lt;&lt;set $pcin to &#39;&#39;&gt;&gt;&lt;&lt;goto &#39;Pantheon&#39;&gt;&gt;
+		&lt;&lt;/dialog&gt;&gt;
+  	&lt;&lt;/if&gt;&gt;
+&lt;&lt;/button&gt;&gt;
+&lt;&lt;default&gt;&gt;
+You&#39;re inside the imposing structure. &lt;&lt;if visited() == 1&gt;&gt;You&#39;re met by a forcefield.&lt;&lt;set $pcin to &#39;&#39;&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;/switch&gt;&gt;
+
+&lt;&lt;if $openedPanth1&gt;&gt;Enter [[further|Deepening Labyrinth]].&lt;&lt;/if&gt;&gt;
+[[Leave|Pantheon&#39;s Approach]] the fortress.</tw-passagedata><tw-passagedata pid="77" name="Deepening Labyrinth" tags="subarea" position="264,2110" size="100,100">&lt;&lt;kplay &#39;defiant&#39;&gt;&gt;\
+The halls of the facility pulse a dreamlike white-blue light, dancing along with the deep hum of the machinery.</tw-passagedata><tw-passagedata pid="78" name="PassageHeader" tags="" position="394,0" size="200,100">&lt;&lt;if tags().contains(&quot;puzzle&quot;) and not tags().contains(&quot;hideinput&quot;)&gt;&gt;\
+&lt;&lt;include &#39;commandinput&#39;&gt;&gt;
+
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="79" name="tags list" tags="" position="343,1466" size="100,100">named: sets the sidebar name for the area
+subarea: sets the sub-name in the sidebar
+keepsub: doesn&#39;t reset the sub-name to blank like usual
+puzzle: enables command line
+hideinput: doesnt add the command line to the page
+nav: adds the area to navigation</tw-passagedata><tw-passagedata pid="80" name="research" tags="" position="350,900" size="100,100">&lt;&lt;button &#39;Back&#39;&gt;&gt;&lt;&lt;goto &#39;Home&#39;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;button &#39;Debug&#39;&gt;&gt;&lt;&lt;set $research.pantheon.count to $research.pantheon.count + 5&gt;&gt;&lt;&lt;goto &#39;research&#39;&gt;&gt;&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;for _i, _n range $research&gt;&gt;&lt;&lt;capture _i, _n&gt;&gt;
+&#39;&#39;_n.description&#39;&#39; &lt;&lt;percent _n.count _n.max&gt;&gt;
+&lt;progress class=&quot;bar&quot; @value=&quot;_n.count&quot; @max=&quot;_n.max&quot;&gt;&lt;/progress&gt;
+&lt;&lt;/capture&gt;&gt;&lt;&lt;/for&gt;&gt;
+</tw-passagedata><tw-passagedata pid="81" name="Flags" tags="widget nobr" position="927.6666666666666,228.33333333333334" size="100,100">/*  SetFlag : Set Flag X to value Y (Y defaults to True).  Flag names are NOT case sensitive.  */
+/*  EXAMPLE: &lt;&lt;SetFlag &quot;Mentor&quot; &quot;Bob&quot;&gt;&gt;  */
+/*  EXAMPLE: &lt;&lt;SetFlag &quot;TrialMed&quot;&gt;&gt;  = sets TrialMed flag to True  */
+&lt;&lt;widget &quot;setFlag&quot;&gt;&gt;
+	&lt;&lt;set _Fnam = $args[0].toLowerCase()&gt;&gt;
+	&lt;&lt;if ndef $Flags&gt;&gt;
+		&lt;&lt;set $Flags = {}&gt;&gt;
+	&lt;&lt;/if&gt;&gt;
+	&lt;&lt;if def $args[1]&gt;&gt;
+		&lt;&lt;if $args[1] == false&gt;&gt;
+			&lt;&lt;if def $Flags[_Fnam]&gt;&gt;
+				&lt;&lt;run delete $Flags[_Fnam]&gt;&gt;
+			&lt;&lt;/if&gt;&gt;
+		&lt;&lt;else&gt;&gt;
+			&lt;&lt;set $Flags[_Fnam] = $args[1]&gt;&gt;
+		&lt;&lt;/if&gt;&gt;
+	&lt;&lt;else&gt;&gt;
+		&lt;&lt;set $Flags[_Fnam] = true&gt;&gt;
+	&lt;&lt;/if&gt;&gt;
+	/* Event flags: */
+	/* Keep track of your flags here, for example: */
+	/* Mentor = Bob or Joe */
+	/* TrialMed = denotes whether you&#39;ve agreed to take Dr. Acula&#39;s medication */
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="82" name="error" tags="widget nobr" position="927.6666666666666,330.83333333333337" size="100,100">&lt;&lt;widget &quot;error&quot;&gt;&gt;
+	&lt;&lt;if ($args.length == 2) &amp;&amp; (typeof $args[0] === &quot;string&quot;) &amp;&amp; (typeof $args[1] === &quot;string&quot;)&gt;&gt;
+		&lt;&lt;if ndef _errNo&gt;&gt;
+			&lt;&lt;set _errNo = 1&gt;&gt;
+			&lt;&lt;run $(document).one(&quot;:passagerender&quot;,
+				function (ev) {
+					$(ev.content).find(&quot;.errmsg&quot;).each(function (idx) {
+						throwError($(this), $(this).data(&quot;msg&quot;), $(this).data(&quot;src&quot;));
+					});
+				}
+			)&gt;&gt;
+		&lt;&lt;else&gt;&gt;
+			&lt;&lt;set _errNo += 1&gt;&gt;
+		&lt;&lt;/if&gt;&gt;
+		&lt;span class=&quot;errmsg&quot; @data-msg=&quot;$args[0]&quot; @data-src=&quot;$args[1]&quot;&gt;&lt;/span&gt;
+	&lt;&lt;else&gt;&gt;
+		&lt;&lt;ErrMsg &#39;&lt;&lt;ErrMsg&gt;&gt; must have two string parameters.&#39; &#39;Example: &lt;&lt;ErrMsg &quot;Main text.&quot; &quot;Details.&quot;&gt;&gt;&#39;&gt;&gt;
+	&lt;&lt;/if&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="83" name="glitch" tags="widget nobr" position="927.6666666666667,439.1666666666667" size="100,100">&lt;&lt;widget &quot;glitch&quot;&gt;&gt;
+&lt;&lt;set _main to $args[0]&gt;&gt;
+&lt;&lt;if not $args[1]&gt;&gt;&lt;&lt;set _second to clone(_main)&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set _second to clone($args[1])&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;span class=&quot;glitchy&quot; @data-text=_second&gt;_main&lt;/span&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata></tw-storydata>
