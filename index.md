@@ -23,6 +23,12 @@ A repo for Deus Ex related information.<br>
 [Merry](https://github.com/codedthoughts/Merry) ![py](https://img.shields.io/badge/Python-3.7%2B-informational.svg?logo=python) ![linux](https://img.shields.io/badge/Platform-Linux-informational.svg?logo=linux)<br> 
 A fully-featured GUI interface for Python3's module manager.<br>
 
+[AthenaOS](https://github.com/codedthoughts/AthenaOS/) ![py](https://img.shields.io/badge/Python-3.7%2B-informational.svg?logo=python) ![linux](https://img.shields.io/badge/Platform-Linux-informational.svg?logo=linux)<br>
+A WIP Desktop Assistant designed around being extendable and modular.
+
+[Memory](https://github.com/codedthoughts/Memory/) ![py](https://img.shields.io/badge/Python-3.7%2B-informational.svg?logo=python) ![linux](https://img.shields.io/badge/Platform-Linux-informational.svg?logo=linux)<br>
+A simple json-based config manager, to automate simple config management.
+
 [333 Browser](https://github.com/codedthoughts/333Browser) ![py](https://img.shields.io/badge/Python-3.7%2B-informational.svg?logo=python) ![linux](https://img.shields.io/badge/Platform-Linux-informational.svg?logo=linux) <br> 
 A gui for the 333networks masterserver API.<br>
 
