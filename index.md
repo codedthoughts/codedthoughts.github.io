@@ -26,6 +26,9 @@ A fully-featured GUI interface for Python3's module manager.<br>
 [AthenaOS](https://github.com/codedthoughts/AthenaOS/) ![py](https://img.shields.io/badge/Python-3.7%2B-informational.svg?logo=python) ![linux](https://img.shields.io/badge/Platform-Linux-informational.svg?logo=linux)<br>
 A WIP Desktop Assistant designed around being extendable and modular.
 
+[AthenaOS-Modules](https://github.com/codedthoughts/aosr-modules/) ![py](https://img.shields.io/badge/Python-3.7%2B-informational.svg?logo=python) ![linux](https://img.shields.io/badge/Platform-Linux-informational.svg?logo=linux)<br>
+A repo for optional AthenaOS plugins.
+
 [Memory](https://github.com/codedthoughts/Memory/) ![py](https://img.shields.io/badge/Python-3.7%2B-informational.svg?logo=python) ![linux](https://img.shields.io/badge/Platform-Linux-informational.svg?logo=linux)<br>
 A simple json-based config manager, to automate simple config management.
 
@@ -42,6 +45,9 @@ A simple GUI for managing AppImage collections, can move images from Downloads t
 [KUI](https://github.com/Kaiz0r/python3-kui) ![py](https://img.shields.io/badge/Python-3.7%2B-informational.svg?logo=python)<br> 
 A python3 library for my own personal use to quickly create modular text windows, for things like log outputs etc.<br>
 Here for if its useful to anyone, but is mainly just required by my other python3 applications.
+
+[Pokedex](https://github.com/codedthoughts/pokedex) ![py](https://img.shields.io/badge/Python-3.7%2B-informational.svg?logo=python)<br> 
+A python3 library wrapper for the Pokeapi.co API.
 
 ## Prototypes
 Work-in-progress title ![js](https://img.shields.io/badge/Platform-Online-informational.svg?logo=html5)<br>
