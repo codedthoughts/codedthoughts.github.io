@@ -122,7 +122,15 @@
         }
 
         setInterval( draw, 35 );
-
+		
+		function clicky(){
+			clicks = Number(document.getElementById("clicks").innerHTML)
+			clicks += 1
+			document.getElementById("clicks").innerHTML = clicks
+		}
         </script>
+        
+        <button onclick="clicky()">Compile...</button>
+        Apps: <label id="clicks">0</label>
     </body>
 </html>
