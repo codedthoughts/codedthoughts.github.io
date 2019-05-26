@@ -1,8 +1,17 @@
-/*basic reset*/
-* {margin: 0; padding: 0;}
-/*adding a black bg to the body to make things clearer*/
 body {
 	background: black;
 	color: white;
 	background-image: url("bg.gif");
+	background-size: cover;
+}
+
+div.tcalert {
+	background-color: #2F2F2F;
+	width: 520px;
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+	font-size: 15px;
 }
