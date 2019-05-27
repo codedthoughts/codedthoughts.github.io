@@ -58,14 +58,14 @@ function clicky(){
 	}
 }
 
-function upgrade(type, cost){
-	if (player.cash >= Number(cost)){
-		payout(cost)
+function upgrade(type){
+	if (player.cash >= Number(player.market[type+'cost'])){
+		payout(player.market[type+'cost'])
 		player[type] += 1;
-		//alert(`${type} is now at ${upgrades[type]}`);
+		
 		document.getElementById(type).innerHTML = player[type];
-		player.market[type+'cost'] = player.market['default'+type+'cost']*player.cpu
-		document.getElementById(`cost${type}`).innerHTML = player.market[type+'cost']
+		player.market[type+'cost'] = player.market['default'+type+'cost']*player[type];
+		document.getElementById(`cost${type}`).innerHTML = `(`${player.market['default'+type+'cost']}`) ${player.market[type+'cost']}`
 	}else{
 		alert("You can't afford it.")
 	}
