@@ -1,6 +1,6 @@
 var player = {clicks:0, cash:0, auto:0, cpu:1};
 
-var autoclick = setInverval(autoclickr, 5);
+var autoclick = window.setInverval(autoclickr, 5);
 
 function autoclickr(){
 	compile()
@@ -12,7 +12,7 @@ function compile(){
 	
 	var btn = document.createElement("P");
 	btn.innerHTML = `+ £${player.cpu}`;
-	document.getElementById("p").classList.add('fadeOutUp');
+	btn.classList.add('fadeOutUp');
 	document.getElementById("worldspace").appendChild(btn);
 
 	document.getElementById("cash").innerHTML = player.cash;
