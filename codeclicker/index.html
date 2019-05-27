@@ -9,8 +9,10 @@
 	<div class="tcalert">
         <button onclick="clicky()">Compile...</button><br>
         £<label id="clicks">0</label><br>
-        <button id="upgauto" style="display: none;" onclick="upgrade('auto')">Buy Automated Compiler (£10)</button>(<label id="autos">0</label>)<br>
-		<button id="upgcpu" style="display: none;" onclick="upgrade('cpu')">Buy CPU upgrade (£10)</button> (<label id="cpus">1</label>)
+        
+        <div id="blockauto" style="display: none;"><button onclick="upgrade('auto')">Buy Automated Compiler (£10)</button> (<label id="auto">0</label>)<br></div>
+        
+		<div id="blockcpu" style="display: none;"><button onclick="upgrade('cpu')">Buy CPU upgrade (£10)</button> (<label id="cpu">1</label>)</div>
 	</div>
   </body>
 </html>
