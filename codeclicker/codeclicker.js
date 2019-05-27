@@ -2,7 +2,7 @@ var player = {clicks:0, cash:0, auto:0, cpu:1};
 
 
 function autoclickr(){
-	compile()
+	compile() //change to for loop auto
 }
 //window.onload = autoclickr;
 setInterval("autoclickr();", 5000);
