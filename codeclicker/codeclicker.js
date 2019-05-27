@@ -5,7 +5,21 @@ function autoclickr(){
 	compile()
 }
 //window.onload = autoclickr;
-setInterval("autoclickr();", 5);
+setInterval("autoclickr();", 5000);
+
+function animateCSS(element, animationName, callback) {
+    const node = document.querySelector(element)
+    node.classList.add('animated', animationName)
+
+    function handleAnimationEnd() {
+        node.classList.remove('animated', animationName)
+        node.removeEventListener('animationend', handleAnimationEnd)
+
+        if (typeof callback === 'function') callback()
+    }
+
+    node.addEventListener('animationend', handleAnimationEnd)
+}
 
 function compile(){
 	player.clicks += player.cpu;
@@ -13,9 +27,10 @@ function compile(){
 	
 	var btn = document.createElement("P");
 	btn.innerHTML = `+ £${player.cpu}`;
-	btn.classList.add('animated', 'fadeOutUp');
+	//btn.classList.add('animated', 'fadeOutUp');
+	btn.classList.add('anim')
 	document.getElementById("worldspace").appendChild(btn);
-
+	animateCSS('p.anim', 'fadeOutUp')
 	document.getElementById("cash").innerHTML = player.cash;
 }
 
