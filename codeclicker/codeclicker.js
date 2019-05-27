@@ -1,5 +1,6 @@
 var player = {clicks:0, cash:0, auto:0, cpu:1};
 
+player.market = {cpucost: 20, autocost: 10, cpudefaultcost: 20, autodefaultcost: 10}
 
 function autoclickr(){
 	compile() //change to for loop auto
@@ -42,7 +43,7 @@ function compile(){
 
 function payout(cost){
 	player.cash -= Number(cost);
-	document.getElementById("cash").innerHTML = player.cash;
+	document.getElementById("cash").innerHTML = `£${player.cash}`;
 }
 
 function clicky(){
@@ -63,6 +64,8 @@ function upgrade(type, cost){
 		player[type] += 1;
 		//alert(`${type} is now at ${upgrades[type]}`);
 		document.getElementById(type).innerHTML = player[type];
+		player.market[type+'cost'] = player.market['default'+type+'cost']*player.cpu
+		document.getElementById(`cost${type}`).innerHTML = player.market[type+'cost']
 	}else{
 		alert("You can't afford it.")
 	}
