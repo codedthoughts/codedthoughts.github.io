@@ -1,6 +1,6 @@
 var player = {clicks:0, cash:0, auto:0, cpu:1};
 
-player.market = {cpucost: 20, autocost: 10, cpudefaultcost: 20, autodefaultcost: 10}
+player.market = {cpucost: 20, autocost: 10, defaultcpucost: 20, defaultautocost: 10}
 
 function autoclickr(){
 	compile() //change to for loop auto
