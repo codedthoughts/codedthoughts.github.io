@@ -1,10 +1,11 @@
 var player = {clicks:0, cash:0, auto:0, cpu:1};
 
-var autoclick = window.setInverval(autoclickr, 5);
 
 function autoclickr(){
 	compile()
 }
+//window.onload = autoclickr;
+setInverval("autoclickr();", 5);
 
 function compile(){
 	player.clicks += player.cpu;
@@ -12,7 +13,7 @@ function compile(){
 	
 	var btn = document.createElement("P");
 	btn.innerHTML = `+ £${player.cpu}`;
-	btn.classList.add('fadeOutUp');
+	btn.classList.add('animated', 'fadeOutUp');
 	document.getElementById("worldspace").appendChild(btn);
 
 	document.getElementById("cash").innerHTML = player.cash;
@@ -57,7 +58,7 @@ function buy(obj, cost){
 		}
 		document.getElementById(type).innerHTML = player[type];
 	}else{
-		alert("You can't afford "+obj+".")
+		alert(`You can't afford ${obj}, you only have ${player.cash}.`)
 	}
 }
 
