@@ -25,14 +25,14 @@ function compile(){
 	player.clicks += player.cpu;
 	player.cash += player.cpu;
 	
-	var btn = document.createElement("div");
+	var btn = document.createElement("p");
 	//btn.innerHTML = `<p class="animated fadeOutUp">+ £${player.cpu}</p>`;
 	btn.innerHTML = `+ £${player.cpu}`;
-	btn.classList.add('animated', 'fadeOutUp');
+	btn.id = "ani"
 	//btn.classList.add('animated', 'fadeOutUp')
-	document.getElementById("cash").appendChild(btn);
+	//document.getElementById("cash").appendChild(btn);
 	
-	//animateCSS('p.anim', 'fadeOutUp')
+	animateCSS('#ani', 'fadeOutUp')
 	//const element =  document.querySelector('.anim')
 	//element.classList.add('animated', 'fadeOutUp')
 	document.getElementById("cash").innerHTML = player.cash;
