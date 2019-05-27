@@ -15,3 +15,8 @@ div.tcalert {
     margin-right: auto;
 	font-size: 15px;
 }
+
+div.anim {
+max-width: 30%;
+max-height: 10%;
+}

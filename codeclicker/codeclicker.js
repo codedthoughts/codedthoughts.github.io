@@ -28,11 +28,11 @@ function compile(){
 	var btn = document.createElement("p");
 	//btn.innerHTML = `<p class="animated fadeOutUp">+ £${player.cpu}</p>`;
 	btn.innerHTML = `+ £${player.cpu}`;
-	btn.id = "ani"
-	//btn.classList.add('animated', 'fadeOutUp')
-	//document.getElementById("cash").appendChild(btn);
+	//btn.id = "ani"
+	btn.classList.add('animated', 'fadeOutUp')
+	document.getElementById("income").appendChild(btn);
 	
-	animateCSS('#ani', 'fadeOutUp')
+	//animateCSS('#ani', 'fadeOutUp')
 	//const element =  document.querySelector('.anim')
 	//element.classList.add('animated', 'fadeOutUp')
 	document.getElementById("cash").innerHTML = player.cash;
