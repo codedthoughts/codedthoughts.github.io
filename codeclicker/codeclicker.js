@@ -30,10 +30,7 @@ function compile(){
 	btn.innerHTML = `+ £${player.cpu}`;
 	btn.classList.add('animated', 'fadeOutUp');
 	//btn.classList.add('animated', 'fadeOutUp')
-	document.getElementById("wbutton").appendChild(btn);
-	btn.addEventListener('animationend', function() { 
-		document.getElementById("wbutton").parentElement.removeChild(btn);
-	});
+	document.getElementById("cash").appendChild(btn);
 	
 	//animateCSS('p.anim', 'fadeOutUp')
 	//const element =  document.querySelector('.anim')
