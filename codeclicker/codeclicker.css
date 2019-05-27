@@ -17,6 +17,6 @@ div.tcalert {
 }
 
 div.anim {
-max-width: 30%;
-max-height: 10%;
+max-width: 0;
+max-height: 0;
 }
