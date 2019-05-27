@@ -25,12 +25,14 @@ function compile(){
 	player.clicks += player.cpu;
 	player.cash += player.cpu;
 	
-	var btn = document.createElement("P");
-	btn.innerHTML = `+ £${player.cpu}`;
+	var btn = document.createElement("div");
+	btn.innerHTML = `<p class="animated fadeOutUp">+ £${player.cpu}</p>`;
 	//btn.classList.add('animated', 'fadeOutUp');
-	btn.classList.add('anim')
+	//btn.classList.add('animated', 'fadeOutUp')
 	document.getElementById("worldspace").appendChild(btn);
-	animateCSS('p.anim', 'fadeOutUp')
+	//animateCSS('p.anim', 'fadeOutUp')
+	//const element =  document.querySelector('.anim')
+	//element.classList.add('animated', 'fadeOutUp')
 	document.getElementById("cash").innerHTML = player.cash;
 }
 
@@ -71,7 +73,7 @@ function buy(obj, cost){
 				compile()
 			}
 		}
-		document.getElementById(type).innerHTML = player[type];
+		//document.getElementById(type).innerHTML = player[type];
 	}else{
 		alert(`You can't afford ${obj}, you only have ${player.cash}.`)
 	}
