@@ -31,7 +31,7 @@ function compile(){
 	//btn.id = "ani"
 	btn.classList.add('animated', 'fadeOutUp')
 	document.getElementById("income").appendChild(btn);
-	
+	btn.addEventListener('animationend', function() { btn.parentNode.removeChild(btn); })
 	//animateCSS('#ani', 'fadeOutUp')
 	//const element =  document.querySelector('.anim')
 	//element.classList.add('animated', 'fadeOutUp')
