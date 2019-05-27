@@ -25,17 +25,18 @@ function compile(){
 	player.clicks += player.cpu;
 	player.cash += player.cpu;
 	
-	var btn = document.createElement("p");
+	//var btn = document.createElement("p");
 	//btn.innerHTML = `<p class="animated fadeOutUp">+ £${player.cpu}</p>`;
-	btn.innerHTML = `+ £${player.cpu}`;
-	//btn.id = "ani"
-	btn.classList.add('animated', 'fadeOutUp')
-	inc = document.getElementById("income")//.appendChild(btn);
-	inc.parentNode.insertBefore(inc, btn);
-	btn.addEventListener('animationend', function() { btn.parentNode.removeChild(btn); })
-	//animateCSS('#ani', 'fadeOutUp')
+	//btn.innerHTML = `+ £${player.cpu}`;
+	//btn.class = "ani"
+	//btn.classList.add('animated', 'fadeOutUp')
+	//inc = document.getElementById("income")//.appendChild(btn);
+	//inc.insertBefore(inc, btn);
+	//btn.addEventListener('animationend', function() { btn.parentNode.removeChild(btn); })
+	animateCSS('.wbutton', 'bounce')
 	//const element =  document.querySelector('.anim')
 	//element.classList.add('animated', 'fadeOutUp')
+	//document.getElementById("wbutton").classList.add('animated', 'bounce')
 	document.getElementById("cash").innerHTML = player.cash;
 }
 
