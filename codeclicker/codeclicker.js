@@ -1,35 +1,63 @@
-var clicks = 0;
-var cash = 0;
+var player = {clicks:0, cash:0, auto:0, cpu:1};
 
-var upgrades = {auto:0, cpu:1}; 
-//Auto timers +1 compile per second
-//CPU makes compilers worth more
+var autoclick = setInverval(autoclickr, 5);
+
+function autoclickr(){
+	compile()
+}
 
 function compile(){
-	clicks += upgrades.cpu;
-	cash += upgrades.cpu;
-}
-function clicky(){
-	//clicks = Number(document.getElementById("clicks").innerHTML)
-	compile();
-	document.getElementById("clicks").innerHTML = clicks;
+	player.clicks += player.cpu;
+	player.cash += player.cpu;
 	
-	if (clicks > 20 && document.getElementById("blockauto").style.display === "none"){
+	var btn = document.createElement("P");
+	btn.innerHTML = `+ £${player.cpu}`;
+	document.getElementById("p").classList.add('fadeOutUp');
+	document.getElementById("worldspace").appendChild(btn);
+
+	document.getElementById("cash").innerHTML = player.cash;
+}
+
+function payout(cost){
+	player.cash -= Number(cost);
+	document.getElementById("cash").innerHTML = player.cash;
+}
+
+function clicky(){
+	compile();
+	
+	if (player.clicks > 20 && document.getElementById("blockauto").style.display === "none"){
 	document.getElementById("blockauto").style.display = 'block';
 	}
 	
-	if (clicks > 10 && document.getElementById("blockcpu").style.display === "none"){
+	if (player.clicks > 10 && document.getElementById("blockcpu").style.display === "none"){
 	document.getElementById("blockcpu").style.display = 'block';
 	}
 }
 
-function upgrade(type){
-	if (cash >= 10){
-		upgrades[type] += 1;
+function upgrade(type, cost){
+	if (player.cash >= Number(cost)){
+		payout(cost)
+		player[type] += 1;
 		//alert(`${type} is now at ${upgrades[type]}`);
-		document.getElementById(type).innerHTML = upgrades[type];
+		document.getElementById(type).innerHTML = player[type];
 	}else{
 		alert("You can't afford it.")
+	}
+}
+
+function buy(obj, cost){
+	if (player.cash >= Number(cost)){
+		payout(cost)
+		if (obj == "pepsi"){
+			alert("You downed a pepsi and got to work!")
+			for (i = 0; i < 5; ++i) {
+				compile()
+			}
+		}
+		document.getElementById(type).innerHTML = player[type];
+	}else{
+		alert("You can't afford "+obj+".")
 	}
 }
 
