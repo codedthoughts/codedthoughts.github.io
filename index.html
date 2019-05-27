@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Code Clicker a29</title>
+    <script src="codeclicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="codeclicker.css">
+    <link rel="stylesheet" href="animate.css">
+  </head>
+  
+  <body>
+	<div class="tcalert">
+       <button class="wbutton" onclick="clicky()">Compile...</button><br>
+        <span class='anim' id="income"></span>£<label id="cash">0</label><br>
+		
+        <button onclick="buy('pepsi', 2)">Buy Pepsi (£2)</button>
+        
+        <div id="blockauto" style="display: none;"><button onclick="upgrade('auto', 10)">Buy Automated Compiler (£10)</button> (<label id="auto">0</label>)<br></div>
+        
+		<div id="blockcpu" style="display: none;"><button onclick="upgrade('cpu', 20)">Buy CPU upgrade (£10)</button> (<label id="cpu">1</label>)</div>
+	</div>
+  </body>
+</html>
