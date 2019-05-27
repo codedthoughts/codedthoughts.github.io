@@ -7,8 +7,10 @@
   
   <body>
 	<div class="tcalert">
-        <button onclick="clicky()">Compile...</button>
-        Apps: <label id="clicks">0</label>
+        <button onclick="clicky()">Compile...</button><br>
+        £<label id="clicks">0</label><br>
+        <button id="upgauto" style="display: none;" onclick="upgrade('auto')">Buy Automated Compiler (£10)</button>
+		<button id="upgcpu" style="display: none;" onclick="upgrade('cpu')">Buy CPU upgrade (£10)</button>
 	</div>
   </body>
 </html>
