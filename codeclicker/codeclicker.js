@@ -26,10 +26,15 @@ function compile(){
 	player.cash += player.cpu;
 	
 	var btn = document.createElement("div");
-	btn.innerHTML = `<p class="animated fadeOutUp">+ £${player.cpu}</p>`;
-	//btn.classList.add('animated', 'fadeOutUp');
+	//btn.innerHTML = `<p class="animated fadeOutUp">+ £${player.cpu}</p>`;
+	btn.innerHTML = `+ £${player.cpu}`;
+	btn.classList.add('animated', 'fadeOutUp');
 	//btn.classList.add('animated', 'fadeOutUp')
-	document.getElementById("worldspace").appendChild(btn);
+	document.getElementById("wbutton").appendChild(btn);
+	btn.addEventListener('animationend', function() { 
+		document.getElementById("wbutton").parentElement.removeChild(btn);
+	});
+	
 	//animateCSS('p.anim', 'fadeOutUp')
 	//const element =  document.querySelector('.anim')
 	//element.classList.add('animated', 'fadeOutUp')
