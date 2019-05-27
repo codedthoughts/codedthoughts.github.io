@@ -5,7 +5,7 @@ function autoclickr(){
 	compile()
 }
 //window.onload = autoclickr;
-setInverval("autoclickr();", 5);
+setInterval("autoclickr();", 5);
 
 function compile(){
 	player.clicks += player.cpu;
