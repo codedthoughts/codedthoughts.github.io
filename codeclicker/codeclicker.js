@@ -65,7 +65,7 @@ function upgrade(type){
 		
 		document.getElementById(type).innerHTML = player[type];
 		player.market[type+'cost'] = player.market['default'+type+'cost']*player[type];
-		document.getElementById(`cost${type}`).innerHTML = `(`${player.market['default'+type+'cost']}`) ${player.market[type+'cost']}`
+		document.getElementById(`cost${type}`).innerHTML = `(${player.market['default'+type+'cost']}) ${player.market[type+'cost']}`
 	}else{
 		alert("You can't afford it.")
 	}
