@@ -37,7 +37,7 @@ function compile(){
 	//const element =  document.querySelector('.anim')
 	//element.classList.add('animated', 'fadeOutUp')
 	//document.getElementById("wbutton").classList.add('animated', 'bounce')
-	document.getElementById("cash").innerHTML = player.cash;
+	document.getElementById("cash").innerHTML = `£${player.cash}`;
 }
 
 function payout(cost){
