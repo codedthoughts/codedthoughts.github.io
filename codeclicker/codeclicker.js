@@ -30,7 +30,8 @@ function compile(){
 	btn.innerHTML = `+ £${player.cpu}`;
 	//btn.id = "ani"
 	btn.classList.add('animated', 'fadeOutUp')
-	document.getElementById("income").appendChild(btn);
+	inc = document.getElementById("income")//.appendChild(btn);
+	btn.parentNode.insertBefore(inc, btn);
 	btn.addEventListener('animationend', function() { btn.parentNode.removeChild(btn); })
 	//animateCSS('#ani', 'fadeOutUp')
 	//const element =  document.querySelector('.anim')
