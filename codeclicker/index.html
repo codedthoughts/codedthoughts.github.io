@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Code Clicker a35</title>
+    <title>Code Clicker a37</title>
     <script src="codeclicker.js"></script>
     <link rel="stylesheet" type="text/css" href="codeclicker.css">
     <link rel="stylesheet" href="animate.css">
@@ -11,11 +11,13 @@
        <div class="wbutton" id="cash">£0</div>
        <button onclick="compile()">Compile...</button><br>
 		
-        <button onclick="buy('pepsi', 2)">Buy Pepsi (£2)</button>
+        <button id="pepsi" onclick="buy('pepsi', 2)">Buy Multipack of Pepsi Turbo (£100)</button>
         
-        <div id="blockauto" style="display: none;"><button onclick="upgrade('auto')">Buy Automated Compiler</button> for £<span id="costauto">10</span> (Currently have: <label id="auto">0</label>)<br></div>
+        <div id="blockauto" style="display: none;"><button onclick="upgrade('auto')">Buy Automated Compiler</button> for £<span id="costauto">10</span> (Currently have: <label id="auto">0</label>) <a onclick="help('auto')" href="javascript:void(0);">?</a><br></div> 
         
-		<div id="blockcpu" style="display: none;"><button onclick="upgrade('cpu')">Buy CPU upgrade</button> for £<span id="costcpu">20</span> (Currently have: <label id="cpu">1</label>)</div>
+		<div id="blockcpu" style="display: none;"><button onclick="upgrade('cpu')">Buy CPU upgrade</button> for £<span id="costcpu">20</span> (Currently have: <label id="cpu">1</label>)<a onclick="help('cpu')" href="javascript:void(0);">?</a><br></div>
+		
+		<div id="blockfarm" style="display: none;"><button onclick="upgrade('farm')">Buy Server Farm</button> for £<span id="costfarm">50</span> (Currently have: <label id="farm">1</label>)<a onclick="help('farm')" href="javascript:void(0);">?</a><br></div>
 	</div>
   </body>
 </html>

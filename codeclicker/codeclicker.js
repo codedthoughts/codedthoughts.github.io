@@ -1,6 +1,6 @@
-var player = {clicks:0, cash:0, auto:0, cpu:1};
+var player = {clicks:0, cash:0, auto:0, cpu:1, farm:0};
 
-player.market = {cpucost: 20, autocost: 10, defaultcpucost: 20, defaultautocost: 10}
+player.market = {cpucost: 20, autocost: 10, farmcost: 50, defaultfarmcost: 50, defaultcpucost: 20, defaultautocost: 10}
 
 function autoclickr(){
 	if (player.auto > 0){
@@ -26,9 +26,15 @@ function animateCSS(element, animationName, callback) {
     node.addEventListener('animationend', handleAnimationEnd)
 }
 
+function incrementAlgorithm(){
+	invar = (player.cpu*1.1)
+	invar += (player.farm*1.2)
+	return Number(invar)
+}
+
 function compile(){
-	player.clicks += player.cpu;
-	player.cash += player.cpu;
+	player.clicks += incrementAlgorithm();
+	player.cash += incrementAlgorithm();
 	
 	animateCSS('.wbutton', 'bounce')
 
@@ -64,14 +70,30 @@ function upgrade(type){
 function buy(obj, cost){
 	if (player.cash >= Number(cost)){
 		payout(cost)
+		var delay = 0
+		document.getElementById(obj).disabled = true;
 		if (obj == "pepsi"){
 			alert("You downed a pepsi and got to work!")
 			for (i = 0; i < 5; ++i) {
 				compile()
 			}
+			delay = 5000
 		}
+		
+		setTimeout(function(){ 
+			document.getElementById(obj).disabled = false;
+			
+		}, delay);
 	}else{
 		alert(`You can't afford ${obj}, you only have ${player.cash}.`)
+	}
+}
+
+function help(obj){
+	helpvars = {
+		auto: "Automatically compiles at intervals.",
+		cpu: "1.1x compile power modifier",
+		farm: "1.2x compile power modifier"
 	}
 }
 
