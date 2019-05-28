@@ -1,8 +1,8 @@
 var player = {clicks:0, cash:0, auto:0, cpu:1, farm:0, aic:0, aica:0};
 
 player.market = {
-	cpucost: 20, autocost: 10, farmcost: 50, aiccost: 100, aicacost: 200, 
-	defaultaiccost:100, defaultfarmcost: 50, defaultcpucost: 20, defaultautocost: 10, defaultaicacost: 200}
+	autocost: 50, cpucost: 100, farmcost: 300, aiccost: 500, aicacost: 1200, 
+	defaultaiccost:500, defaultfarmcost: 300, defaultcpucost: 100, defaultautocost: 50, defaultaicacost: 1200}
 
 function autoclickr(){
 	if (player.auto > 0){
