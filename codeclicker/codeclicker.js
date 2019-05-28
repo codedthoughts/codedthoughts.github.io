@@ -47,8 +47,8 @@ function compile(){
 	if (player.clicks > 20 && document.getElementById("blockcpu").style.display === "none"){
 		document.getElementById("blockcpu").style.display = 'block';
 	}
-	if (player.clicks > 20 && document.getElementById("blockcpu").style.display === "none"){
-		document.getElementById("blockcpu").style.display = 'block';
+	if (player.clicks > 50 && document.getElementById("blockfarm").style.display === "none"){
+		document.getElementById("blockfarm").style.display = 'block';
 	}
 }
 
@@ -69,6 +69,7 @@ function upgrade(type){
 		//Updating clickpower UI
 		document.getElementById('pwr').innerHTML = `
 		Compile Power: ${incrementAlgorithm()}<br>
+		Auto-Compiling ${player.auto}/m
 		`;
 		animateCSS('.cpwr', 'flash')
 	}else{
