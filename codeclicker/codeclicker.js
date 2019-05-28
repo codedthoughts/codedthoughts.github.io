@@ -3,9 +3,13 @@ var player = {clicks:0, cash:0, auto:0, cpu:1};
 player.market = {cpucost: 20, autocost: 10, defaultcpucost: 20, defaultautocost: 10}
 
 function autoclickr(){
-	compile() //change to for loop auto
+	if (player.auto > 0){
+		for (i = 0; i < player.auto; ++i){
+			compile()
+		}
+	}
 }
-//window.onload = autoclickr;
+
 setInterval("autoclickr();", 5000);
 
 function animateCSS(element, animationName, callback) {
@@ -26,36 +30,22 @@ function compile(){
 	player.clicks += player.cpu;
 	player.cash += player.cpu;
 	
-	//var btn = document.createElement("p");
-	//btn.innerHTML = `<p class="animated fadeOutUp">+ £${player.cpu}</p>`;
-	//btn.innerHTML = `+ £${player.cpu}`;
-	//btn.class = "ani"
-	//btn.classList.add('animated', 'fadeOutUp')
-	//inc = document.getElementById("income")//.appendChild(btn);
-	//inc.insertBefore(inc, btn);
-	//btn.addEventListener('animationend', function() { btn.parentNode.removeChild(btn); })
 	animateCSS('.wbutton', 'bounce')
-	//const element =  document.querySelector('.anim')
-	//element.classList.add('animated', 'fadeOutUp')
-	//document.getElementById("wbutton").classList.add('animated', 'bounce')
+
 	document.getElementById("cash").innerHTML = `£${player.cash}`;
+	
+	if (player.clicks > 10 && document.getElementById("blockauto").style.display === "none"){
+		document.getElementById("blockauto").style.display = 'block';
+	}
+	
+	if (player.clicks > 20 && document.getElementById("blockcpu").style.display === "none"){
+		document.getElementById("blockcpu").style.display = 'block';
+	}
 }
 
 function payout(cost){
 	player.cash -= Number(cost);
 	document.getElementById("cash").innerHTML = `£${player.cash}`;
-}
-
-function clicky(){
-	compile();
-	
-	if (player.clicks > 20 && document.getElementById("blockauto").style.display === "none"){
-	document.getElementById("blockauto").style.display = 'block';
-	}
-	
-	if (player.clicks > 10 && document.getElementById("blockcpu").style.display === "none"){
-	document.getElementById("blockcpu").style.display = 'block';
-	}
 }
 
 function upgrade(type){
@@ -65,7 +55,7 @@ function upgrade(type){
 		
 		document.getElementById(type).innerHTML = player[type];
 		player.market[type+'cost'] = player.market['default'+type+'cost']*player[type];
-		document.getElementById(`cost${type}`).innerHTML = `(${player.market['default'+type+'cost']}) ${player.market[type+'cost']}`
+		document.getElementById(`cost${type}`).innerHTML = `${player.market[type+'cost']}`
 	}else{
 		alert("You can't afford it.")
 	}
@@ -80,7 +70,6 @@ function buy(obj, cost){
 				compile()
 			}
 		}
-		//document.getElementById(type).innerHTML = player[type];
 	}else{
 		alert(`You can't afford ${obj}, you only have ${player.cash}.`)
 	}
