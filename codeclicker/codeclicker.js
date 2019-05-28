@@ -56,12 +56,16 @@ function payout(cost){
 
 function upgrade(type){
 	if (player.cash >= Number(player.market[type+'cost'])){
+		//Processing transaction
 		payout(player.market[type+'cost'])
 		player[type] += 1;
-		
 		document.getElementById(type).innerHTML = player[type];
 		player.market[type+'cost'] = player.market['default'+type+'cost']*player[type];
 		document.getElementById(`cost${type}`).innerHTML = `${player.market[type+'cost']}`
+		
+		//Updating clickpower UI
+		document.getElementById('pwr').innerHTML = incrementAlgorithm();
+		animateCSS('.cpwr', 'flash')
 	}else{
 		alert("You can't afford it.")
 	}
