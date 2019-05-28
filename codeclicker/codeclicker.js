@@ -29,7 +29,7 @@ function animateCSS(element, animationName, callback) {
 function incrementAlgorithm(){
 	invar = (player.cpu*1.1)
 	invar += (player.farm*1.2)
-	return Number(invar)
+	return Math.floor(Number(invar))
 }
 
 function compile(){
@@ -95,5 +95,6 @@ function help(obj){
 		cpu: "1.1x compile power modifier",
 		farm: "1.2x compile power modifier"
 	}
+	alert(helpvars[obj])
 }
 
