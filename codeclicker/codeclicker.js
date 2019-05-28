@@ -30,9 +30,9 @@ function animateCSS(element, animationName, callback) {
 
 function incrementAlgorithm(){
 	invar = player.cpu
-	invar += (player.farm*2.0)
-	invar *= (player.aic/1.7)
-	invar *= (player.aic/1.2)
+	if (player.farm > 0){invar += (player.farm*2.0)}
+	if (player.aic > 0){invar *= (player.aic/1.7)}
+	if (player.aica > 0){invar *= (player.aica/1.2)}
 	return Math.floor(Number(invar))
 }
 
