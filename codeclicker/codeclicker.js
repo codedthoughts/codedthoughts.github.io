@@ -31,8 +31,8 @@ function animateCSS(element, animationName, callback) {
 function incrementAlgorithm(){
 	invar = player.cpu
 	if (player.farm > 0){invar += (player.farm*2.0)}
-	if (player.aic > 0){invar *= (player.aic/1.7)}
-	if (player.aica > 0){invar *= (player.aica/1.2)}
+	if (player.aic > 0){invar *= (player.aic*1.3)}
+	if (player.aica > 0){invar *= (player.aica*1.7)}
 	return Math.floor(Number(invar))
 }
 
@@ -48,16 +48,16 @@ function compile(){
 		document.getElementById("blockauto").style.display = 'block';
 	}
 	
-	if (player.clicks > 20 && document.getElementById("blockcpu").style.display === "none"){
+	if (player.clicks > 50 && document.getElementById("blockcpu").style.display === "none"){
 		document.getElementById("blockcpu").style.display = 'block';
 	}
-	if (player.clicks > 50 && document.getElementById("blockfarm").style.display === "none"){
+	if (player.clicks > 100 && document.getElementById("blockfarm").style.display === "none"){
 		document.getElementById("blockfarm").style.display = 'block';
 	}
-	if (player.clicks > 100 && document.getElementById("blockaic").style.display === "none"){
+	if (player.cash > 400 && document.getElementById("blockaic").style.display === "none"){
 		document.getElementById("blockaic").style.display = 'block';
 	}
-	if (player.clicks > 200 && document.getElementById("blockaica").style.display === "none"){
+	if (player.cash > 1000 && document.getElementById("blockaica").style.display === "none"){
 		document.getElementById("blockaica").style.display = 'block';
 	}
 }
