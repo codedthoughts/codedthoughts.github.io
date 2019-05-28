@@ -1,4 +1,4 @@
-var player = {clicks:0, cash:0, auto:0, cpu:1, farm:0, aic:0, aica};
+var player = {clicks:0, cash:0, auto:0, cpu:1, farm:0, aic:0, aica:0};
 
 player.market = {
 	cpucost: 20, autocost: 10, farmcost: 50, aiccost: 100, aicacost: 200, 
