@@ -47,6 +47,9 @@ function compile(){
 	if (player.clicks > 20 && document.getElementById("blockcpu").style.display === "none"){
 		document.getElementById("blockcpu").style.display = 'block';
 	}
+	if (player.clicks > 20 && document.getElementById("blockcpu").style.display === "none"){
+		document.getElementById("blockcpu").style.display = 'block';
+	}
 }
 
 function payout(cost){
@@ -64,7 +67,9 @@ function upgrade(type){
 		document.getElementById(`cost${type}`).innerHTML = `${player.market[type+'cost']}`
 		
 		//Updating clickpower UI
-		document.getElementById('pwr').innerHTML = incrementAlgorithm();
+		document.getElementById('pwr').innerHTML = `
+		Compile Power: ${incrementAlgorithm()}<br>
+		`;
 		animateCSS('.cpwr', 'flash')
 	}else{
 		alert("You can't afford it.")
