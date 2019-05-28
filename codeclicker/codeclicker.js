@@ -1,6 +1,8 @@
-var player = {clicks:0, cash:0, auto:0, cpu:1, farm:0};
+var player = {clicks:0, cash:0, auto:0, cpu:1, farm:0, aic:0};
 
-player.market = {cpucost: 20, autocost: 10, farmcost: 50, defaultfarmcost: 50, defaultcpucost: 20, defaultautocost: 10}
+player.market = {
+	cpucost: 20, autocost: 10, farmcost: 50, aiccost: 100, 
+	defaultaiccost:100, defaultfarmcost: 50, defaultcpucost: 20, defaultautocost: 10}
 
 function autoclickr(){
 	if (player.auto > 0){
@@ -28,7 +30,8 @@ function animateCSS(element, animationName, callback) {
 
 function incrementAlgorithm(){
 	invar = (player.cpu*1.1)
-	invar += (player.farm*1.2)
+	invar += (player.farm*1.4)
+	invar += (player.aic*1.8)
 	return Math.floor(Number(invar))
 }
 
@@ -50,6 +53,9 @@ function compile(){
 	if (player.clicks > 50 && document.getElementById("blockfarm").style.display === "none"){
 		document.getElementById("blockfarm").style.display = 'block';
 	}
+	if (player.clicks > 100 && document.getElementById("blockaic").style.display === "none"){
+		document.getElementById("blockaic").style.display = 'block';
+	}
 }
 
 function payout(cost){
@@ -69,7 +75,7 @@ function upgrade(type){
 		//Updating clickpower UI
 		document.getElementById('pwr').innerHTML = `
 		Compile Power: ${incrementAlgorithm()}<br>
-		Auto-Compiling ${incrementAlgorithm()*player.auto}/m
+		Auto-Compiling ${incrementAlgorithm()*player.auto} every 5s
 		`;
 		animateCSS('.cpwr', 'flash')
 	}else{
@@ -103,7 +109,8 @@ function help(obj){
 	helpvars = {
 		auto: "Automatically compiles at intervals.",
 		cpu: "1.1x compile power modifier",
-		farm: "1.2x compile power modifier"
+		farm: "1.2x compile power modifier",
+		aic: "1.7x compile power modifier"
 	}
 	alert(helpvars[obj])
 }
