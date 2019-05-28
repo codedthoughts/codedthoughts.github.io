@@ -1,8 +1,8 @@
-var player = {clicks:0, cash:0, auto:0, cpu:1, farm:0, aic:0};
+var player = {clicks:0, cash:0, auto:0, cpu:1, farm:0, aic:0, aica};
 
 player.market = {
-	cpucost: 20, autocost: 10, farmcost: 50, aiccost: 100, 
-	defaultaiccost:100, defaultfarmcost: 50, defaultcpucost: 20, defaultautocost: 10}
+	cpucost: 20, autocost: 10, farmcost: 50, aiccost: 100, aicacost: 200, 
+	defaultaiccost:100, defaultfarmcost: 50, defaultcpucost: 20, defaultautocost: 10, defaultaicacost: 200}
 
 function autoclickr(){
 	if (player.auto > 0){
@@ -29,9 +29,10 @@ function animateCSS(element, animationName, callback) {
 }
 
 function incrementAlgorithm(){
-	invar = (player.cpu*1.1)
-	invar += (player.farm*1.4)
-	invar += (player.aic*1.8)
+	invar = player.cpu
+	invar += (player.farm*2.0)
+	invar *= (player.aic/1.7)
+	invar *= (player.aic/1.2)
 	return Math.floor(Number(invar))
 }
 
@@ -55,6 +56,9 @@ function compile(){
 	}
 	if (player.clicks > 100 && document.getElementById("blockaic").style.display === "none"){
 		document.getElementById("blockaic").style.display = 'block';
+	}
+	if (player.clicks > 200 && document.getElementById("blockaica").style.display === "none"){
+		document.getElementById("blockaica").style.display = 'block';
 	}
 }
 
@@ -108,9 +112,10 @@ function buy(obj, cost){
 function help(obj){
 	helpvars = {
 		auto: "Automatically compiles at intervals.",
-		cpu: "1.1x compile power modifier",
-		farm: "1.2x compile power modifier",
-		aic: "1.7x compile power modifier"
+		cpu: "1.1x compile power upgrade",
+		farm: "1.8x compile power upgrade",
+		aic: "1.1x total compile power modifier",
+		aica: "1.7x total compile power modifier"
 	}
 	alert(helpvars[obj])
 }
