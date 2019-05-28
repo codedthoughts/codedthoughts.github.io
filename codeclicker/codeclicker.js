@@ -69,7 +69,7 @@ function upgrade(type){
 		//Updating clickpower UI
 		document.getElementById('pwr').innerHTML = `
 		Compile Power: ${incrementAlgorithm()}<br>
-		Auto-Compiling ${player.auto}/m
+		Auto-Compiling ${incrementAlgorithm()*player.auto}/m
 		`;
 		animateCSS('.cpwr', 'flash')
 	}else{
